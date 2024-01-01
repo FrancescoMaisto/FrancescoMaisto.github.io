@@ -3,29 +3,24 @@
 		<title>Francesco Maisto - Web Games - Gold Yard</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 		<style>
-		p {font-family:"Trebuchet MS", Helvetica, sans-serif}
-		p {font-size:12px;}
-		p {color:#aaaaaa;}
-		
-		body, html {
-			height: 100%;
-			margin: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		p {
+			font-family:"Trebuchet MS", Helvetica, sans-serif;
+			font-size:24px;
+			color:#aaaaaa;
 		}
-
+		
 		.container {
+			width: 100%;
+			height: 100%;
 			display: flex;
-			align-items: center;
 			justify-content: center;
-		}		
+			align-items: center;
+		}
+		
 		</style>
 	</head>
 	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	    <div id="container">
-			<div class="content">
-			</div>
+	    <div id="container" class="container">
 		</div>
 	    <script>
             window.RufflePlayer = window.RufflePlayer || {};
@@ -42,8 +37,8 @@
                 player.style.width = "550px";
                 player.style.height = "410px";
                 
-                const content = document.getElementById("content");
-                content.appendChild(player);
+                const container = document.getElementById("container");
+                container.appendChild(player);
                 player.load("gold-yard.swf");
                 player.play();
             });
