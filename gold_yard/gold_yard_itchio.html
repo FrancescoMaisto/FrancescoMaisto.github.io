@@ -23,7 +23,7 @@
 		</style>
 	</head>
 	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	    <div id="container" align=middle>
+	    <div id="container">
 			<div class="content">
 			</div>
 		</div>
@@ -42,8 +42,8 @@
                 player.style.width = "550px";
                 player.style.height = "410px";
                 
-                const container = document.getElementById("content");
-                container.appendChild(player);
+                const content = document.getElementById("content");
+                content.appendChild(player);
                 player.load("gold-yard.swf");
                 player.play();
             });
