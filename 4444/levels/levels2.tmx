@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="8" height="11" tilewidth="80" tileheight="80" backgroundcolor="#f4ae58">
+ <tileset firstgid="1" name="Grid 1" tilewidth="320" tileheight="320">
+  <tileoffset x="0" y="240"/>
+  <image source="../../../Level Editor/tileset_1.png" width="960" height="1280"/>
+ </tileset>
+ <tileset firstgid="13" name="Grid 2" tilewidth="160" tileheight="160">
+  <tileoffset x="0" y="80"/>
+  <image source="../../../Level Editor/tileset_2.png" width="480" height="640"/>
+ </tileset>
+ <tileset firstgid="25" name="Grid 3" tilewidth="80" tileheight="80">
+  <image source="../../../Level Editor/tileset_3.png" width="240" height="480"/>
+ </tileset>
+ <layer name="1" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="0"/>
+   <property name="zMoves" value="6"/>
+   <property name="zParTime" value="4918"/>
+  </properties>
+  <data encoding="csv">
+13,0,15,0,14,0,14,0,
+0,0,0,0,0,0,0,0,
+15,0,15,0,13,0,14,0,
+0,0,0,0,0,0,0,0,
+14,0,13,0,15,0,15,0,
+0,0,0,0,0,0,0,0,
+14,0,14,0,15,0,13,0,
+0,0,0,0,0,0,0,0,
+27,26,27,26,37,38,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="2" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="1"/>
+   <property name="zMoves" value="3"/>
+   <property name="zParTime" value="1500"/>
+  </properties>
+  <data encoding="csv">
+1,0,0,0,2,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+2,0,0,0,14,0,13,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,13,0,13,0,
+0,0,0,0,0,0,0,0,
+30,26,30,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="3" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="1"/>
+   <property name="zMoves" value="6"/>
+   <property name="zParTime" value="2296"/>
+  </properties>
+  <data encoding="csv">
+25,28,14,0,3,0,0,0,
+28,28,0,0,0,0,0,0,
+14,0,14,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+3,0,0,0,14,0,14,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,14,0,28,28,
+0,0,0,0,0,0,28,25,
+28,26,28,26,26,26,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="4" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="6"/>
+   <property name="zParTime" value="3295"/>
+  </properties>
+  <data encoding="csv">
+3,0,0,0,3,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+16,0,26,25,25,26,16,0,
+0,0,26,26,26,26,0,0,
+16,0,16,0,16,0,16,0,
+0,0,0,0,0,0,0,0,
+30,28,30,28,30,28,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="5" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="11"/>
+   <property name="zParTime" value="4538"/>
+  </properties>
+  <data encoding="csv">
+14,0,15,0,14,0,15,0,
+0,0,0,0,0,0,0,0,
+13,0,14,0,15,0,13,0,
+0,0,0,0,0,0,0,0,
+14,0,13,0,16,0,15,0,
+0,0,0,0,0,0,0,0,
+13,0,15,0,14,0,16,0,
+0,0,0,0,0,0,0,0,
+26,26,27,27,25,25,28,28,
+25,25,30,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="6" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="11"/>
+   <property name="zParTime" value="6590"/>
+  </properties>
+  <data encoding="csv">
+14,0,15,0,14,0,15,0,
+0,0,0,0,0,0,0,0,
+13,0,14,0,15,0,13,0,
+0,0,0,0,0,0,0,0,
+14,0,13,0,16,0,15,0,
+0,0,0,0,0,0,0,0,
+13,0,15,0,14,0,16,0,
+0,0,0,0,0,0,0,0,
+27,25,26,28,25,26,28,27,
+26,30,26,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="7" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="8"/>
+   <property name="zParTime" value="3304"/>
+  </properties>
+  <data encoding="csv">
+18,0,14,0,14,0,18,0,
+0,0,0,0,0,0,0,0,
+13,0,15,0,18,0,15,0,
+0,0,0,0,0,0,0,0,
+15,0,18,0,15,0,13,0,
+0,0,0,0,0,0,0,0,
+18,0,14,0,14,0,18,0,
+0,0,0,0,0,0,0,0,
+26,27,26,26,27,27,26,26,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="8" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="0"/>
+   <property name="zMoves" value="6"/>
+   <property name="zParTime" value="2010"/>
+  </properties>
+  <data encoding="csv">
+20,0,13,0,19,0,19,0,
+0,0,0,0,0,0,0,0,
+20,0,20,0,19,0,14,0,
+0,0,0,0,0,0,0,0,
+19,0,19,0,13,0,20,0,
+0,0,0,0,0,0,0,0,
+14,0,19,0,20,0,20,0,
+0,0,0,0,0,0,0,0,
+26,25,26,25,26,26,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="9" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="1"/>
+   <property name="zMoves" value="8"/>
+   <property name="zParTime" value="2753"/>
+  </properties>
+  <data encoding="csv">
+14,0,13,0,13,0,14,0,
+0,0,0,0,0,0,0,0,
+13,0,14,0,13,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,13,0,14,0,13,0,
+0,0,0,0,0,0,0,0,
+14,0,13,0,13,0,14,0,
+0,0,0,0,0,0,0,0,
+26,30,25,30,26,30,25,30,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="10" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="8"/>
+   <property name="zParTime" value="4710"/>
+  </properties>
+  <data encoding="csv">
+18,0,18,0,13,0,18,0,
+0,0,0,0,0,0,0,0,
+13,0,14,0,15,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,15,0,14,0,13,0,
+0,0,0,0,0,0,0,0,
+18,0,13,0,18,0,18,0,
+0,0,0,0,0,0,0,0,
+26,27,26,27,31,27,36,30,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="11" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="30"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="8"/>
+   <property name="zParTime" value="5034"/>
+  </properties>
+  <data encoding="csv">
+18,0,15,0,15,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,14,0,13,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,13,0,14,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,15,0,15,0,18,0,
+0,0,0,0,0,0,0,0,
+26,27,26,27,38,31,36,26,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="12" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="9"/>
+   <property name="zParTime" value="3562"/>
+  </properties>
+  <data encoding="csv">
+18,0,14,0,15,0,18,0,
+0,0,0,0,0,0,0,0,
+13,0,18,0,13,0,15,0,
+0,0,0,0,0,0,0,0,
+15,0,13,0,18,0,13,0,
+0,0,0,0,0,0,0,0,
+18,0,15,0,14,0,18,0,
+0,0,0,0,0,0,0,0,
+32,33,32,33,25,33,25,36,
+30,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="13" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="9"/>
+   <property name="zParTime" value="3684"/>
+  </properties>
+  <data encoding="csv">
+14,0,18,0,17,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,15,0,18,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,18,0,16,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,14,0,18,0,14,0,
+0,0,0,0,0,0,0,0,
+29,27,25,28,35,30,32,36,
+29,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="14" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="0"/>
+   <property name="zMoves" value="10"/>
+   <property name="zParTime" value="3769"/>
+  </properties>
+  <data encoding="csv">
+14,0,15,0,13,0,20,0,
+0,0,0,0,0,0,0,0,
+15,0,15,0,13,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,13,0,15,0,15,0,
+0,0,0,0,0,0,0,0,
+20,0,13,0,15,0,14,0,
+0,0,0,0,0,0,0,0,
+27,26,26,27,26,26,27,26,
+26,27,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="15" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="6"/>
+   <property name="zParTime" value="2108"/>
+  </properties>
+  <data encoding="csv">
+14,0,14,0,16,0,16,0,
+0,0,0,0,0,0,0,0,
+14,0,19,0,19,0,16,0,
+0,0,0,0,0,0,0,0,
+3,0,0,0,3,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+36,26,27,36,28,27,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="16" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="11"/>
+   <property name="zParTime" value="13086"/>
+  </properties>
+  <data encoding="csv">
+19,0,20,0,23,0,19,0,
+0,0,0,0,0,0,0,0,
+20,0,20,0,23,0,23,0,
+0,0,0,0,0,0,0,0,
+22,0,22,0,21,0,21,0,
+0,0,0,0,0,0,0,0,
+19,0,22,0,21,0,19,0,
+0,0,0,0,0,0,0,0,
+36,40,36,41,36,39,36,37,
+38,30,37,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="17" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="8"/>
+   <property name="zParTime" value="5255"/>
+  </properties>
+  <data encoding="csv">
+16,0,16,0,5,0,0,0,
+0,0,0,0,0,0,0,0,
+16,0,19,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+14,0,14,0,10,0,0,0,
+0,0,0,0,0,0,0,0,
+21,0,14,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+36,26,29,36,28,29,36,41,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="18" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="0"/>
+   <property name="zMoves" value="16"/>
+   <property name="zParTime" value="6137"/>
+  </properties>
+  <data encoding="csv">
+20,0,13,0,13,0,20,0,
+0,0,0,0,0,0,0,0,
+13,0,20,0,20,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,21,0,21,0,13,0,
+0,0,0,0,0,0,0,0,
+21,0,13,0,13,0,21,0,
+0,0,0,0,0,0,0,0,
+36,36,36,36,36,36,36,36,
+30,25,38,25,30,25,38,25,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="19" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="14"/>
+   <property name="zParTime" value="5654"/>
+  </properties>
+  <data encoding="csv">
+1,0,0,0,2,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+2,0,0,0,1,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+36,36,36,36,30,30,30,30,
+30,30,30,30,30,30,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="20" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="1"/>
+   <property name="zMoves" value="19"/>
+   <property name="zParTime" value="11486"/>
+  </properties>
+  <data encoding="csv">
+15,0,13,0,13,0,15,0,
+0,0,0,0,0,0,0,0,
+13,0,13,0,15,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,15,0,13,0,13,0,
+0,0,0,0,0,0,0,0,
+15,0,13,0,13,0,15,0,
+0,0,0,0,0,0,0,0,
+32,35,34,35,32,35,34,35,
+34,35,35,32,34,35,35,32,
+30,38,37,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="21" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="1"/>
+   <property name="zMoves" value="7"/>
+   <property name="zParTime" value="4984"/>
+  </properties>
+  <data encoding="csv">
+14,0,14,0,14,0,14,0,
+0,0,0,0,0,0,0,0,
+15,0,14,0,1,0,0,0,
+0,0,0,0,0,0,0,0,
+15,0,14,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+14,0,14,0,14,0,14,0,
+0,0,0,0,0,0,0,0,
+36,26,26,37,38,39,26,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="22" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="0"/>
+   <property name="zMoves" value="16"/>
+   <property name="zParTime" value="10375"/>
+  </properties>
+  <data encoding="csv">
+22,0,13,0,13,0,21,0,
+0,0,0,0,0,0,0,0,
+13,0,22,0,21,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,21,0,22,0,13,0,
+0,0,0,0,0,0,0,0,
+21,0,13,0,13,0,22,0,
+0,0,0,0,0,0,0,0,
+36,30,36,38,36,36,30,39,
+36,36,36,25,30,37,36,25,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="23" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="11"/>
+   <property name="zParTime" value="6600"/>
+  </properties>
+  <data encoding="csv">
+18,0,15,0,14,0,18,0,
+0,0,0,0,0,0,0,0,
+18,0,30,30,30,30,18,0,
+0,0,28,26,25,27,0,0,
+18,0,27,25,26,28,18,0,
+0,0,30,30,30,30,0,0,
+18,0,14,0,15,0,18,0,
+0,0,0,0,0,0,0,0,
+26,27,26,27,27,27,26,26,
+28,30,27,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="24" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="5"/>
+   <property name="zParTime" value="9689"/>
+  </properties>
+  <data encoding="csv">
+17,0,17,0,17,0,17,0,
+0,0,0,0,0,0,0,0,
+17,0,29,29,29,29,17,0,
+0,0,29,15,0,29,0,0,
+17,0,29,0,0,29,17,0,
+0,0,29,29,29,29,0,0,
+17,0,17,0,17,0,17,0,
+0,0,0,0,0,0,0,0,
+36,41,29,41,30,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="25" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="9"/>
+   <property name="zParTime" value="11251"/>
+  </properties>
+  <data encoding="csv">
+15,0,15,0,15,0,15,0,
+0,0,0,0,0,0,0,0,
+15,0,26,26,26,26,15,0,
+0,0,26,13,0,26,0,0,
+15,0,26,0,0,26,15,0,
+0,0,26,26,26,26,0,0,
+15,0,15,0,15,0,15,0,
+0,0,0,0,0,0,0,0,
+36,38,27,38,30,26,27,26,
+30,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="26" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="0"/>
+   <property name="zMoves" value="8"/>
+   <property name="zParTime" value="3508"/>
+  </properties>
+  <data encoding="csv">
+15,0,14,0,15,0,14,0,
+0,0,0,0,0,0,0,0,
+15,0,21,0,19,0,21,0,
+0,0,0,0,0,0,0,0,
+15,0,14,0,15,0,14,0,
+0,0,0,0,0,0,0,0,
+21,0,19,0,21,0,15,0,
+0,0,0,0,0,0,0,0,
+33,36,33,27,36,33,27,27,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="27" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="11"/>
+   <property name="zParTime" value="6551"/>
+  </properties>
+  <data encoding="csv">
+22,0,16,0,23,0,17,0,
+0,0,0,0,0,0,0,0,
+22,0,32,25,27,33,23,0,
+0,0,32,26,25,33,0,0,
+13,0,35,29,28,34,15,0,
+0,0,35,27,25,34,0,0,
+19,0,19,0,15,0,21,0,
+0,0,0,0,0,0,0,0,
+29,25,28,27,27,29,26,28,
+37,30,37,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="28" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="24"/>
+   <property name="zParTime" value="14604"/>
+  </properties>
+  <data encoding="csv">
+20,0,16,0,14,0,22,0,
+0,0,0,0,0,0,0,0,
+17,0,33,33,31,31,15,0,
+0,0,26,29,28,29,0,0,
+15,0,27,25,26,27,14,0,
+0,0,32,32,34,34,0,0,
+19,0,16,0,17,0,21,0,
+0,0,0,0,0,0,0,0,
+27,26,25,28,26,27,28,25,
+26,26,26,28,28,28,27,27,
+27,25,25,25,26,30,25,38
+</data>
+ </layer>
+ <layer name="29" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="4"/>
+   <property name="eSplitter_Frequency" value="0.3"/>
+   <property name="eSplitter_Speed" value="7"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="7"/>
+   <property name="zParTime" value="4988"/>
+  </properties>
+  <data encoding="csv">
+2,0,0,0,4,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+1,0,0,0,3,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,
+42,42,42,42,37,30,37,0,
+0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="30" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="10"/>
+   <property name="eSplitter_Frequency" value="0.3"/>
+   <property name="eSplitter_Speed" value="3.5"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="16"/>
+   <property name="zParTime" value="10470"/>
+  </properties>
+  <data encoding="csv">
+15,0,15,0,14,0,14,0,
+0,0,0,0,0,0,0,0,
+15,0,13,0,16,0,14,0,
+0,0,0,0,0,0,0,0,
+14,0,16,0,13,0,15,0,
+0,0,0,0,0,0,0,0,
+14,0,14,0,15,0,15,0,
+0,0,0,0,0,0,0,0,
+36,36,36,36,36,36,36,36,
+36,36,26,27,26,27,30,30,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="31" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="6"/>
+   <property name="ePainter_Frequency" value="0.5"/>
+   <property name="ePainter_Speed" value="9"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="16"/>
+   <property name="zParTime" value="12507"/>
+  </properties>
+  <data encoding="csv">
+14,0,20,0,23,0,15,0,
+0,0,0,0,0,0,0,0,
+19,0,20,0,21,0,21,0,
+0,0,0,0,0,0,0,0,
+21,0,21,0,20,0,22,0,
+0,0,0,0,0,0,0,0,
+15,0,22,0,20,0,14,0,
+0,0,0,0,0,0,0,0,
+36,36,36,36,36,36,36,26,
+36,27,36,26,36,27,30,30,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="32" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="4"/>
+   <property name="eSplitter_Frequency" value="0.2"/>
+   <property name="eSplitter_Speed" value="12"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="14"/>
+   <property name="zParTime" value="10701"/>
+  </properties>
+  <data encoding="csv">
+29,29,15,0,13,0,26,26,
+29,27,0,0,0,0,25,26,
+15,0,15,0,13,0,13,0,
+0,0,0,0,0,0,0,0,
+13,0,13,0,15,0,15,0,
+0,0,0,0,0,0,0,0,
+26,29,13,0,15,0,26,28,
+26,26,0,0,0,0,28,28,
+26,28,26,29,25,27,27,25,
+33,32,32,36,39,26,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="33" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="5"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="12"/>
+   <property name="zParTime" value="5270"/>
+  </properties>
+  <data encoding="csv">
+15,0,15,0,16,0,26,25,
+0,0,0,0,0,0,26,26,
+15,0,26,26,16,0,16,0,
+0,0,26,25,0,0,0,0,
+16,0,16,0,25,26,15,0,
+0,0,0,0,26,26,0,0,
+26,26,16,0,15,0,15,0,
+25,26,0,0,0,0,0,0,
+26,27,26,28,26,27,26,28,
+25,29,30,27,0,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="34" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="13"/>
+   <property name="zParTime" value="15222"/>
+  </properties>
+  <data encoding="csv">
+16,0,16,0,16,0,19,0,
+0,0,0,0,0,0,0,0,
+16,0,27,27,27,27,16,0,
+0,0,27,13,0,27,0,0,
+16,0,27,0,0,27,16,0,
+0,0,27,27,27,27,0,0,
+19,0,16,0,16,0,16,0,
+0,0,0,0,0,0,0,0,
+36,38,28,38,30,27,28,27,
+30,36,28,36,28,0,0,0,
+0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="35" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="22"/>
+   <property name="zParTime" value="27664"/>
+  </properties>
+  <data encoding="csv">
+26,25,25,25,25,25,25,27,
+25,25,26,26,25,27,25,25,
+25,26,25,26,25,27,27,25,
+25,26,26,26,25,25,25,25,
+25,25,25,25,26,26,26,25,
+25,27,27,25,26,25,26,25,
+25,25,27,25,26,26,25,25,
+27,25,25,25,25,25,25,26,
+30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,0,0
+</data>
+ </layer>
+ <layer name="36" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="4"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0.1"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="24"/>
+   <property name="zParTime" value="29341"/>
+  </properties>
+  <data encoding="csv">
+31,26,14,0,13,0,25,32,
+27,31,0,0,0,0,32,28,
+16,0,21,0,22,0,15,0,
+0,0,0,0,0,0,0,0,
+13,0,20,0,19,0,14,0,
+0,0,0,0,0,0,0,0,
+25,34,15,0,16,0,33,26,
+34,27,0,0,0,0,28,33,
+28,25,26,27,28,26,27,25,
+26,28,25,27,26,27,28,25,
+28,25,27,26,28,27,37,39
+</data>
+ </layer>
+ <layer name="37" width="8" height="11" visible="0">
+  <properties>
+   <property name="colors" value="3"/>
+   <property name="ePainter_Count" value="-1"/>
+   <property name="ePainter_Frequency" value="0"/>
+   <property name="ePainter_Speed" value="0"/>
+   <property name="eSplitter_Count" value="-1"/>
+   <property name="eSplitter_Frequency" value="0"/>
+   <property name="eSplitter_Speed" value="0"/>
+   <property name="odds_Cage" value="0"/>
+   <property name="odds_Jolly" value="0"/>
+   <property name="odds_Rainbow" value="0"/>
+   <property name="odds_Trap" value="0"/>
+   <property name="odds_Zzap" value="0"/>
+   <property name="score_Threshold" value="0"/>
+   <property name="starting_Grid" value="2"/>
+   <property name="zMoves" value="24"/>
+   <property name="zParTime" value="23051"/>
+  </properties>
+  <data encoding="csv">
+27,26,26,26,25,25,26,27,
+26,26,25,26,26,25,26,26,
+26,25,27,27,25,25,25,25,
+26,26,27,25,27,25,26,25,
+25,26,25,27,25,27,26,26,
+25,25,25,25,27,27,25,26,
+27,26,25,26,26,25,27,26,
+27,27,25,25,26,26,26,26,
+26,25,25,27,26,27,25,26,
+25,26,27,26,26,25,26,25,
+26,25,25,26,27,26,27,26
+</data>
+ </layer>
+</map>

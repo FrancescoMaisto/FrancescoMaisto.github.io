@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Slot Machine - Derivco test</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<style>
+		p {font-family:"Trebuchet MS", Helvetica, sans-serif}
+		p {font-size:12px;}
+		p {color:#aaaaaa;}
+		</style>
+	</head>
+	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	    <div id="container" align=middle></div>
+	    <script>
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.RufflePlayer.config = {
+                "autoplay": "on",
+                "contextMenu": "off",
+                "splashScreen": false,
+                "unmuteOverlay": "hidden"
+            }
+            window.addEventListener("load", (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                const player = ruffle.createPlayer();
+                
+                player.style.width = "400px";
+                player.style.height = "460px";
+                
+                const container = document.getElementById("container");
+                container.appendChild(player);
+                player.load("4444.swf");
+            });
+        </script>
+        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+	</body>
+</html>

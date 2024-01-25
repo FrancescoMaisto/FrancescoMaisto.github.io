@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:dac523ccb2486265a33343f87b9a5c27:dbe62d43be8dbdfb2b585c4c48e25f22:d53e00a7b35ca3b360b700c0b9aa24da$ -->
+<TextureAtlas imagePath="atlas_iaps.png">
+    <SubTexture name="btn_unlock_all" x="2" y="2" width="182" height="60"/>
+</TextureAtlas>

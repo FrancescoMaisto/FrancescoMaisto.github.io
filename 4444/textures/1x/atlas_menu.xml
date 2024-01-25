@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:74e9ef53643a8a2c4ad721c28b4c69d0:589170287a2c90065154bb29cb8fa811:620253f804a8ad401ffa16eb888d2d90$ -->
+<TextureAtlas imagePath="atlas_menu.png">
+    <SubTexture name="br" x="227" y="332" rotated="true" width="17" height="23"/>
+    <SubTexture name="btn_Levels_up" x="169" y="489" width="80" height="80"/>
+    <SubTexture name="btn_NextPage_up" x="69" y="1686" width="60" height="60"/>
+    <SubTexture name="btn_Next_up" x="169" y="571" width="80" height="80"/>
+    <SubTexture name="btn_Play_main" x="2" y="472" width="165" height="165"/>
+    <SubTexture name="btn_Play_up" x="2" y="996" width="120" height="60"/>
+    <SubTexture name="btn_PrevPage_up" x="2" y="1748" width="60" height="60"/>
+    <SubTexture name="btn_Quit_up" x="165" y="653" width="80" height="80"/>
+    <SubTexture name="btn_Retry_up" x="165" y="735" width="80" height="80"/>
+    <SubTexture name="btn_Settings_big_up" x="95" y="1460" width="80" height="80"/>
+    <SubTexture name="btn_Yes_up" x="2" y="1465" width="80" height="80"/>
+    <SubTexture name="btn_arcade" x="2" y="1238" rotated="true" width="109" height="60"/>
+    <SubTexture name="btn_audio_off" x="2" y="2" width="240" height="54"/>
+    <SubTexture name="btn_audio_on" x="2" y="58" width="240" height="54"/>
+    <SubTexture name="btn_back" x="64" y="1748" width="60" height="60"/>
+    <SubTexture name="btn_hiscore" x="84" y="1542" width="80" height="80"/>
+    <SubTexture name="btn_levelmap" x="2" y="1547" width="80" height="80"/>
+    <SubTexture name="btn_levels" x="177" y="1498" rotated="true" width="65" height="60"/>
+    <SubTexture name="btn_levels_down" x="84" y="1624" rotated="true" width="65" height="60"/>
+    <SubTexture name="btn_levels_starless" x="2" y="1629" rotated="true" width="65" height="60"/>
+    <SubTexture name="btn_lp_big" x="2" y="267" width="223" height="58"/>
+    <SubTexture name="btn_narrow_up" x="2" y="114" width="240" height="54"/>
+    <SubTexture name="btn_square_small" x="126" y="1748" width="60" height="60"/>
+    <SubTexture name="btn_timescope" x="210" y="1380" rotated="true" width="33" height="86"/>
+    <SubTexture name="cn" x="191" y="1366" rotated="true" width="17" height="23"/>
+    <SubTexture name="de" x="191" y="1391" rotated="true" width="17" height="23"/>
+    <SubTexture name="es" x="191" y="1416" rotated="true" width="17" height="23"/>
+    <SubTexture name="eye_on_next" x="2" y="875" rotated="true" width="126" height="119"/>
+    <SubTexture name="finger_pointing" x="2" y="1058" rotated="true" width="119" height="64"/>
+    <SubTexture name="fontana" x="2" y="327" rotated="true" width="182" height="143" frameX="-5" frameY="0" frameWidth="148" frameHeight="186"/>
+    <SubTexture name="fr" x="191" y="1441" rotated="true" width="17" height="23"/>
+    <SubTexture name="game_over_evil_eye" x="97" y="1366" width="92" height="92" frameX="-3" frameY="-3" frameWidth="98" frameHeight="98"/>
+    <SubTexture name="game_over_overlay" x="166" y="1560" width="80" height="80"/>
+    <SubTexture name="game_over_time_up" x="113" y="1268" width="96" height="96"/>
+    <SubTexture name="game_over_zero_moves" x="2" y="1373" width="91" height="90"/>
+    <SubTexture name="game_over_zzap" x="2" y="1300" rotated="true" width="93" height="71"/>
+    <SubTexture name="gb" x="210" y="1468" rotated="true" width="17" height="23"/>
+    <SubTexture name="icon_cog" x="195" y="1729" rotated="true" width="42" height="40"/>
+    <SubTexture name="icon_email" x="211" y="1351" width="35" height="27"/>
+    <SubTexture name="icon_fb" x="186" y="327" width="39" height="40"/>
+    <SubTexture name="icon_info" x="211" y="1314" width="35" height="35" frameX="-1" frameY="-1" frameWidth="37" frameHeight="37"/>
+    <SubTexture name="icon_rate" x="150" y="1704" width="43" height="42"/>
+    <SubTexture name="icon_twitter" x="211" y="1268" rotated="true" width="36" height="44"/>
+    <SubTexture name="it" x="229" y="1468" rotated="true" width="17" height="23"/>
+    <SubTexture name="jp" x="218" y="1686" width="23" height="17"/>
+    <SubTexture name="kr" x="131" y="1686" rotated="true" width="17" height="23"/>
+    <SubTexture name="level_completed" x="2" y="170" width="223" height="95"/>
+    <SubTexture name="level_locked" x="151" y="1642" rotated="true" width="65" height="60"/>
+    <SubTexture name="loading_icon" x="2" y="1691" width="49" height="52" frameX="-2" frameY="0" frameWidth="52" frameHeight="52"/>
+    <SubTexture name="logo" x="133" y="817" rotated="true" width="116" height="273"/>
+    <SubTexture name="merge4tiles" x="2" y="639" width="161" height="52"/>
+    <SubTexture name="merging_w_cage" x="2" y="693" width="161" height="52"/>
+    <SubTexture name="merging_w_jolly" x="2" y="747" width="161" height="52"/>
+    <SubTexture name="nl" x="131" y="1711" rotated="true" width="17" height="23"/>
+    <SubTexture name="no_overlap" x="186" y="369" rotated="true" width="62" height="118"/>
+    <SubTexture name="no_overlap_cage" x="123" y="1092" width="118" height="62"/>
+    <SubTexture name="pack_complete" x="133" y="801" rotated="true" width="16" height="14"/>
+    <SubTexture name="particle_square_menu" x="239" y="357" width="8" height="8"/>
+    <SubTexture name="particle_star" x="177" y="1466" rotated="true" width="31" height="30" frameX="-1" frameY="-1" frameWidth="32" frameHeight="32"/>
+    <SubTexture name="ru" x="195" y="1704" rotated="true" width="17" height="23"/>
+    <SubTexture name="shadow_bg" x="227" y="170" rotated="true" width="17" height="160"/>
+    <SubTexture name="square_black" x="244" y="2" width="5" height="4"/>
+    <SubTexture name="star_empty" x="119" y="1156" width="113" height="110" frameX="-1" frameY="-1" frameWidth="115" frameHeight="112"/>
+    <SubTexture name="star_full" x="2" y="1124" width="115" height="112"/>
+    <SubTexture name="star_small" x="169" y="472" width="13" height="12"/>
+    <SubTexture name="tr" x="214" y="1705" width="23" height="17"/>
+    <SubTexture name="triangle_arrow" x="218" y="1642" rotated="true" width="23" height="42"/>
+    <SubTexture name="tutorial_arrow" x="2" y="801" width="129" height="72"/>
+    <SubTexture name="x_icon" x="227" y="357" width="10" height="10"/>
+</TextureAtlas>
