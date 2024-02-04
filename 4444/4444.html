@@ -18,11 +18,12 @@
                 const player = ruffle.createPlayer();
                 
                 player.style.width = "360px";
-                player.style.height = "480px";
+                player.style.height = "460px";
                 
                 const container = document.getElementById("container");
                 container.appendChild(player);
                 player.load("4444.swf");
+				player.play();
             });
         </script>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
