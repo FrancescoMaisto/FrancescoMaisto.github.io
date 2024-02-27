@@ -4,14 +4,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	</head>
 	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	
-	<h2>Fullscreen with JavaScript</h2>
-	<p>Click on the button to open the video in fullscreen mode.</p>
-	<button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
-	<p><strong>Tip:</strong> Press the "Esc" key to exit full screen.</p>
-	
-	
-	
 	    <div id="container" align=middle></div>
 	    <script>
             window.RufflePlayer = window.RufflePlayer || {};
@@ -28,24 +20,9 @@
                 const container = document.getElementById("container");
                 container.appendChild(player);
                 player.load("piranhas.swf");
-                player.style.width = "100%";
-                //player.style.height = "500px";
+                player.style.width = "1200px";
+                player.style.height = "1000px";
             });
-			
-			/* Get the element you want displayed in fullscreen */ 
-			var elem = document.getElementById("container");
-
-			/* Function to open fullscreen mode */
-			function openFullscreen() {
-			  if (elem.requestFullscreen) {
-				elem.requestFullscreen();
-			  } else if (elem.webkitRequestFullscreen) { /* Safari */
-				elem.webkitRequestFullscreen();
-			  } else if (elem.msRequestFullscreen) { /* IE11 */
-				elem.msRequestFullscreen();
-			  }
-			}
-			
         </script>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	</body>
