@@ -4,24 +4,27 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	</head>
 	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	    <div id="container" align=middle></div>
+	    <div id="container" class="container">
+		</div>
 	    <script>
             window.RufflePlayer = window.RufflePlayer || {};
             window.RufflePlayer.config = {
                 "autoplay": "on",
-                "contextMenu": "on",
+                "contextMenu": "off",
                 "splashScreen": false,
                 "unmuteOverlay": "hidden"
             }
-            
             window.addEventListener("load", (event) => {
                 const ruffle = window.RufflePlayer.newest();
                 const player = ruffle.createPlayer();
+                
+                player.style.width = "800px";
+                player.style.height = "920px";
+                
                 const container = document.getElementById("container");
                 container.appendChild(player);
                 player.load("swf/alphattack/alphattack.swf");
-                player.style.width = "800px";
-                player.style.height = "920px";
+                player.play();
             });
         </script>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
