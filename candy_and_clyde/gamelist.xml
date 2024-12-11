@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<game name="Tidy Neighbourhood" candyTime="75" candyInstruction="Clean!" clydeTime="55" clydeInstruction="Litter!" swfName="TidyNeighbourhood" />
+	<game name="Wall Paintings" candyTime="40" candyInstruction="Straighten!" clydeTime="20" clydeInstruction="Take it down!" swfName="WallPaintings" />
+	<game name="Venus Flytrap" candyTime="50" candyInstruction="Feed!" clydeTime="50" clydeInstruction="Feed!" swfName="VenusFlytrap" />
+	<game name="Shopping List" candyTime="15" candyInstruction="Shop!" clydeTime="20" clydeInstruction="Shop!" swfName="ShoppingList" />
+	<game name="Rainy Day" candyTime="90" candyInstruction="Check in!" clydeTime="90" clydeInstruction="Check in!" swfName="RainyDay" />
+	<game name="Dress Me" candyTime="10" candyInstruction="Dress!" clydeTime="10" clydeInstruction="Dress!" swfName="DressMe" />
+	<game name="Teary Eyes" candyTime="40" candyInstruction="Wipe!" clydeTime="40" clydeInstruction="Poke!" swfName="TearyEyes" />
+	<game name="Match Maker" candyTime="110" candyInstruction="Match!" clydeTime="80" clydeInstruction="Match!" swfName="Memory" />
+	<game name="Birthday Cake" candyTime="25" candyInstruction="Fan!" clydeTime="50" clydeInstruction="Pull!" swfName="BirthdayCake" />
+	<game name="Lazy Squirrel" candyTime="50" candyInstruction="Hit!" clydeTime="50" clydeInstruction="Hit!" swfName="LazySquirrel" />
+	<game name="Fish Bowls" candyTime="80" candyInstruction="feed them!" clydeTime="25" clydeInstruction="feed It!" swfName="FishBowl" />
+	<game name="Comb Me" candyTime="50" candyInstruction="Comb me, please!" clydeTime="40" clydeInstruction="Blow a hairdo!" swfName="CombMe" />
+	<game name="Cockroach" candyTime="120" candyInstruction="Scare Boogey off!" clydeTime="50" clydeInstruction="Squish'em!" swfName="Cockroach" />
+	<game name="Counting Sheep" candyTime="120" candyInstruction="Jump!" clydeTime="120" clydeInstruction="Stumble!" swfName="CountingSheep" />
+	<game name="Bird's Nest" candyTime="70" candyInstruction="Back to Mum!" clydeTime="110" clydeInstruction="Chop!" swfName="BirdsNest" />
+</list>
