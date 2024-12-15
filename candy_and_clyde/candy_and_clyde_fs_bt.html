@@ -3,8 +3,32 @@
 		<title>Francesco Maisto - Web Games - Candy and Clyde</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	</head>
-	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-	    <div id="container" align=middle></div>
+	<style>
+		.button {
+		  background-color: #1a5089;
+		  border: none;
+		  border-radius: 4px;
+		  color: white;
+		  padding: 6px 12px 6px 12px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 14px;
+		  margin: 12px;
+		  cursor: pointer;
+		  transition-duration: 0.15s;
+		}
+		.button:hover {
+		  background-color: #546D97;
+		  color: white;
+		}
+	</style>
+	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">		
+	    <div id="container" align=middle>
+		</div>
+		<div id="button_container" align=middle>
+			<button class="button" onclick="openFullscreen()">Full Screen</button>
+		</div>
 	    <script>
             window.RufflePlayer = window.RufflePlayer || {};
             window.RufflePlayer.config = {
@@ -20,9 +44,15 @@
                 const container = document.getElementById("container");
                 container.appendChild(player);
                 player.load("candy_and_clyde.swf");
+				// player.style.width = "100%";
+                // player.style.height = "100%";
                 player.style.width = "550px";
                 player.style.height = "400px";
             });
+			
+			function openFullscreen() {
+				document.querySelector("ruffle-embed, ruffle-object, ruffle-player").enterFullscreen();			
+			}
         </script>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	</body>
