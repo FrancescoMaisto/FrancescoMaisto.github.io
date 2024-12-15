@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Francesco Maisto - Web Games - Candy and Clyde</title>
+		<title>1 - Francesco Maisto - Web Games - Candy and Clyde</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	</head>
 	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
@@ -22,6 +22,9 @@
                 player.load("candy_and_clyde.swf");
                 player.style.width = "550px";
                 player.style.height = "400px";
+				if (container.requestFullscreen) {
+				  container.requestFullscreen();
+				}
             });
         </script>
         <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
