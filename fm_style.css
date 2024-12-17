@@ -1,3 +1,6 @@
+body {
+	background-image: url("images/bg_tetris.png");
+}
 .button {
 	background-color: #1a5089;
 	border: none;
