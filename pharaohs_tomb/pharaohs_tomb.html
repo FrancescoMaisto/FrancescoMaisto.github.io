@@ -17,12 +17,12 @@
                 const ruffle = window.RufflePlayer.newest();
                 const player = ruffle.createPlayer();
                 
-                player.style.width = "800px";
-                player.style.height = "598px";
+				player.style.width = "550px";
+                player.style.height = "410px";
                 
                 const container = document.getElementById("container");
                 container.appendChild(player);
-                player.load("swf/pharaohs_tomb/the_pharaohs_tomb_nohiscore.swf");
+                player.load("the_pharaohs_tomb_nohiscore.swf");
                 player.play();
             });
         </script>
