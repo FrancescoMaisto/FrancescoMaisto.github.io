@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Francesco Maisto - Web Games - Gold Yard</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link rel="stylesheet" href="../fm_style.css">
+	</head>
+	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">		
+	    <div id="container" align=middle>
+		</div>
+		<div id="button_container" align=middle>
+			<button class="button" onclick="openFullscreen()">Full Screen<img src="../images/full-screen-icon-32x32.png" alt="Full Screen"  width="50" height="50" style="vertical-align:middle;margin:0px 0px 0px 20px"></button>
+		</div>
+	    <script>
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.RufflePlayer.config = {
+                "autoplay": "on",
+                "contextMenu": "off",
+                "splashScreen": false,
+                "unmuteOverlay": "hidden"
+            }
+            
+            window.addEventListener("load", (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                const player = ruffle.createPlayer();
+                const container = document.getElementById("container");
+                container.appendChild(player);
+                player.load("gold-yard.swf");
+                player.style.width = "550px";
+                player.style.height = "410px";
+            });
+			
+			function openFullscreen() {
+				document.querySelector("ruffle-embed, ruffle-object, ruffle-player").enterFullscreen();			
+			}
+        </script>
+        <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+	</body>
+</html>
