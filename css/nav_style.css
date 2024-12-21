@@ -1,4 +1,7 @@
-body {margin: 0;}
+body {
+	margin: 0;
+	background-image: url('../images/bg_tetris_darker.png');
+}
 
 // <uniquifier>: Use a unique and descriptive class name
 // <weight>: Use a value from 100 to 900
