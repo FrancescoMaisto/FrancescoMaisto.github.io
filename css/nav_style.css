@@ -1,0 +1,80 @@
+body {margin: 0;}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.roboto-condensed-navigation {
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: 2;
+  font-style: normal;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gameTitle {
+	font-family: "Press Start 2P", serif;
+	color: #ffce10;
+	padding: 20px;
+}
+
+.Image_IconButton {
+	vertical-align:middle;
+	margin:0px 0px 0px 20px;
+	width: 30px;
+	height: 30px;
+}
+
+.button {
+	background-color: #1a5089;
+	border: 3px solid CornflowerBlue;
+	border-radius: 8px;
+	color: white;
+	padding: 6px 24px 6px 24px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 24px;
+	cursor: pointer;
+	transition-duration: 0.15s;
+}
+.button:hover {
+	background-color: #FFCE10;
+	color: #D2691E;
+	border: 3px solid Beige;
+}
+
+ul.topnav {
+  font-family: "Roboto Condensed", serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1A5089;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #497AAF;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
