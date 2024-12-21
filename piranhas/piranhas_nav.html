@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Francesco Maisto - Web Games - Piranhas</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="../css/nav_style.css">
+	</head>
+	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<!--Navigation Bar -->
+		<ul class="topnav">
+			<li><a href="../candy_and_clyde/candy_and_clyde_nav.html">Candy and Clyde</a></li>
+			<li><a href="../gold_yard/gold_yard_nav.html">Gold Yard</a></li>
+			<li><a href="../pharaohs_tomb/pharaohs_tomb_nav.html">Pharaoh's Tomb</a></li>
+			<li><a class="active">Piranhas</a></li>
+			<li><a href="../acid_factory/acid_factory_nav.html">Acid Factory</a></li>
+			<li><a href="../alphattack/alphattack_nav.html">Alphattack</a></li>
+			<li><a href="../4444/4444_nav.html">4444</a></li>		
+			<li class="right"><a href="#about">About</a></li>
+		</ul>
+		<!-- Game Title -->
+		<div class="gameTitle" align=middle>PHARAOH'S TOMB</div>
+		<!-- SWF -->
+		<div id="container" align=middle></div>
+		<!-- Full Screen Button -->
+		<div id="button_container" class="fullScreenButton" align=middle>
+			<button class="button" onclick="openFullscreen()">2X<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="Full Screen"></button>
+		</div>
+		<script>					
+			window.RufflePlayer = window.RufflePlayer || {};
+			window.RufflePlayer.config = {
+					"autoplay": "on",
+					"contextMenu": "off",
+					"splashScreen": false,
+					"unmuteOverlay": "hidden"
+			}
+			
+			window.addEventListener("load", (event) => {
+					const ruffle = window.RufflePlayer.newest();
+					const player = ruffle.createPlayer();
+					const container = document.getElementById("container");
+					container.appendChild(player);
+					player.load("piranhas.swf");
+					player.style.width = "600px";
+					player.style.height = "500px";
+			});
+			
+			function openFullscreen() {
+				const player = document.querySelector("ruffle-embed, ruffle-object, ruffle-player");
+				player.style.width = "1200px";
+				player.style.height = "1000px";			
+			}						
+		</script>
+		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+	</body>
+</html>
