@@ -48,16 +48,16 @@ body {
 	margin: 24px;
 	cursor: pointer;
 	transition-duration: 0.15s;
-	box-shadow: 0 8px #333333;
+	box-shadow: 0 5px #333333;
 }
 .button:hover {
 	background-color: #497AAF;
 	border: 3px solid Beige;
-	box-shadow: 0 8px #555555;
+	box-shadow: 0 5px #555555;
 }
 
 .button:active {
-  box-shadow: 0 4px #555555;
+  box-shadow: 0 0px #555555;
   transform: translateY(4px);
 }
 
