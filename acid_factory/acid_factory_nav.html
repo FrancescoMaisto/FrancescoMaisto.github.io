@@ -25,7 +25,8 @@
 		<div id="container" align=middle></div>
 		<!-- Full Screen Button -->
 		<div id="button_container" class="fullScreenButton" align=middle>
-			<button class="button" onclick="openFullscreen()">2X<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="Full Screen"></button>
+			<button id="button1X" class="button" onclick="scale1X()">1X<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="1X"></button>
+			<button id="button2X" class="button" onclick="scale2X()">2X<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="2X"></button>
 		</div>
 		<script>					
 			window.RufflePlayer = window.RufflePlayer || {};
@@ -41,14 +42,18 @@
 				const container = document.getElementById("container");
 				container.appendChild(player);
 				player.load("acidfactory.swf");
+				scale1X();
+			});			
+			function scale1X() {
+				const player = document.querySelector("ruffle-embed, ruffle-object, ruffle-player");
 				player.style.width = "782px";
 				player.style.height = "501px";
-			});			
-			function openFullscreen() {
+			};
+			function scale2X() {
 				const player = document.querySelector("ruffle-embed, ruffle-object, ruffle-player");
 				player.style.width = "1564px";
 				player.style.height = "1002px";	
-			};						
+			};			
 		</script>
 		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	</body>
