@@ -34,8 +34,7 @@
 				"contextMenu": "off",
 				"splashScreen": false,
 				"unmuteOverlay": "hidden"
-			}
-			
+			};			
 			window.addEventListener("load", (event) => {
 				const ruffle = window.RufflePlayer.newest();
 				const player = ruffle.createPlayer();
@@ -44,12 +43,12 @@
 				player.load("acidfactory.swf");
 				player.style.width = "782px";
 				player.style.height = "501px";
-			});
-			
+			});			
 			function openFullscreen() {
-				window.RufflePlayer.style.width = "1564px";
-				window.RufflePlayer.style.height = "1002px";	
-			}						
+				const player = document.querySelector("ruffle-embed, ruffle-object, ruffle-player");
+				player.style.width = "1564px";
+				player.style.height = "1002px";	
+			};						
 		</script>
 		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	</body>
