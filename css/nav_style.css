@@ -7,7 +7,7 @@ body {
 // <weight>: Use a value from 100 to 900
 
 .roboto-condensed-navigation {
-  font-family: "Roboto Condensed", serif;
+  font-family: "Roboto", serif;
   font-optical-sizing: auto;
   font-weight: 2;
   font-style: normal;
@@ -21,7 +21,9 @@ body {
 
 .gameTitle {
 	font-family: "Press Start 2P", serif;
-	color: #ffce10;
+	font-size: 24px;
+	color: #FFCE10;
+	text-shadow: 1px 1px DarkRed;
 	padding: 20px;
 }
 
@@ -38,7 +40,7 @@ body {
 	border-radius: 8px;
 	color: white;
 	padding: 6px 24px 6px 24px;
-	font-family: "Roboto Condensed", serif;
+	font-family: "Roboto", serif;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -46,15 +48,21 @@ body {
 	margin: 24px;
 	cursor: pointer;
 	transition-duration: 0.15s;
+	box-shadow: 0 8px #333333;
 }
 .button:hover {
-	background-color: #FFCE10;
-	color: #D2691E;
+	background-color: #497AAF;
 	border: 3px solid Beige;
+	box-shadow: 0 8px #555555;
+}
+
+.button:active {
+  box-shadow: 0 4px #555555;
+  transform: translateY(4px);
 }
 
 ul.topnav {
-  font-family: "Roboto Condensed", serif;
+  font-family: "Roboto", serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -74,7 +82,12 @@ ul.topnav li a {
 
 ul.topnav li a:hover:not(.active) {background-color: #497AAF;}
 
-ul.topnav li a.active {background-color: #04AA6D;}
+ul.topnav li a:clicked:not(.active) {background-color: Green;}
+
+ul.topnav li a.active {
+	background-color: #FFCE10;
+	color: black;
+}
 
 ul.topnav li.right {float: right;}
 
