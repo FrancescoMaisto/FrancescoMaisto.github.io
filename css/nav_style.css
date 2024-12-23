@@ -3,8 +3,8 @@ body {
 	background-image: url('../images/bg_tetris_darker.png');
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+// uniquifier: Use a unique and descriptive class name
+// weight: Use a value from 100 to 900
 
 .roboto-condensed-navigation {
   font-family: "Roboto Condensed", serif;
@@ -81,8 +81,6 @@ ul.topnav li a {
 }
 
 ul.topnav li a:hover:not(.active) {background-color: #497AAF;}
-
-ul.topnav li a:clicked:not(.active) {background-color: Green;}
 
 ul.topnav li a.active {
 	background-color: #FFCE10;
