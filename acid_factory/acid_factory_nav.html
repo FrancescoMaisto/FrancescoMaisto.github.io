@@ -28,6 +28,7 @@
 		<div id="button_container" class="fullScreenButton" align=middle>
 			<button id="button1X" class="button" onclick="scale1X()">1X<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="1X"></button>
 			<button id="button2X" class="button" onclick="scale2X()">2X<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="2X"></button>
+			<button id="buttonFullScreen" class="button" onclick="openFullscreen()">Full Screen<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="2X"></button>
 		</div>
 		<script>					
 			window.RufflePlayer = window.RufflePlayer || {};
@@ -54,6 +55,9 @@
 				const player = document.querySelector("ruffle-embed, ruffle-object, ruffle-player");
 				player.style.width = "1564px";
 				player.style.height = "1002px";	
+			};
+			function openFullscreen() {
+				document.querySelector("ruffle-embed, ruffle-object, ruffle-player").enterFullscreen();			
 			};			
 		</script>
 		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
