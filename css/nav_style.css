@@ -7,7 +7,7 @@ body {
 // <weight>: Use a value from 100 to 900
 
 .roboto-condensed-navigation {
-  font-family: "Roboto", serif;
+  font-family: "Roboto Condensed", serif;
   font-optical-sizing: auto;
   font-weight: 2;
   font-style: normal;
@@ -62,7 +62,7 @@ body {
 }
 
 ul.topnav {
-  font-family: "Roboto", serif;
+  font-family: "Roboto Condensed", serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
