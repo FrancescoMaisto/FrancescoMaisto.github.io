@@ -105,3 +105,40 @@ ul.topnav li.right {float: right;}
   ul.topnav li.right, 
   ul.topnav li {float: none;}
 }
+
+.image-nav {
+    padding: 50px 0;
+}
+
+.image-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.image-nav ul li {
+    margin: 0 15px;
+}
+
+.image-nav ul li a {
+    width: 66%;
+    height: 66%;
+}
+
+.image-nav ul li a img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-nav img {
+	filter: brightness(0.7);
+	transition: filter 0.3s ease;
+}
+
+.image-nav ul li a:hover img {
+	filter: brightness(1.2);
+    transform: scale(1.2);
+}
