@@ -13,6 +13,18 @@ body {
   font-style: normal;
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 800
+
+.open-sans-navigation {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 .press-start-2p-regular {
   font-family: "Press Start 2P", serif;
   font-weight: 400;
@@ -40,7 +52,7 @@ body {
 	border-radius: 8px;
 	color: white;
 	padding: 6px 24px 6px 24px;
-	font-family: "Roboto", serif;
+	font-family: "Open Sans", serif;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -62,7 +74,7 @@ body {
 }
 
 ul.topnav {
-  font-family: "Roboto Condensed", serif;
+  font-family: "Open Sans", serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
