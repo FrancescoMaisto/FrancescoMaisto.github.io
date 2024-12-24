@@ -101,11 +101,6 @@ ul.topnav li a.active {
 
 ul.topnav li.right {float: right;}
 
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-
 .image-nav {
 	padding: 50px 0;
 }
@@ -166,4 +161,11 @@ ul.topnav li.right {float: right;}
 	visibility: visible;
 	opacity: 1;
 	top: 25px;
+}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  ul.image-nav li.right, 
+  ul.image-nav li {float: none;}
 }
