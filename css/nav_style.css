@@ -74,22 +74,22 @@ body {
 }
 
 ul.topnav {
-  font-family: "Open Sans", serif;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #1A5089;
+	font-family: "Open Sans", serif;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #1A5089;
 }
 
 ul.topnav li {float: left;}
 
 ul.topnav li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 }
 
 ul.topnav li a:hover:not(.active) {background-color: #497AAF;}
@@ -107,35 +107,35 @@ ul.topnav li.right {float: right;}
 }
 
 .image-nav {
-    padding: 50px 0;
+	padding: 50px 0;
 }
 
 .image-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
 }
 
 .image-nav ul li {
-    margin: 0 15px;
+	margin: 0 0.7%;
 }
 
 .image-nav ul li a {
-    width: 66%;
-    height: 66%;
+	width: 66%;
+	height: 66%;
 	align-items: center;
 	position: relative; /* Ensure the tooltip aligns with the image */
 }
 
 .image-nav ul li a img {
-    width: 100%;
-    height: auto;
+	width: 100%;
+	height: auto;
 	border: 2px solid Beige;
 	border-radius: 8px;
 	filter: brightness(0.7);
-    transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .image-nav img {
@@ -145,7 +145,7 @@ ul.topnav li.right {float: right;}
 .image-nav ul li a:hover img {
 	border: 2px solid White;
 	filter: brightness(1.1);
-    transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 .image-nav ul li .tooltip { 
