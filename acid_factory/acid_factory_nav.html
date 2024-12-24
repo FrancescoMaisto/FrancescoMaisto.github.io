@@ -88,7 +88,8 @@
 				const container = document.getElementById("container");
 				container.appendChild(player);
 				player.load("acidfactory.swf");
-				scale1X();
+				player.style.width = "782px";
+				player.style.height = "501px";
 			});
 			function openFullscreen() {
 				document.querySelector("ruffle-embed, ruffle-object, ruffle-player").enterFullscreen();			
