@@ -125,20 +125,45 @@ ul.topnav li.right {float: right;}
 .image-nav ul li a {
     width: 66%;
     height: 66%;
+	align-items: center;
+	position: relative; /* Ensure the tooltip aligns with the image */
 }
 
 .image-nav ul li a img {
     width: 100%;
     height: auto;
+	border: 2px solid Beige;
+	border-radius: 8px;
+	filter: brightness(0.7);
     transition: transform 0.3s ease;
 }
 
 .image-nav img {
-	filter: brightness(0.7);
 	transition: filter 0.3s ease;
 }
 
 .image-nav ul li a:hover img {
-	filter: brightness(1.2);
-    transform: scale(1.2);
+	border: 2px solid White;
+	filter: brightness(1.1);
+    transform: scale(1.1);
+}
+
+.image-nav ul li .tooltip { 
+	visibility: hidden;
+	font-family: "Open Sans", serif;
+	font-size: 18px;
+	color: #fff;
+	position: absolute;
+	opacity: 0;
+	top: 7px;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	transition: opacity 0.3s ease;
+	transition: top 0.4s ease;
+}
+
+.image-nav ul li:hover .tooltip {
+	visibility: visible;
+	opacity: 1;
+	top: 25px;
 }
