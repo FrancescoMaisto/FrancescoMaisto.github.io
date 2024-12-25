@@ -74,7 +74,6 @@ body {
 }
 
 ul.topnav {
-	font-family: "Open Sans", serif;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -82,7 +81,10 @@ ul.topnav {
 	background-color: #1A5089;
 }
 
-ul.topnav li {float: left;}
+ul.topnav li {
+	font-family: "Open Sans", serif;
+	float: right;
+}
 
 ul.topnav li a {
 	display: block;
@@ -92,17 +94,22 @@ ul.topnav li a {
 	text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {background-color: #497AAF;}
+ul.topnav li a:hover:not(.active) {
+	background-color: #497AAF;
+}
 
 ul.topnav li a.active {
 	background-color: #FFCE10;
 	color: black;
 }
 
-ul.topnav li.right {float: right;}
+ul.topnav li.logo {
+	float: left;
+	text-shadow: 2px 2px Black;
+}
 
 .image-nav {
-	padding: 50px 0;
+	padding: 50px 0px 100px;
 }
 
 .image-nav ul {
