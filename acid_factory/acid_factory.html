@@ -74,26 +74,27 @@
 				</li>		
 			</ul>
 		</nav>
-		<script>					
+		<script>
 			window.RufflePlayer = window.RufflePlayer || {};
 			window.RufflePlayer.config = {
 				"autoplay": "on",
 				"contextMenu": "off",
 				"splashScreen": false,
 				"unmuteOverlay": "hidden"
-			};			
+			};
 			window.addEventListener("load", (event) => {
 				const ruffle = window.RufflePlayer.newest();
 				const player = ruffle.createPlayer();
 				const container = document.getElementById("container");
 				container.appendChild(player);
+				player.className = "swf-container"
 				player.load("acidfactory.swf");
 				player.style.width = "782px";
 				player.style.height = "501px";
 			});
 			function openFullscreen() {
 				document.querySelector("ruffle-embed, ruffle-object, ruffle-player").enterFullscreen();			
-			};			
+			};
 		</script>
 		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	</body>

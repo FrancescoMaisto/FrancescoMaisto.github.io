@@ -23,7 +23,7 @@
 		<!-- Game Title -->
 		<div class="gameTitle" align=middle>CANDY &amp; CLYDE</div>
 		<!-- SWF -->
-		<div id="container" class="swf-container" align=middle></div>
+		<div id="container" align=middle></div>
 		<!-- Full Screen Button -->
 		<div id="button_container" class="fullScreenButton" align=middle>
 			<button class="button" onclick="openFullscreen()">Full Screen<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="Full Screen"></button>
@@ -89,6 +89,7 @@
 				const player = ruffle.createPlayer();
 				const container = document.getElementById("container");
 				container.appendChild(player);
+				player.className = "swf-container"
 				player.load("candy_and_clyde.swf");
 				player.style.width = "550px";
 				player.style.height = "400px";

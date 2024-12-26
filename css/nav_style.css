@@ -1,6 +1,8 @@
 body {
 	margin: 0;
 	background-image: url('../images/bg_tetris_light.gif');
+	background-blend-mode: multiply;
+	background-color: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
 }
 
 // uniquifier: Use a unique and descriptive class name
@@ -20,6 +22,10 @@ body {
 	color: #00AEEF;
 	text-shadow: 1px 1px White;
 	padding: 14px;
+}
+
+.swf-container {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 ul.topnav {
@@ -64,7 +70,7 @@ ul.topnav li.logo {
 }
 
 .image-nav {
-	background-color: Black;
+	background-color: rgba(0, 0, 0, 1);
 	border-top: 5px solid #00AEEF;
 	border-bottom: 5px solid #00AEEF;
 	padding: 30px 1% 40px;

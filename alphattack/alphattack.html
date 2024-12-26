@@ -88,6 +88,7 @@
 				const player = ruffle.createPlayer();
 				const container = document.getElementById("container");
 				container.appendChild(player);
+				player.className = "swf-container"
 				player.load("alphattack.swf");
                 player.style.width = "400px";
                 player.style.height = "460px";
