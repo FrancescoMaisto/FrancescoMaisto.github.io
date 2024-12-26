@@ -1,82 +1,73 @@
 body {
 	margin: 0;
-	background-image: url('../images/bg_tetris_darker.png');
+	background-image: url('../images/bg_tetris_light.gif');
 }
 
 // uniquifier: Use a unique and descriptive class name
 // weight: Use a value from 100 to 900
 
-.roboto-condensed-navigation {
-	font-family: "Roboto Condensed", serif;
-	font-optical-sizing: auto;
-	font-weight: 2;
-	font-style: normal;
-}
-
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 800
-
-.open-sans-navigation {
-  font-family: "Open Sans", serif;
+.exo-2-navigation {
+  font-family: "Exo 2", serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: <weight>;
   font-style: normal;
-  font-variation-settings: 
-    "wdth" 100;
-}
-
-.press-start-2p-regular {
-	font-family: "Press Start 2P", serif;
-	font-weight: 400;
-	font-style: normal;
 }
 
 .gameTitle {
-	font-family: "Press Start 2P", serif;
-	font-size: 24px;
-	color: #FFCE10;
-	text-shadow: 2px 2px DarkRed;
-	padding: 20px;
+	font-family: "Exo 2", serif;
+	font-size: 48px;
+	font-weight: bold;
+	color: #00AEEF;
+	text-shadow: 1px 1px White;
+	padding: 14px;
 }
 
 ul.topnav {
 	list-style-type: none;
-	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #1A5089;
+	box-shadow: 0px 5px #00AEEF;
+	background-color: black;
 }
 
 ul.topnav li {
-	font-family: "Open Sans", serif;
-	text-shadow: 1px 1px Black;
+	margin: 10px 0px 0px 0px;
+	font-family: "Exo 2", serif;
 	float: right;
 }
 
 ul.topnav li a {
 	display: block;
-	color: white;
+	border-radius: 6px 6px 0px 0px;
+	color: #CCCCCC;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 10px 16px;
+	margin: 0px 2px 0px 2px;
 	text-decoration: none;
 }
 
-ul.topnav li a:hover:not(.active) {
-	background-color: #497AAF;
+ul.topnav li:not(.logo) a:hover:not(.active) {
+	color: white;
+	background-color: #3B3B3B;
 }
 
 ul.topnav li a.active {
-	background-color: #FFCE10;
-	color: black;
+	background-color: #00AEEF;
+	color: white;
 	text-shadow: 0px 0px;
 }
 
 ul.topnav li.logo {
+	font-weight: bold;
+	transform: translate(0px, -5px);
 	float: left;
 }
 
 .image-nav {
-	padding: 40px 1% 60px;
+	background-color: Black;
+	border-top: 5px solid #00AEEF;
+	border-bottom: 5px solid #00AEEF;
+	padding: 30px 1% 40px;
 }
 
 .image-nav ul {
@@ -101,9 +92,9 @@ ul.topnav li.logo {
 .image-nav ul li a img {
 	width: 100%;
 	height: auto;
-	border: 2px solid Beige;
+	border: 3px solid DarkGray;
 	border-radius: 8px;
-	filter: brightness(0.7);
+	filter: brightness(0.8);
 	transition: transform 0.3s ease;
 }
 
@@ -112,16 +103,17 @@ ul.topnav li.logo {
 }
 
 .image-nav ul li a:hover img {
-	border: 2px solid White;
+	border: 3px solid White;
 	filter: brightness(1.1);
 	transform: scale(1.1);
 }
 
 .image-nav ul li .tooltip { 
 	visibility: hidden;
-	font-family: "Open Sans", serif;
+	font-family: "Exo 2", serif;
 	font-size: 18px;
-	color: #fff;
+	font-weight: bold;
+	color: #00AEEF;
 	position: absolute;
 	opacity: 0;
 	top: 7px;
@@ -154,7 +146,7 @@ ul.topnav li.logo {
 	border-radius: 8px;
 	color: white;
 	padding: 6px 24px 6px 24px;
-	font-family: "Open Sans", serif;
+	font-family: "Exo 2", serif;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
