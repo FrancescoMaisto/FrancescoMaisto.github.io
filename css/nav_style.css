@@ -58,6 +58,13 @@ ul.topnav li:not(.logo) a:hover:not(.active) {
 	background-color: #3B3B3B;
 }
 
+#gold_yard .gold_yard, #about .about, #contact .contact
+{
+	background-color: #00AEEF;
+	color: white;
+	text-shadow: 0px 0px;
+}
+
 ul.topnav li a.active {
 	background-color: #00AEEF;
 	color: white;
