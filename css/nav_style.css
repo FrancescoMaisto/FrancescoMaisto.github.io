@@ -64,11 +64,6 @@ ul.topnav li:not(.logo) a:hover {
 	color: white;
 }
 
-ul.topnav li a.active {
-	background-color: #00AEEF;
-	color: white;
-}
-
 ul.topnav li.logo {
 	font-weight: bold;
 	transform: translate(0px, -5px);
