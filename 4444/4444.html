@@ -5,90 +5,22 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">		
+		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">	
 		<link rel="stylesheet" href="../css/nav_style.css">
+		<script src="../js/embed-swf.js"></script>
 	</head>
-	<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-		<!--Navigation Bar -->
-		<ul class="topnav">
-			<li><a class="active">4444</a></li>
-			<li><a href="../alphattack/alphattack.html">Alphattack</a></li>			
-			<li><a href="../acid_factory/acid_factory.html">Acid Factory</a></li>			
-			<li><a href="../piranhas/piranhas.html">Piranhas</a></li>			
-			<li><a href="../pharaohs_tomb/pharaohs_tomb.html">Pharaoh's Tomb</a></li>
-			<li><a href="../gold_yard/gold_yard.html">Gold Yard</a></li>			
-			<li><a href="../candy_and_clyde/candy_and_clyde.html">Candy &amp; Clyde</a></li>			
-			<li class="logo"><a href="#about">FRANCESCO MAISTO - Web Games</a></li>
-		</ul>
+	<body id="4444" bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		<!--Top Navigation -->
+		<div w3-include-html="../includes/top_nav.html"></div>
 		<!-- Game Title -->
 		<div class="gameTitle" align=middle>4444</div>
 		<!-- SWF -->
 		<div id="container" align=middle></div>
-		<nav class="image-nav">
-			<ul>
-				<li>
-					<a href="../candy_and_clyde/candy_and_clyde.html">
-						<img src="../images/tn_candy_and_clyde.png" alt="Candy &amp; Clyde">
-						<span class="tooltip">Candy&nbsp;&amp;&nbsp;Clyde</span>
-					</a>
-				</li>
-				<li>
-					<a href="../gold_yard/gold_yard.html">
-						<img src="../images/tn_goldyard.png" alt="Gold Yard">					
-						<span class="tooltip">Gold&nbsp;Yard</span>
-					</a>
-				</li>
-				<li>
-					<a href="../pharaohs_tomb/pharaohs_tomb.html">
-						<img src="../images/tn_pharaohs_tomb.png" alt="Pharaoh's Tomb">
-						<span class="tooltip">Pharaoh's&nbsp;Tomb</span>
-					</a>
-				</li>
-				<li>
-					<a href="../piranhas/piranhas.html">
-						<img src="../images/tn_piranhas.png" alt="Piranhas">
-						<span class="tooltip">Piranhas</span>
-					</a>						
-				</li>
-				<li>
-					<a href="../acid_factory/acid_factory.html">
-						<img src="../images/tn_acid_factory.png" alt="Acid Factory">
-						<span class="tooltip">Acid&nbsp;Factory</span>
-					</a>
-				</li>
-				<li>
-					<a href="../alphattack/alphattack.html">
-						<img src="../images/tn_alphattack.png" alt="Alphattack">
-						<span class="tooltip">Alphattack</span>
-					</a>
-				</li>
-				<li>
-					<a href="../4444/4444.html">
-						<img src="../images/tn_4444.png" alt="4444">
-						<span class="tooltip">4444</span>
-					</a>
-				</li>		
-			</ul>
-		</nav>
-		<script>					
-			window.RufflePlayer = window.RufflePlayer || {};
-			window.RufflePlayer.config = {
-				"autoplay": "on",
-				"contextMenu": "off",
-				"splashScreen": false,
-				"unmuteOverlay": "hidden"
-			}
-			
-			window.addEventListener("load", (event) => {
-				const ruffle = window.RufflePlayer.newest();
-				const player = ruffle.createPlayer();
-				const container = document.getElementById("container");
-				container.appendChild(player);
-				player.className = "swf-container"
-				player.load("4444.swf");
-                player.style.width = "360px";
-                player.style.height = "480px";
-			});					
+		<!-- Bottom Navigation -->
+		<div w3-include-html="../includes/bottom_nav.html"></div>
+		<script>
+			embedSWF("4444.swf","360px","480px");
+			includeHTML();
 		</script>
 		<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 	</body>
