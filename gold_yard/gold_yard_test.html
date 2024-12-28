@@ -10,16 +10,15 @@
 		<script src="../js/embed-swf.js"></script>
 	</head>
 	<body id="gold_yard" bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
-		<!--Navigation Bar -->
+		<!--Top Navigation -->
 		<div w3-include-html="../includes/top_nav.html"></div>
 		<!-- Game Title -->
 		<div class="gameTitle" align=middle>GOLD YARD</div>
 		<!-- SWF -->
 		<div id="container" align=middle></div>
 		<!-- Full Screen Button -->
-		<div id="button_container" class="fullScreenButton" align=middle>
-			<button class="button" onclick="openFullscreen()">Full Screen<img class="Image_IconButton" src="../images/full-screen-icon-32x32.png" alt="Full Screen"></button>
-		</div>
+		<div w3-include-html="../includes/fullscreen_button.html" align=middle></div>
+		<!-- Bottom Navigation -->
 		<div w3-include-html="../includes/bottom_nav.html"></div>
 		<script>
 			embedSWF("gold-yard.swf","550px","410px");
