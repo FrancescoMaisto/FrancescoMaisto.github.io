@@ -1,3 +1,50 @@
+function setRuffle(bodyId) {
+	
+	let swfName;
+	let swfWidth;
+	let swfHeight;
+	
+	switch (bodyId) {
+	case "g_4444":
+		swfName = "4444.swf";
+		sfwWidth = "360px";
+		swfHeight = "480px";
+	break;
+	case "acid_factory":
+		swfName = "acidfactory.swf";
+		sfwWidth = "782px";
+		swfHeight = "501px";
+	break;
+	case "alphattack":
+		swfName = "alphattack.swf";
+		sfwWidth = "400px";
+		swfHeight = "460px";
+	break;
+	case "gold_yard":
+		swfName = "gold-yard.swf";
+		sfwWidth = "550px";
+		swfHeight = "410px";
+	break;
+	case "pharaohs_tomb":
+		swfName = "the_pharaohs_tomb_nohiscore.swf";
+		sfwWidth = "550px";
+		swfHeight = "410px";
+	break;
+	case "piranhas":
+		swfName = "piranhas.swf";
+		sfwWidth = "600px";
+		swfHeight = "500px";
+	break;
+	case "candy_and_clyde":
+		swfName = "candy_and_clyde.swf";
+		sfwWidth = "550px";
+		swfHeight = "400px";
+	}	
+	
+	embedSWF(swfName, swfWidth, swfHeight);
+	console.log(swfName);
+}
+
 function embedSWF(swfName, swfWidth, swfHeight) {
 	window.RufflePlayer = window.RufflePlayer || {};
 	window.RufflePlayer.config = {
