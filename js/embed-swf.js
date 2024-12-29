@@ -2,47 +2,55 @@ function setRuffle(bodyId) {
 	
 	let swfName;
 	let swfWidth;
-	let swfHeight;
+	let swfHeight
+	let gameTitle;
 	
 	switch (bodyId) {
 	case "g_4444":
+		gameTitle = "4444";
 		swfName = "4444.swf";
 		swfWidth = "360px";
 		swfHeight = "480px";
 	break;
 	case "acid_factory":
+		gameTitle = "ACID FACTORY";
 		swfName = "acidfactory.swf";
 		swfWidth = "782px";
 		swfHeight = "501px";
 	break;
 	case "alphattack":
+		gameTitle = "ALPHATTACK";
 		swfName = "alphattack.swf";
 		swfWidth = "400px";
 		swfHeight = "460px";
 	break;
 	case "gold_yard":
+		gameTitle = "GOLD YARD";
 		swfName = "gold-yard.swf";
 		swfWidth = "550px";
 		swfHeight = "410px";
 	break;
 	case "pharaohs_tomb":
+		gameTitle = "PHARAOH'S TOMB";
 		swfName = "the_pharaohs_tomb_nohiscore.swf";
 		swfWidth = "550px";
 		swfHeight = "410px";
 	break;
 	case "piranhas":
+		gameTitle = "PIRANAHAS";
 		swfName = "piranhas.swf";
 		swfWidth = "600px";
 		swfHeight = "500px";
 	break;
 	case "candy_and_clyde":
+		gameTitle = "CANDY &amp; CLYDE";
 		swfName = "candy_and_clyde.swf";
 		swfWidth = "550px";
 		swfHeight = "400px";
 	}	
 	
+	document.getElementById("gameTitle").innerHTML = gameTitle;
 	embedSWF(swfName, swfWidth, swfHeight);
-	console.log(swfName);
 }
 
 function embedSWF(swfName, swfWidth, swfHeight) {
