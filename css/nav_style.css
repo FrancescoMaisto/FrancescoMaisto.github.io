@@ -111,14 +111,14 @@ ul.topnav li.logo {
 
 .image-nav ul li a:hover img {
 	border: 3px solid White;
-	filter: brightness(1.1);
+	filter: brightness(1);
 	transform: scale(1.1);
 }
 
 #gold_yard .b_goldyard, #pharaohs_tomb .b_pharaohs, #piranhas .b_piranhas, #alphattack .b_alphattack, #acid_factory .b_acid_factory, #candy_and_clyde .b_candy, #g_4444 .b_4444
 {
 	border: 4px solid Orange;
-	filter: brightness(1.4);
+	filter: brightness(1.2);
 	transform: scale(1.1);
 }
 
@@ -134,7 +134,7 @@ ul.topnav li.logo {
 	left: 50%;
 	transform: translate(-50%, 0%);
 	transition: opacity 0.3s ease;
-	transition: top 0.5s ease;
+	transition: top 0.3s ease;
 }
 
 .image-nav ul li:hover .tooltip {
