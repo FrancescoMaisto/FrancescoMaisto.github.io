@@ -37,7 +37,7 @@ function setRuffle(bodyId) {
 		swfHeight = "410px";
 	break;
 	case "piranhas":
-		gameTitle = "PIRANAHAS";
+		gameTitle = "PIRANHAS";
 		swfName = "piranhas.swf";
 		swfWidth = "600px";
 		swfHeight = "500px";
