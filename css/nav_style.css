@@ -1,6 +1,6 @@
 :root {
     --theme-color: #00AEEF;  /* A nice blue */
-    --accent-color: #FF7C33; /* Orange for accents */
+    --accent-color: yellow; /* Orange for accents */
 }
 
 body {
