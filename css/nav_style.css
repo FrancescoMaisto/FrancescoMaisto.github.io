@@ -120,7 +120,7 @@ ul.topnav li.logo {
 	transform: scale(1.1);
 }
 
-#gold_yard .b_goldyard, #pharaohs_tomb .b_pharaohs, #piranhas .b_piranhas, #alphattack .b_alphattack, #acid_factory .b_acid_factory, #candy_and_clyde .b_candy, #g_4444 .b_4444
+#gold_yard .b_goldyard, #pharaohs_tomb .b_pharaohs, #piranhas .b_piranhas, #alphattack .b_alphattack, #acid_factory .b_acid, #candy_and_clyde .b_candy, #g_4444 .b_4444
 {
 	border: 4px solid var(--accent-color);
 	filter: brightness(1.2);
