@@ -106,7 +106,7 @@ ul.topnav li.logo {
 	height: auto;
 	border: 3px solid DarkGray;
 	border-radius: 8px;
-	filter: brightness(0.8);
+	filter: brightness(0.5);
 	transition: transform 0.3s ease;
 }
 
@@ -122,7 +122,7 @@ ul.topnav li.logo {
 
 #gold_yard .b_goldyard, #pharaohs_tomb .b_pharaohs, #piranhas .b_piranhas, #alphattack .b_alphattack, #acid_factory .b_acid, #candy_and_clyde .b_candy, #g_4444 .b_4444
 {
-	border: 4px solid var(--accent-color);
+	border: 4px solid var(--theme-color);
 	filter: brightness(1.2);
 	transform: scale(1.1);
 }
