@@ -50,7 +50,7 @@ function setRuffle(bodyId) {
 	}	
 	
 	document.getElementById("gameTitle").innerHTML = gameTitle;
-	document.getElementById("pageTitle").innerHTML = "Francesco Maisto - Web Games - " + gameTitle;
+	document.getElementById("pageTitle").innerHTML = gameTitle + " - Flash Game";
 	embedSWF(swfName, swfWidth, swfHeight);
 }
 
