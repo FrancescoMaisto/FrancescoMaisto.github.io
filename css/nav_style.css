@@ -125,6 +125,7 @@ ul.topnav li.logo {
 	border: 4px solid var(--theme-color);
 	filter: brightness(1.2);
 	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(0, 255, 255, 1);
 }
 
 .image-nav ul li .tooltip { 
