@@ -1,3 +1,4 @@
+const version = "0.001";
 let debug = false;
 let typingSpeed = 35; // Default value
 let storyData = {};
@@ -64,14 +65,12 @@ function addClickPageListener() {
 		displayFullParagraph(pObj.spanElement, pObj.paragraphHtml, pObj.keyword, activeParagraphId, pObj.paragraphType);
     });
 }
-
 function setChapterTitle(chapterNum) {
 	chapterName = storyData.story.chapterName;
 	chapterTitle = storyData.story.chapters[chapterNum].title;
 	chapterId = storyData.story.chapters[chapterNum].id;
-	document.getElementById("chapterTitle").innerHTML = "<b>" + chapterName + " " + (chapterId+1) + "</b> - " + chapterTitle;
+	document.getElementById("chapterTitle").innerHTML = "<b>" + chapterName + " " + (chapterId+1) + "</b><br>" + chapterTitle;
 }
-
 function setParagraph(paragraphId) {
 
 	// We populate paragraphsArray with the current paragraph id
@@ -82,7 +81,6 @@ function setParagraph(paragraphId) {
 		createParagraphContainer(item);
 	});
 }
-
 function createParagraphContainer(paragraphId) {
 	let spanElement = document.createElement("p");
 	spanElement.id = "paragraph" + paragraphId;
@@ -92,7 +90,6 @@ function typeText(pIndex) {
 	displayGameOver(false);
 	setParagraphText(pIndex);
 }
-
 function getParagraphObject(activeParagraphId) {
 	let spanElement = document.getElementById("paragraph" + activeParagraphId);
 
@@ -144,15 +141,12 @@ function setParagraphText(pIndex) {
 		return;
 	}
 }
-
 function parseTextForVariables(text) {
 	return text.replace(/{(\w+)}/g, (match, p1) => dynamicVars[p1] || match);
 }
-
 function getParagraphIndexById(chapterId, paragraphId) {
 	return storyData.story.chapters[chapterId].paragraphs.findIndex(paragraph => paragraph.id === paragraphId);
 }
-
 function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, paragraphType) {
 
 	let parIdLabel = "";
@@ -186,7 +180,6 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 	// Scroll to the bottom after the full paragraph has been displayed
 	window.scrollTo(0, document.body.scrollHeight);
 }
-
 function displayGameOver(gameOver) {
 	if (gameOver == true) {
 		gameOverElement.innerHTML = text[1];
@@ -194,12 +187,10 @@ function displayGameOver(gameOver) {
 		gameOverElement.innerHTML = "";
 	}
 }
-
 function highlightKeyword(paragraphId, paragraphText, keyword) {
 	const keywordRegex = new RegExp(`(${keyword})`, 'gi');
 	return paragraphText.replace(keywordRegex, '<span class="keyword" id="keyword' + paragraphId + '">$1</span>');
 }
-
 function activateKeyword(paragraphId) {
     let keywordId = "keyword" + paragraphId;
 	const keywordElement = document.getElementById(keywordId);
@@ -274,8 +265,6 @@ function selectWord(newWord, keywordElement, pIndex) {
 
 function createDropDown(keywordElement, pIndex) {
 	
-	// let selectedWord = keywordElement.innerHTML;
-
 	let parID = paragraphsArray[pIndex];
 	
 	// Create a <ul> element
@@ -312,8 +301,7 @@ function createDropDown(keywordElement, pIndex) {
 	// Append the <ul> element to the dropdown-list div
 	const dropdownList = document.getElementById('dropdown-list');
 	dropdownList.appendChild(ul);
-	positionDropdown(ul, keywordElement);
-	
+	positionDropdown(ul, keywordElement);	
 }
 function positionDropdown(dropdownElement, keywordElement) {
 	dropdownElement.style.left = keywordElement.offsetLeft + 'px';  /* Align the left position */

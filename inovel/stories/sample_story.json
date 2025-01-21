@@ -34,7 +34,7 @@
 						"choices": [
 							{
 								"text_body": "Ulfius",
-								"destination_id": 9,
+								"destination_id": 1,
 								"default": true,
 								"variables": [
 									{
@@ -136,7 +136,7 @@
 					{
 						"id": 4,
 						"type": "regular",
-						"text_body": "Prima di partire all'avventura Ludovico chiese al figlio se avesse bisogno di qualcosa.<p>«Padre, a dire il vero, avrei proprio bisogno di un'ampolla di ███████», rispose {characterName}.",
+						"text_body": "Prima di partire all'avventura Ludovico chiese al figlio se avesse bisogno di qualcosa.<p>«Padre, a dire il vero, avrei proprio bisogno di una di quelle vostre ampolle di ███████», rispose {characterName}.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -166,7 +166,7 @@
 					{
 						"id": 8,
 						"type": "regular",
-						"text_body": "Ludovico andò nel retrobottega e ne ritornò poco dopo con una piccola ampolla di cristallo piena di {item}. {characterName} la prese, salutò il padre e senza indugio si incamminò alla volta della basilica di San Petronio.<p>Vi arrivò che era quasi ███████.",
+						"text_body": "Ludovico andò nel retrobottega e ne ritornò poco dopo con una piccola ampolla piena di {item}. {characterName} la prese, salutò il padre e senza indugio si incamminò alla volta della basilica di San Petronio.<p>Vi arrivò che era quasi ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
