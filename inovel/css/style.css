@@ -47,7 +47,7 @@ body {
 }
 #chapterTitle {
 	font-family: "Cinzel Decorative", serif;
-	font-size: 38px;
+	font-size: 20px;
 	text-align: center;
 	color: #777777;
 }
@@ -93,7 +93,7 @@ p {
 }
 	.options li {
 		cursor: pointer; /* Show hand cursor on hover */
-		color: darkred;
+		color: #186ee5;
 		background-color: #ffffff;
 		font-family: "Libre Baskerville", serif;
 		font-size: 26px;
