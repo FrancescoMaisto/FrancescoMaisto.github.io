@@ -91,16 +91,17 @@ p {
 	border: 2px solid grey; /* outline */
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
-.options li {
-	cursor: pointer; /* Show hand cursor on hover */
-	color: teal;
-	background-color: #ffffff;
-	font-family: "Libre Baskerville", serif;
-	font-size: 28px;
-	border: 1px solid lightgrey; /* outline */
-	padding: 10px;
-}
+	.options li {
+		cursor: pointer; /* Show hand cursor on hover */
+		color: darkred;
+		background-color: #ffffff;
+		font-family: "Libre Baskerville", serif;
+		font-size: 26px;
+		/*font-weight: bold;*/
+		border: 1px solid lightgrey; /* outline */
+		padding: 10px;
+	}
 .options li:hover {
 	color: white;
-	background-color: #666666;
+	background-color: #222222;
 }

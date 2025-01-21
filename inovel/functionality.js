@@ -1,5 +1,5 @@
 let debug = false;
-let typingSpeed = 35;
+let typingSpeed = 35; // Default value
 let storyData = {};
 let chapterName;
 let chapterTitle;
@@ -8,6 +8,7 @@ let activeParagraphId;
 let paragraphsArray = [];
 let typingIntervalId;
 let dynamicVars = {};
+let text = [];
 
 // We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,17 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function init() {
 	typingSpeed = storyData.story.typingSpeed; // Typing speed in milliseconds
-
-	// We set language-specific words
-	let language = "ita"; // Default language
-	let text = [];
-	if (language == "ita") {
-		text[0] = "CAPITOLO";
-		text[1] = "Fine.";
-	} else if (language == "eng") {
-		text[0] = "CHAPTER";
-		text[1] = "The End.";
-	}
+	text[0] = storyData.story.chapterName;
+	text[1] = storyData.story.endString;
 
 	addResizeListener();
 	addClickPageListener();

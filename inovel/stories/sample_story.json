@@ -1,8 +1,8 @@
 {
 	"story": {
 		"storyTitle": "Sample Story",
-		"Author": "Francesco Maisto",
-		"PublishedOn": "2025-01-14",
+		"author": "Francesco Maisto",
+		"publishedOn": "2025-01-14",
 		"chapterName": "Capitolo",
 		"endString": "Fine.",
 		"typingSpeed": 35,
