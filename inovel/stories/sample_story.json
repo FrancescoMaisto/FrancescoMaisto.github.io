@@ -1,0 +1,240 @@
+{
+	"story": {
+		"storyTitle": "Sample Story",
+		"Author": "Francesco Maisto",
+		"PublishedOn": "2025-01-14",
+		"chapterName": "Capitolo",
+		"endString": "Fine.",
+		"typingSpeed": 35,
+		"variables": [
+			{
+				"name": "characterName",
+				"value": ""
+			},
+			{
+				"name": "item",
+				"value": ""
+			},
+			{
+				"name": "money",
+				"value": 100
+			}
+		],
+		"chapters": [
+			{
+				"id": 0,
+				"title": "Il Cavaliere Errante",
+				"type": "storyStart",
+				"paragraphs": [
+					{
+						"id": 0,
+						"type": "chapterStart",
+						"text_body": "Questa è la storia di un cavaliere errante nato e cresciuto nel borgo di San Gargano che per una serie di sciagurati eventi si ritrovò al servizio del Marchese di Pietra Alta. Il suo nome era ███████.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "Ulfius",
+								"destination_id": 9,
+								"default": true,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Ulfius"
+									}
+								]
+							},
+							{
+								"text_body": "Terenzio",
+								"destination_id": 1,
+								"default": false,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Terenzio"
+									}
+								]
+							},
+							{
+								"text_body": "Ermengardo",
+								"destination_id": 1,
+								"default": false,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Ermengardo"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 1,
+						"type": "regular",
+						"text_body": "{characterName} era di umili natali. La madre, Costanza, era una contadina, mentre il padre, Ludovico, era un ███████.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "fabbro",
+								"destination_id": 2,
+								"default": true
+							},
+							{
+								"text_body": "cerusico",
+								"destination_id": 4,
+								"default": false
+							}
+						]
+					},
+					{
+						"id": 2,
+						"type": "regular",
+						"text_body": "Prima di partire all'avventura Ludovico chiese al figlio se avesse bisogno di qualcosa.<p>«Padre, a dire il vero, avrei proprio bisogno di uno ███████ nuovo», rispose {characterName}.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "scudo",
+								"destination_id": 3,
+								"default": true,
+								"variables": [
+									{
+										"name": "item",
+										"value": "scudo"
+									}
+								]
+							},
+							{
+								"text_body": "spadone",
+								"destination_id": 3,
+								"default": false,
+								"variables": [
+									{
+										"name": "item",
+										"value": "spadone"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 3,
+						"type": "regular",
+						"text_body": "Ludovico andò nel retrobottega e ne ritornò poco dopo con uno {item} di gran pregio. {characterName} prese lo {item}, ringraziò il padre e senza perdere altro tempo si incamminò alla volta della basilica di San Petronio.<p>Vi arrivò che era quasi ███████.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "notte",
+								"destination_id": 7,
+								"default": true
+							},
+							{
+								"text_body": "l'alba",
+								"destination_id": 7,
+								"default": false
+							}
+						]
+					},
+					{
+						"id": 4,
+						"type": "regular",
+						"text_body": "Prima di partire all'avventura Ludovico chiese al figlio se avesse bisogno di qualcosa.<p>«Padre, a dire il vero, avrei proprio bisogno di un'ampolla di ███████», rispose {characterName}.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "acqua santa",
+								"destination_id": 8,
+								"default": true,
+								"variables": [
+									{
+										"name": "item",
+										"value": "acqua santa"
+									}
+								]
+							},
+							{
+								"text_body": "vino guaritore",
+								"destination_id": 8,
+								"default": false,
+								"variables": [
+									{
+										"name": "item",
+										"value": "vino guaritore"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 8,
+						"type": "regular",
+						"text_body": "Ludovico andò nel retrobottega e ne ritornò poco dopo con una piccola ampolla di cristallo piena di {item}. {characterName} la prese, salutò il padre e senza indugio si incamminò alla volta della basilica di San Petronio.<p>Vi arrivò che era quasi ███████.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "notte",
+								"destination_id": 7,
+								"default": true
+							},
+							{
+								"text_body": "l'alba",
+								"destination_id": 9,
+								"default": false
+							}
+						]
+					},
+					{
+						"id": 7,
+						"type": "regular",
+						"text_body": "Stava proprio esplorando la cripta di quella basilica quando, alla fine di uno stretto corridoio in pietra, arrivò in una piccola stanza con due grosse porte di legno.<p>La porta di sinistra aveva un bassorilievo raffigurante un teschio, mentre quella di destra era rinforzata da borchie di ferro battuto. {characterName} decise di aprire la porta di ███████.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "sinistra",
+								"destination_id": 6,
+								"default": true
+							},
+							{
+								"text_body": "destra",
+								"destination_id": 5,
+								"default": false
+							}
+						]
+					},
+					{
+						"id": 5,
+						"type": "storyEnd",
+						"text_body": "La porta si apri con un cigolio sinistro.",
+						"keyword": null,
+						"choices": []
+					},
+					{
+						"id": 6,
+						"type": "storyEnd",
+						"text_body": "Aprì senza indugio la porta col teschio. Al di là di essa, un'oscurità impenetrabile.<p>Una folata di vento gelido proveniente dall'interno gli sferzò il volto incappucciato e un attimo dopo fu investito da un nugolo di dardi da balestra. L'ultimo suo pensiero, mentre si accasciava sanguinante sul freddo pavimento della cripta, fu: «una dannata trappola!».",
+						"keyword": null,
+						"choices": []
+					},
+					{
+						"id": 9,
+						"type": "passThru",
+						"text_body": "Stava albeggiando",
+						"destination_id": 6
+					}
+				]
+			},
+			{
+				"id": 1,
+				"title": "The End",
+				"type": "storyEnd",
+				"paragraphs": [
+					{
+						"id": 0,
+						"text_body": "You reach the village and find safety.",
+						"keyword": "village",
+						"choices": [],
+						"type": "ChapterEnd"
+					}
+				]
+			}
+		]
+	}
+}

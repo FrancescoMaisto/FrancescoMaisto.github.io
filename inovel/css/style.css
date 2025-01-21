@@ -33,9 +33,22 @@
 	font-weight: 900;
 	font-style: normal;
 }
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: #dddddd;
+	margin-top: 5%;
+	margin-bottom: 15%;
+	margin-right: 5%;
+	margin-left: 5%;
+	height: 100%;
+}
 #chapterTitle {
 	font-family: "Cinzel Decorative", serif;
 	font-size: 38px;
+	text-align: center;
 	color: #777777;
 }
 p {
@@ -44,15 +57,18 @@ p {
     color: #222222;
     line-height: 1.6;
 }
+#debug {
+	font-size: 13px;
+	color: white;
+	background-color: #dd3333;
+	line-height: 2;
+}
+
 #text-placeholder {
 	cursor: default;
 }
 #game-over {
 	font-weight: bold;
-}
-body {
-	background-color: #dddddd;
-	margin: 5%;
 }
 .keyword {
 	cursor: pointer;
@@ -66,7 +82,6 @@ body {
 	position: relative;
 	font-weight: bold;
 }
-
 .options {
 	list-style-type: none;
 	padding-left: 0; /* Remove default padding */
