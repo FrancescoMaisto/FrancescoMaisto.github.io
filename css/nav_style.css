@@ -158,7 +158,7 @@ ul.topnav li.logo {
 }
 
 .button {
-	background-color: #a51c1c;
+	background-color: #ea1313;
 	border: 3px solid #d87420;
 	border-radius: 8px;
 	color: white;
@@ -174,8 +174,8 @@ ul.topnav li.logo {
 	box-shadow: 0 5px #333333;
 }
 .button:hover {
-	background-color: #497AAF;
-	border: 3px solid Beige;
+	background-color: #cbd915;
+	border: 3px solid white;
 	box-shadow: 0 5px #555555;
 }
 
