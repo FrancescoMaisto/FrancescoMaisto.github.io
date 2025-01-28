@@ -10,9 +10,6 @@ body {
 	background-color: rgba(0, 0, 0, 0); /* Adjust the opacity as needed */
 }
 
-// uniquifier: Use a unique and descriptive class name
-// weight: Use a value from 100 to 900
-
 .exo-2-navigation {
   font-family: "Exo 2", serif;
   font-optical-sizing: auto;
@@ -161,8 +158,8 @@ ul.topnav li.logo {
 }
 
 .button {
-	background-color: #1a5089;
-	border: 3px solid CornflowerBlue;
+	background-color: #a51c1c;
+	border: 3px solid #d87420;
 	border-radius: 8px;
 	color: white;
 	padding: 6px 24px 6px 24px;
