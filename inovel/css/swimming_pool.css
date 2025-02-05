@@ -1,7 +1,6 @@
-.special-elite-regular {
-	font-family: "Special Elite", serif;
-	font-weight: 400;
-	font-style: normal;
+:root {
+	--accent-color: #dd3333; /* A muted red */
+	--hover-color: yellow; /* Orange */
 }
 .libre-baskerville-regular {
 	font-family: "Libre Baskerville", serif;
@@ -39,29 +38,40 @@ html {
 
 body {
 	background-color: #dddddd;
+	background-image: url('../images/02/background.png');
 	margin-top: 5%;
 	margin-bottom: 15%;
 	margin-right: 5%;
 	margin-left: 5%;
 	height: 100%;
 }
+
 #chapterTitle {
 	font-family: "Cinzel Decorative", serif;
 	font-size: 20px;
 	text-align: center;
-	color: #777777;
+	color: lightgreen;
 }
 p {
-    font-family: "Libre Baskerville", serif;
-    font-size: 26px;
-    color: #222222;
-    line-height: 1.6;
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	color: white;
+	text-shadow: 1px 1px 3px rgba(8, 67, 100, 1);
+	line-height: 1.6;
+}
+img {
+	display: block;     /* Removes any space below the image */
+	margin: 0 auto; 	/* Horizontally center the image inside the container */
 }
 #debug {
 	font-size: 13px;
 	color: white;
-	background-color: #dd3333;
+	background-color: var(--accent-color);
 	line-height: 2;
+}
+
+#debug:hover {
+	background-color: #850e0e;
 }
 
 #text-placeholder {
@@ -73,11 +83,17 @@ p {
 .keyword {
 	cursor: pointer;
 	color: #090909;
-	border-bottom: 4px solid #ff0000;
+	border-bottom: 4px solid var(--accent-color);
 	position: relative;
+	transition: background .5s;
 	background-color: white;
 	/* filter: blur(2px); */
 }
+
+.keyword:hover {
+	background-color: var(--hover-color);
+}
+
 .keyword-off {
 	position: relative;
 	font-weight: bold;
@@ -93,7 +109,7 @@ p {
 }
 	.options li {
 		cursor: pointer; /* Show hand cursor on hover */
-		color: #186ee5;
+		color: var(--accent-color);
 		background-color: #ffffff;
 		font-family: "Libre Baskerville", serif;
 		font-size: 26px;

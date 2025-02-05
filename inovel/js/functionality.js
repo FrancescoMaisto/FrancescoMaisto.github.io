@@ -1,4 +1,4 @@
-const version = "0.001";
+﻿const version = "0.001";
 
 // SETTINGS
 let debug = false;
@@ -51,14 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function init() {
 	typingSpeed = storyData.story.typingSpeed; // Typing speed in milliseconds
+
 	text[0] = storyData.story.chapterString;
 	text[1] = storyData.story.endString;
-
+	text[2] = storyData.story.inventoryString;
+	text[3] = "L'inventario è vuoto."
 
 	setStylesheet();
 	addResizeListener();
 	addClickPageListener();
 	setDynamicVars();
+	createNavbar();
 	container = document.getElementById("text-placeholder");
 	gameOverElement = document.getElementById("game-over");
 	setChapterTitle(0);
@@ -204,7 +207,7 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 function displayImage(spanElement, paragraphImage) {
 	// Create an img element dynamically
 	const img = document.createElement('img'); // Create an <img> element
-	const p = document.createElement('p'); // Create an <p> element
+	const p = document.createElement('p'); // Create an <p> element, we will use this as a spacer
 
 	img.src = 'stories/01/' + paragraphImage; // Set the image source
 	img.alt = 'Dynamically Added Image'; // Optionally set an alt attribute
@@ -285,6 +288,7 @@ function selectWord(newWord, keywordElement, pIndex) {
 					if (variable.type == VAR_TYPE.INVENTORY_ITEM) {
 						if (variable.operation == VAR_OPERATION.ADD) {
 							inventory.push(variable.value);
+							updateInventory();
 						} else if (variable.operation == VAR_OPERATION.REMOVE) {
                             let index = inventory.indexOf(variable.value);
 							if (index > -1) {
@@ -327,7 +331,6 @@ function selectWord(newWord, keywordElement, pIndex) {
 
 	newParagraph(destinationId);
 }
-
 function playerHasItemInInventory(itemName) {
 	return inventory.includes(itemName);
 }

@@ -1,0 +1,29 @@
+							{
+								"text_body": "cadaveri in putrefazione",
+								destinations[
+									{ 
+										"condition": "hasItem",
+										"item": "spadone",
+										"destination_id": 10
+									},
+									{ 
+										"condition": "none";
+										"destination_id": 10
+									}
+								]
+								conditionalDestinations[
+									{ 
+										"condition": "variable",
+										"operator": "higherThan", "lowerThan", "equalTo", "isNot"
+										"value": 50,
+										"destination_id": 12
+									}
+								]
+								"destination_id": 10,
+								"default": true
+							},
+
+
+displayFullParagraph (153)
+activateKeyword (218)
+createDropDown (297)

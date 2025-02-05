@@ -6,15 +6,19 @@
 		"stylesheet": "default.css",
 		"chapterString": "CAPITOLO",
 		"endString": "Fine.",
+		"inventoryString": "Inventario",
 		"typingSpeed": 35,
+		"hasInventory":  true,
 		"variables": [
 			{
 				"type": "characterName",
-				"value": ""
+				"value": "",
+				"displayInUI": false
 			},
 			{
 				"type": "money",
-				"value": 100
+				"value": 100,
+				"displayInUI":  true
 			}
 		],
 		"chapters": [
