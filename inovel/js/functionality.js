@@ -1,7 +1,8 @@
-﻿const version = "0.001";
+﻿const version = "0.002";
 
 // SETTINGS
-let debug = false;
+// YED (Editor grafico per diagrammi) https://www.yworks.com/products/yed
+let debug = true;
 let displayImages = false;
 let typingSpeed = 35;
 
@@ -16,21 +17,6 @@ let typingIntervalId;
 let dynamicVars = {}; // a collection of unique objects (i.e. characterName, money, health, etc.)
 let inventory = []; // An array containing all inventory items
 let text = [];
-
-class PAR_TYPE {
-	static CHAPTER_START = "chapterStart";
-	static REGULAR = "regular";
-	static PASS_THRU = "passThru";
-	static STORY_END = "storyEnd";
-	static CHAPTER_END = "chapterEnd";
-}
-class VAR_TYPE {
-	static INVENTORY_ITEM = "inventoryItem";
-}
-class VAR_OPERATION {
-	static ADD = "add";
-	static REMOVE = "remove";
-}
 
 // We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
@@ -75,7 +61,7 @@ function setDynamicVars() {
 	});
 }
 function setStylesheet() {
-	// We fetch the stylesheet from the JSON file and apply it to the document
+	// We fetch the stylesheet filename from the JSON file and apply it to the document
 	let stylesheet;
 	if (storyData.story.stylesheet) {
 		stylesheet = 'css/' + storyData.story.stylesheet;
@@ -121,7 +107,7 @@ function getParagraphObject(activeParagraphId) {
 
 	let paragraphText = parseTextForVariables(storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].text_body);
 	let keyword = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].keyword;
-	let paragraphHtml = highlightKeyword(activeParagraphId, paragraphText, keyword);
+	let paragraphHtml = highlightKeyword(paragraphText, keyword);
 	let paragraphType = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].type;
 	let image = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].image;
 
@@ -168,22 +154,14 @@ function setParagraphText(pIndex) {
 function parseTextForVariables(text) {
 	return text.replace(/{(\w+)}/g, (match, p1) => dynamicVars[p1] || match);
 }
-// finds the index of a paragraph in the JSON file's paragraphs array, based on the paragraphID
+
 function getParagraphIndexById(chapterId, paragraphId) {
+	// finds the index of a paragraph in the JSON file's paragraphs array, based on the paragraphID
 	return storyData.story.chapters[chapterId].paragraphs.findIndex(paragraph => paragraph.id === paragraphId);
 }
 function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, paragraphType, paragraphImage) {
-	let debugInfo = "";
 	let pIndex = paragraphsArray.length - 1;
-	if (debug) {
-		debugInfo = "<p id='debug'>&nbsp;&nbsp;Array Index: <strong>" +
-			pIndex + "</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Paragraph ID: <strong>" +
-			paragraphId + "</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Array: <strong>" +
-			paragraphsArray + "</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Length: <strong>" +
-			paragraphsArray.length + "</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Type: <strong>" +
-			paragraphType + "</strong>&nbsp;&nbsp;|&nbsp;&nbsp;Image: <strong>" +
-			paragraphImage + "</strong></p > ";
-	}
+	let debugInfo = getDebugInfo(pIndex, paragraphId, paragraphType, paragraphImage);
 	spanElement.innerHTML = debugInfo + paragraphHtml + " ";
 	if (keyword) {
 		activateKeyword(pIndex);
@@ -192,7 +170,8 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 		displayGameOver(true);
 	} else if (paragraphType == PAR_TYPE.PASS_THRU) {
         // 1. Fetch the destination_id from the current paragraph
-		let destinationId = storyData.story.chapters[chapterId].paragraphs[activeParagraphId].destination_id;
+		let item = storyData.story.chapters[chapterId].paragraphs[activeParagraphId];
+		destinationId = getDestination(item);
 		newParagraph(destinationId);
 	};
 
@@ -201,8 +180,25 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 		displayImage(spanElement, paragraphImage);
 	}
 
-	// Scroll to the bottom after the full paragraph has been displayed
+	// Scroll to the bottom of the page after the full paragraph has been displayed
 	window.scrollTo(0, document.body.scrollHeight);
+}
+function getDebugInfo(pIndex, paragraphId, paragraphType, paragraphImage) {
+	let debugInfo = "";
+	if (debug) {
+		const separator = "&nbsp;&nbsp;|&nbsp;&nbsp;";
+		if (!paragraphImage) {
+			paragraphImage = "<i>none</i>";
+		}
+		debugInfo = "<p id='debug'>&nbsp;&nbsp;Array Index: <strong>" +
+			pIndex + "</strong>" + separator + "Paragraph ID: <strong>" +
+			paragraphId + "</strong>" + separator + "Array: <strong>" +
+			paragraphsArray + "</strong>" + separator + "Length: <strong>" +
+			paragraphsArray.length + "</strong>" + separator + "Type: <strong>" +
+			paragraphType + "</strong>" + separator + "Image: <strong>" +
+			paragraphImage + "</strong></p > ";
+	}
+	return debugInfo;
 }
 function displayImage(spanElement, paragraphImage) {
 	// Create an img element dynamically
@@ -235,12 +231,11 @@ function displayGameOver(gameOver) {
 		gameOverElement.innerHTML = "";
 	}
 }
-function highlightKeyword(paragraphId, paragraphText, keyword) {
+function highlightKeyword(paragraphText, keyword) {
 	const keywordRegex = new RegExp(`(${keyword})`, 'gi');
 	const pIndex = paragraphsArray.length - 1;
-	//	return paragraphText.replace(keywordRegex, '<span class="keyword" id="keyword' + paragraphId + '">$1</span>');
-	return paragraphText.replace(keywordRegex, '<span class="keyword" id="keyword' + pIndex + '">$1</span>');
-
+	const newParagraphText = paragraphText.replace(keywordRegex, '<span class="keyword" id="keyword' + pIndex + '">$1</span>');
+	return newParagraphText;
 }
 function activateKeyword(pIndex) {
     let keywordId = "keyword" + pIndex;
@@ -298,22 +293,8 @@ function selectWord(newWord, keywordElement, pIndex) {
 					}
 				});
 			}
-
-			// Set the default destination
-			destinationId = item.destination_id;
-
-			// Then we check if there's any conditional destination for this given choice
-			if (item.conditionalDestinations) {
-				item.conditionalDestinations.forEach(i => {
-					console.log(`conditionalDestinations: ${i}`);
-					if (i.condition == "hasItem" && playerHasItemInInventory(i.value)) {
-						// set a different destination
-						destinationId = i.destination_id;
-					}
-				});
-			} else {
-				console.log(`This choice has no conditional destinations: ${item.text_body}`);
-			}
+			// Get the paragraph destination
+			destinationId = getDestination(item);
 		}	
 	});
 
@@ -330,6 +311,20 @@ function selectWord(newWord, keywordElement, pIndex) {
 	paragraphsArray.splice(pIndex + 1);
 
 	newParagraph(destinationId);
+}
+function getDestination(item) {
+	let destination = item.destination_id; // we set the default destination
+	if (item.conditionalDestinations) {
+		item.conditionalDestinations.forEach(i => {
+			if (i.condition == CONDITIONS.HAS_ITEM && playerHasItemInInventory(i.value)) {
+				// set a conditional destination
+				console.log(`Conditional destination: ${i.destination_id}`);
+				destination = i.destination_id;
+			}
+		});
+
+	} 
+	return destination;	
 }
 function playerHasItemInInventory(itemName) {
 	return inventory.includes(itemName);

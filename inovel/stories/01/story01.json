@@ -40,6 +40,11 @@
 									{
 										"type": "characterName",
 										"value": "Ulfius"
+									},
+									{
+										"type": "inventoryItem",
+										"value": "corazza",
+										"operation": "add"
 									}
 								]
 							},
@@ -326,7 +331,7 @@
 					{
 						"id": 17,
 						"type": "regular",
-						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa.<p>Sulla parete opposta alla porta c'era una grossa balestra montata su un supporto di legno.<p>Al centro della stanza, invece, troneggiava una rozza bara di legno lunga più di due metri.<p>{characterName} decise allora di ███████.",
+						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa. Le pareti erano affrescate con scene di caccia. Nonostante gli affreschi fossero ormai danneggiati dal tempo e dall'umidità, era ancora possibile distinguere le sagome di uomini e animali.<p>Dall'altra parte della stanza c'era una grossa balestra montata su un supporto di legno.<p>Al centro della stanza, invece, troneggiava una rozza bara di legno lunga più di due metri.<p>{characterName} decise allora di ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -382,7 +387,7 @@
 					{
 						"id": 20,
 						"type": "regular",
-						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa.<p>Sulla parete opposta alla porta c'era il supporto di legno che prima sosteneva una grossa balestra.<p>Al centro della stanza troneggiava una grossa bara di legno lunga più di due metri.<p>{characterName} decise allora di ███████.",
+						"text_body": "Sulla parete opposta alla porta c'era il supporto di legno che prima sosteneva una grossa balestra.<p>Al centro della stanza troneggiava una grossa bara di legno lunga più di due metri.<p>{characterName} decise allora di ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -433,6 +438,12 @@
 								"destination_id": 20
 							}
 						]
+					},
+					{
+						"id": 23,
+						"type": "passThru",
+						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa. Le pareti erano affrescate con scene di caccia. Nonostante gli affreschi fossero ormai danneggiati dal tempo e dall'umidità, era ancora possibile distinguere le sagome di uomini a cavllo e animali selvatici.",
+						"destination_id": 7
 					}
 				]
 			},

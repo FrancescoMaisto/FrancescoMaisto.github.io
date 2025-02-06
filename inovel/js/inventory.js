@@ -2,11 +2,12 @@
     let invDiv = document.getElementById('inventory');
     let inventoryButton = document.getElementById('inventory-button');
     let guiElement = document.getElementById('gui');
+    let navBar = document.getElementById('navbar');
     let position;
 
     if (invDiv) {
         console.log("Removing inventory");
-        position = -15;
+        position = navBar.offsetHeight - guiElement.offsetHeight;
         inventoryButton.textContent = text[2] + " ▲";
         inventoryButton.className = "";        
         setTimeout(() => {
@@ -14,7 +15,7 @@
         }, 500); // Short delay to ensure the transition is applied
     } else {
         console.log("Showing inventory");
-        position = 50;
+        position = navBar.offsetHeight + guiElement.offsetHeight;
         inventoryButton.textContent = text[2] + " ▼";
         inventoryButton.className = "active";
         invDiv = document.createElement('div');
@@ -33,6 +34,7 @@
     guiElement.style.top = position + 'px';
 }
 function updateInventory() {
+    // Updates the inventory content in case the inventory is visible when the player picks up an item
     let invDiv = document.getElementById('inventory');
     if (invDiv) {
         invDiv.remove();
@@ -43,7 +45,7 @@ function updateInventory() {
     }
 }
 function populateInventory(invDiv) {
-    // Iterate over the inventory array to create the items elements
+    // Iterates over the inventory array to create the items elements
     inventory.forEach(item => {
         const i = document.createElement('a');
         i.className = 'inventory-item';
