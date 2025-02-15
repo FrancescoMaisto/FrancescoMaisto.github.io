@@ -8,7 +8,7 @@
 		"endString": "Fine.",
 		"inventoryName": "",
 		"inventoryEmpty": "",
-		"typingSpeed": 40,
+		"typingSpeed": 45,
 		"hasInventory": false,
 		"variables": [
 			{
@@ -21,13 +21,13 @@
 		"chapters": [
 			{
 				"id": 0,
-				"title": "Il Vecchio Pozzo",
+				"title": "La vita è breve",
 				"type": "storyStart",
 				"paragraphs": [
 					{
 						"id": 0,
 						"type": "chapterStart",
-						"text_body": "Nacqui in una gelida notte d'inverno, i miei flebili vagiti riecheggiavano tra le fredde mura di pietra del maniero. Ero la figlia del Marchese di Corvonero — un uomo di formidabile potere, vincolato dal dovere a mantenere il proprio onore. Fui concepita in una relazione proibita con la sua giovane domestica, la mia stessa esistenza era uno scandalo, testimonianza vivente del suo tradimento. Fin dal mio primo respiro, era chiaro che sarei stata scartata come simbolo della sua infedeltà. In quel buio e fatale momento, compresi che il mio destino sarebbe dipeso dalla natura della sua anima — un'anima che era inequivocabilmente ███████.",
+						"text_body": "Nacqui in una gelida notte d'inverno, i miei flebili vagiti riecheggiavano tra le fredde mura di pietra del maniero. Ero la figlia del Marchese di Corvonero — un uomo il cui formidabile potere dipendeva dal proprio onore quanto dalla propria reputazione. Fui concepita in una relazione proibita con la sua giovane domestica, Agnese, mia madre. La mia stessa esistenza era uno scandalo, testimonianza vivente del suo tradimento. Fin dal mio primo respiro, fu chiaro che sarei stata scartata come simbolo della sua infedeltà. In quel buio e fatale momento, compresi che il mio destino sarebbe dipeso dalla natura della sua anima — un'anima che era inequivocabilmente ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -85,7 +85,7 @@
 					{
 						"id": 2,
 						"type": "regular",
-						"text_body": "Mio padre, benché uomo di grande potere, era visibilmente agitato. La sua voce, di solito ferma e stentorea, vacillò per un attimo mentre pronunciava l'ordine che mi avrebbe condannata all'oblio — uno dei suoi servi avrebbe dovuto gettarmi nel vecchio pozzo del maniero. Riuscivo ancora a sentire la straziante preghiera di mia madre riecheggiare nei freddi corridoi della magione — una supplica di ███████ che, tra un singhiozzo e l'altro, portava in sè il peso dell'incertezza e una fragile possibilità.",
+						"text_body": "Mio padre, benché uomo di grande potere, era visibilmente agitato. La sua voce, di solito ferma e risoluta, vacillò per un momento mentre pronunciava l'ordine che mi avrebbe condannata all'oblio — uno dei suoi servi avrebbe dovuto gettarmi nel vecchio pozzo del maniero. Riuscivo ancora a sentire la straziante preghiera di mia madre riecheggiare nei freddi corridoi della magione — una supplica di ███████ che, tra un singhiozzo e l'altro, portava in sè il peso dell'incertezza e una fragile possibilità.",
 						"keyword": "███████",
 						"choices": [
 							{
