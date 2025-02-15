@@ -176,13 +176,13 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 		newParagraph(destinationId);
 	};
 
+	// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
+	window.scrollTo(0, document.body.scrollHeight);
+
 	// IMAGE: if the paragraph has an image, display the image
 	if (paragraphImage && displayImages) {
 		displayImage(spanElement, paragraphImage);
 	}
-
-	// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
-	window.scrollTo(0, document.body.scrollHeight);
 }
 function getDebugInfo(pIndex, paragraphId, paragraphType, paragraphImage) {
 	let debugInfo = "";
