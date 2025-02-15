@@ -1,0 +1,146 @@
+{
+	"story": {
+		"title": "Il Marchese di Corvonero",
+		"author": "Francesco Maisto",
+		"date": "2025-01-14",
+		"stylesheet": "default.css",
+		"chapterString": "STORIA",
+		"endString": "Fine.",
+		"inventoryName": "",
+		"inventoryEmpty": "",
+		"typingSpeed": 35,
+		"hasInventory": false,
+		"variables": [
+			{
+				"type": "string",
+				"name": "ending",
+				"value": "",
+				"displayInUI": false
+			}
+		],
+		"chapters": [
+			{
+				"id": 0,
+				"title": "Abbandonata dal Destino",
+				"type": "storyStart",
+				"paragraphs": [
+					{
+						"id": 0,
+						"type": "chapterStart",
+						"text_body": "Nacqui in una gelida notte d'inverno, i miei flebili vagiti riecheggiavano contro le fredde mura di pietra del maniero. Ero la figlia del Marchese di Corvonero — un uomo di formidabile potere, vincolato dal dovere a mantenere il proprio onore. Fui concepita in una relazione proibita con la sua giovane domestica, la mia stessa esistenza era uno scandalo, testimonianza vivente del suo tradimento. Fin dal mio primo respiro, era chiaro che sarei stata scartata come simbolo della sua infedeltà. In quel buio e fatale momento, compresi che il mio destino sarebbe dipeso dalla natura della sua anima — un'anima che era inequivocabilmente ███████.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "spietata",
+								"destination_id": 1
+							},
+							{
+								"text_body": "tormentata",
+								"destination_id": 2
+							}
+						]
+					},
+					{
+						"id": 1,
+						"type": "regular",
+						"text_body": "Mio padre, mosso da una fredda e inflessibile risolutezza, ordinò senza il minimo accenno di pietà che mi si facesse sparire. Le sue parole, sferzanti come il vento invernale, non lasciavano spazio alla compassione, nè alla speranza. Il cupo ordine fu affidato a un servo leale, i cui occhi tradivano un conflitto interiore mentre si preparava a eseguire il suo terribile dovere — sbarazzarsi di me gettandomi nel pozzo del maniero. Ricordo il momento in cui si avvicinò — il suo volto celava un'espressione ███████ che presagiva un destino inevitabile.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "stoica",
+								"destination_id": 3,
+								"variables": [
+									{
+										"name": "ending",
+										"value": "1: 'Un Dovere Crudele e Inesorabile'",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "angosciata",
+								"destination_id": 4,
+								"variables": [
+									{
+										"name": "ending",
+										"value": "2: 'Un Addio con una Promessa'",
+										"operation": "set"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 3,
+						"type": "passThru",
+						"text_body": "Lo sguardo del servo non ammetteva dissenso. Senza alcuna traccia di empatia, eseguì l'ordine del Marchese, gettandomi nelle profondità dell'antico pozzo. Mentre l'oscurità si chiudeva su di me e l'acqua gelida mi inghiottiva, compresi con una chiarezza spettrale che non mi era mai stato concesso nemmeno un nome.",
+						"image": "02/images/01_01.webp",
+						"destination_id": 7
+					},
+					{
+						"id": 4,
+						"type": "passThru",
+						"text_body": "Lo sguardo del servo tradiva un dolore ben più profondo di quello richiesto dal suo dovere. In quel momento straziante, mentre eseguiva a malincuore l'ordine, sentii una forza misteriosa agitarsi intorno a me — una promessa silenziosa che, anche mentre la mia fragile vita stava svanendo nelle gelide profondità del pozzo, la mia anima un giorno avrebbe albergato in un altro neonato. In quell’ultimo istante intriso di disperazione e speranza, nonostante non avessi neanche un nome, sentii dentro di me la flebile possibilità di una nuova vita.",
+						"image": "02/images/01_04_2.webp",
+						"destination_id": 7
+					},
+					{
+						"id": 2,
+						"type": "regular",
+						"text_body": "Mio padre, benché uomo di grande potere, era visibilmente tormentato dai suoi rimorsi. Il suo cuore in conflitto esitò mentre pronunciava l'ordine che mi avrebbe condannata all'oblio — dovevo essere gettata nel pozzo da uno dei suoi servi. Riuscivo ancora a sentire la sommessa preghiera di mia madre riecheggiare nei freddi corridoi del maniero — una litania di ███████ che portava in sè il peso dell'incertezza e una fragile possibilità.",
+						"keyword": "███████",
+						"choices": [
+							{
+								"text_body": "speranza",
+								"destination_id": 5,
+								"variables": [
+									{
+										"name": "ending",
+										"value": "3: 'Un Barlume di Vita tra le Tenebre'",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "sconforto",
+								"destination_id": 6,
+								"variables": [
+									{
+										"name": "ending",
+										"value": "4: 'L'Abisso del Dolore'",
+										"operation": "set"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 5,
+						"type": "passThru",
+						"text_body": "Mentre venivo calata nell'antico pozzo, un calore inaspettato mi avvolse. Sfuggendo al gelo del destino, mani invisibili mi sollevarono dal baratro, risparmiandomi da morte certa. Contro ogni previsione, fui salvata e mi fu concessa una possibilità di vivere — una possibilità per ricevere finalmente un nome.",
+						"image": "02/images/01_03.webp",
+						"destination_id": 7
+					},
+					{
+						"id": 6,
+						"type": "passThru",
+						"text_body": "La mia caduta fu segnata dalla soffocante disperazione dell'addio di mia madre — un lamento senza speranza che preannunciava l'inevitabilità dell'oblio. L'implacabile oscurità del pozzo mi consumò interamente e, mentre sprofondavo nell'abbraccio delle sue fredde acque, sentii la mia fragile vita sfuggirmi di mano. La mia esistenza cancellata senza aver mai conosciuto il conforto di un vero nome.",
+						"image": "02/images/01_02.webp",
+						"destination_id": 7
+					},
+					{
+						"id": 7,
+						"type": "passThru",
+						"text_body": "<strong>Fine.</strong>",
+						"destination_id": 8
+					},
+					{
+						"id": 8,
+						"type": "regular",
+						"text_body": "<span id='highlight_word'><strong>Finale {ending}</strong>. Prova a cambiare le scelte precedenti per vedere altri finali.</span>"
+					}
+				]
+			}
+		]
+	}
+}

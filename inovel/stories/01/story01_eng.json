@@ -4,11 +4,12 @@
 		"author": "Francesco Maisto",
 		"date": "2025-01-14",
 		"stylesheet": "default.css",
-		"chapterString": "CAPITOLO",
-		"endString": "Fine.",
-		"inventoryString": "Inventario",
+		"chapterString": "CHAPTER",
+		"endString": "The End.",
+		"inventoryName": "Inventory",
+		"inventoryEmpty": "The inventory is empty",
 		"typingSpeed": 35,
-		"hasInventory":  true,
+		"hasInventory": true,
 		"variables": [
 			{
 				"type": "string",
@@ -17,54 +18,78 @@
 				"displayInUI": false
 			},
 			{
+				"type": "string",
+				"name": "disease",
+				"value": "",
+				"displayInUI": false
+			},
+			{
 				"type": "number",
 				"name": "money",
-				"displayName": "Denari",
+				"displayName": "Coins :",
 				"value": 0,
+				"displayInUI": true
+			},
+			{
+				"type": "string",
+				"name": "time",
+				"displayName": "Calendar :",
+				"value": "Day 1, 10:30 AM",
 				"displayInUI": true
 			}
 		],
 		"chapters": [
 			{
 				"id": 0,
-				"title": "La reliquia di Sant'Eufebio",
+				"title": "The Marquis of Ravenclaw",
 				"type": "storyStart",
 				"paragraphs": [
 					{
 						"id": 0,
 						"type": "chapterStart",
-						"text_body": "Questa è la storia di un cavaliere errante nato e cresciuto nel borgo di San Gargano che per una serie di sciagurati eventi si ritrovò al servizio del subdolo Marchese di Corvonero. Il suo nome era ███████.",
+						"text_body": "This is the story of a knight errant born and raised in the village of Saint Garganus who, through a series of unfortunate events, found himself in the service of the devious Marquis of Ravenclaw. His name was Sir ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
-								"text_body": "Ulfius il caparbio",
+								"text_body": "Reginald Crumblepot",
 								"destination_id": 24,
 								"variables": [
 									{
 										"name": "characterName",
-										"value": "Ulfius",
+										"value": "Reginald",
 										"operation": "set"
 									}
 								]
 							},
 							{
-								"text_body": "Guiscardo Spaccalegna",
+								"text_body": "Bartholomew Grubstone",
 								"destination_id": 24,
 								"variables": [
 									{
 										"name": "characterName",
-										"value": "Guiscardo",
+										"value": "Bartholomew",
 										"operation": "set"
 									}
 								]
 							},
 							{
-								"text_body": "Teofrasto da Norcia",
+								"text_body": "Percival Ticklebottom",
 								"destination_id": 24,
 								"variables": [
 									{
 										"name": "characterName",
-										"value": "Teofrasto",
+										"value": "Percival",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "Sir Thaddeus Puddleduck",
+								"destination_id": 24,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Thaddeus",
 										"operation": "set"
 									}
 								]
@@ -74,16 +99,16 @@
 					{
 						"id": 1,
 						"type": "regular",
-						"text_body": "{characterName} era di umili natali. La madre, Costanza, era una contadina, mentre il padre, Ludovico, era un ███████.",
+						"text_body": "{characterName} was of humble birth. His mother, Costanza, was a peasant, while his father, Lodovico, was ███████.",
 						"keyword": "███████",
 						"image": "images/01_01.jpeg",
 						"choices": [
 							{
-								"text_body": "fabbro",
+								"text_body": "a blacksmith",
 								"destination_id": 2
 							},
 							{
-								"text_body": "cerusico",
+								"text_body": "an apothecary",
 								"destination_id": 4
 							}
 						]
@@ -91,27 +116,27 @@
 					{
 						"id": 2,
 						"type": "regular",
-						"text_body": "Prima di partire all'avventura Ludovico chiese al figlio se avesse bisogno di qualcosa.<p>«Padre, a dire il vero, avrei proprio bisogno di una ███████ nuova», rispose {characterName}.",
+						"text_body": "Before setting off on his quest, Lodovico asked his son if he needed anything.<p>«Father, to tell the truth, I could really use a new ███████», {characterName} replied.",
 						"keyword": "███████",
 						"choices": [
 							{
-								"text_body": "corazza",
+								"text_body": "suit of armor",
 								"destination_id": 3,
 								"variables": [
 									{
 										"type": "inventoryItem",
-										"value": "corazza",
+										"value": "suit of armor",
 										"operation": "add"
 									}
 								]
 							},
 							{
-								"text_body": "spada",
+								"text_body": "sword",
 								"destination_id": 3,
 								"variables": [
 									{
 										"type": "inventoryItem",
-										"value": "spada",
+										"value": "sword",
 										"operation": "add"
 									}
 								]
@@ -121,15 +146,15 @@
 					{
 						"id": 3,
 						"type": "regular",
-						"text_body": "Ludovico andò nel retrobottega e ne ritornò poco dopo con una {inventoryItem} di gran pregio. {characterName} la prese, ringraziò il padre e senza perdere altro tempo si mise in cammino alla volta della basilica di Sant'Eufebio.<p>Vi arrivò che era quasi ███████.",
+						"text_body": "Lodovico went into the back room and returned shortly after with a very valuable {inventoryItem}. {characterName} took it, thanked his father and without wasting any more time set out for Sant'Eufebio's church.<p>He arrived there almost at ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
-								"text_body": "mezzanotte",
+								"text_body": "midnight",
 								"destination_id": 10
 							},
 							{
-								"text_body": "l'alba",
+								"text_body": "dawn",
 								"destination_id": 9
 							}
 						]
@@ -137,27 +162,27 @@
 					{
 						"id": 4,
 						"type": "regular",
-						"text_body": "Prima di partire all'avventura Ludovico chiese al figlio se avesse bisogno di qualcosa.<p>«Padre, a dire il vero, avrei proprio bisogno di una di quelle vostre ampolle di ███████», rispose {characterName}.",
+						"text_body": "Before setting off on his quest, Lodovico asked his son if he needed anything.<p>«Father, to tell the truth, I could really use one of those ███████ flasks of yours.», replied {characterName}.",
 						"keyword": "███████",
 						"choices": [
 							{
-								"text_body": "acqua santa",
+								"text_body": "holy water",
 								"destination_id": 8,
 								"variables": [
 									{
 										"type": "inventoryItem",
-										"value": "acqua santa",
+										"value": "holy water",
 										"operation": "add"
 									}
 								]
 							},
 							{
-								"text_body": "vino guaritore",
+								"text_body": "healing wine",
 								"destination_id": 8,
 								"variables": [
 									{
 										"type": "inventoryItem",
-										"value": "vino guaritore",
+										"value": "healing wine",
 										"operation": "add"
 									}
 								]
@@ -167,7 +192,7 @@
 					{
 						"id": 8,
 						"type": "regular",
-						"text_body": "Ludovico andò nel retrobottega e ne ritornò poco dopo con una piccola ampolla di {inventoryItem}. {characterName} la prese, salutò il padre e senza indugio si incamminò alla volta della basilica di Sant'Eufebio.<p>Vi arrivò che era quasi ███████.",
+						"text_body": "Lodovico went into the back room and returned shortly after with a small flask of {inventoryItem}. {characterName} took it, thanked his father and without wasting any more time set out for Sant'Eufebio's church.<p>He arrived there almost at ███████.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -233,7 +258,7 @@
 					{
 						"id": 10,
 						"type": "passThru",
-						"text_body": "Nonostante la crescente oscurità la luna era al primo quarto e l'antica basilica, illuminata da quella pallida luce, si stagliava spettrale contro l'erba scura della vallata.",
+						"text_body": "Despite the growing darkness, the moon was in its first quarter, and the ancient basilica, illuminated by that pale light, stood out ghostly against the dark grass expanse of the valley.",
 						"destination_id": 7
 					},
 					{
@@ -453,33 +478,58 @@
 					{
 						"id": 23,
 						"type": "passThru",
-						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa. Le pareti erano affrescate con scene di caccia. Nonostante gli affreschi fossero ormai danneggiati dal tempo e dall'umidità, era ancora possibile distinguere le sagome di uomini a cavllo e animali selvatici.",
+						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa. Le pareti erano affrescate con scene di caccia. Nonostante gli affreschi fossero ormai danneggiati dal tempo e dall'umidità, era ancora possibile distinguere le sagome di uomini a cavallo e animali selvatici.",
 						"destination_id": 7
 					},
 					{
 						"id": 24,
 						"type": "regular",
-						"text_body": "Un giorno il Marchese convocò {characterName} al suo maniero per assegnargli un incarico: ritrovare l'antico reliquiario di Sant'Eufebio, che si diceva fosse nascosto nelle catacombe della basilica omonima. Il Marchese era infatti affetto da tempo da una grave forma di ███████ che lo teneva a letto per gran parte del giorno. La leggenda narrava che la polvere delle ossa del santo, mischiata in certe dosi con acqua santa e sali di mercurio, fosse in grado di guarire ogni malanno.",
+						"text_body": "On a sad morning of a cloudy day of March the Marquis summoned {characterName} to his manor to give him a task: he was to find the ancient reliquary of Saint Euphebius, which was said to be hidden in the catacombs of the eponymous church.<p>Legend had it that the dust of the saint's bones, mixed in certain doses with holy water and mercury salts, was able to cure any ailment.<p>The Marquis had in fact been suffering from a serious form of ███████ for some time, which kept him in bed for most of the day.",
 						"keyword": "███████",
 						"choices": [
 							{
-								"text_body": "tubercolosi",
-								"destination_id": 25
+								"text_body": "tubercolosis",
+								"destination_id": 25,
+								"variables": [
+									{
+										"name": "disease",
+										"value": "tubercolosis",
+										"operation": "set"
+									}
+								]
 							},
 							{
-								"text_body": "sifilide",
-								"destination_id": 25
+								"text_body": "syphilis",
+								"destination_id": 25,
+								"variables": [
+									{
+										"name": "disease",
+										"value": "syphilis",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "housemaid's knee",
+								"destination_id": 25,
+								"variables": [
+									{
+										"name": "disease",
+										"value": "housemaid's knee",
+										"operation": "set"
+									}
+								]
 							}
 						]
 					},
 					{
 						"id": 25,
 						"type": "regular",
-						"text_body": "«{characterName} portami il reliquario di Sant'Eufebio ti ricompenserò con 500 denari.» disse il Marchese. «Ecco, prendi questi ███████, considerali un anticipo per le spese di viaggio. Il resto lo avrai quando mi avrai consegnato il reliquiario»",
+						"text_body": "«Bring me the <span id='highlight_word'>reliquary of Saint Euphebius</span> and I will reward you with 500 coins.» said the Marquis. «Here, take these ███████, consider them an advance for the travel expenses. You will get the remainder of your reward when you have delivered the reliquary to me.»",
 						"keyword": "███████",
 						"choices": [
 							{
-								"text_body": "50 denari",
+								"text_body": "50 coins",
 								"destination_id": 26,
 								"variables": [
 									{
@@ -490,7 +540,7 @@
 								]
 							},
 							{
-								"text_body": "100 denari",
+								"text_body": "100 coins",
 								"destination_id": 26,
 								"variables": [
 									{
@@ -505,19 +555,8 @@
 					{
 						"id": 26,
 						"type": "passThru",
-						"text_body": "{characterName} prese i {money} denari, e con un profondo inchino si accomiatò dal Marchese.",
-						"destination_id": 1,
-						"choices": [
-							{
-								"variables": [
-									{
-										"type": "inventoryItem",
-										"value": "mazza ferrata",
-										"operation": "add"
-									}
-								]
-							}
-						]
+						"text_body": "{characterName} took the <span id='highlight_word'>coins</span>, and with a deep bow took leave of the Marquis.",
+						"destination_id": 1
 					},
 					{
 						"id": 27,

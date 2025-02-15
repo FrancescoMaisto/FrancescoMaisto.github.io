@@ -1,9 +1,9 @@
-﻿const version = "0.002";
+﻿const version = "0.003";
 
 // SETTINGS
 // YED (Editor grafico per diagrammi) https://www.yworks.com/products/yed
-let debug = true;
-let displayImages = false;
+let debug = false;
+let displayImages = true;
 let typingSpeed = 35;
 
 // VARS
@@ -14,13 +14,11 @@ let chapterId;
 let activeParagraphId;
 let paragraphsArray = [];
 let typingIntervalId;
-let dynamicVars = {}; // a collection of unique objects (i.e. characterName, money, health, etc.)
-let inventory = []; // An array containing all inventory items
 let text = [];
 
 // We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
-	fetch('stories/01/story01.json')
+	fetch('stories/02/story02_ita.json')
 		.then(response => {
 			if (!response.ok) {
 				throw new Error('Network response was not ok ' + response.statusText);
@@ -40,8 +38,8 @@ function init() {
 
 	text[0] = storyData.story.chapterString;
 	text[1] = storyData.story.endString;
-	text[2] = storyData.story.inventoryString;
-	text[3] = "L'inventario è vuoto."
+	text[2] = storyData.story.inventoryName;
+	text[3] = storyData.story.inventoryEmpty;
 
 	setStylesheet();
 	addResizeListener();
@@ -53,13 +51,7 @@ function init() {
 	setChapterTitle(0);
 	newParagraph(0);
 }
-function setDynamicVars() {
-	// Cycle through the variables array to create an object of unique dynamic variables
-	let variables = storyData.story.variables;
-	variables.forEach(item => {
-		dynamicVars[item.type] = item.value;
-	});
-}
+
 function setStylesheet() {
 	// We fetch the stylesheet filename from the JSON file and apply it to the document
 	let stylesheet;
@@ -163,24 +155,33 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 	let pIndex = paragraphsArray.length - 1;
 	let debugInfo = getDebugInfo(pIndex, paragraphId, paragraphType, paragraphImage);
 	spanElement.innerHTML = debugInfo + paragraphHtml + " ";
+    // Activate the keyword if it exists
 	if (keyword) {
 		activateKeyword(pIndex);
 	};
-	if (paragraphType == PAR_TYPE.STORY_END) {
+	if (paragraphType === PAR_TYPE.STORY_END) {
+        // GAME OVER: if the paragraph type is "story_end", display the game over message
 		displayGameOver(true);
-	} else if (paragraphType == PAR_TYPE.PASS_THRU) {
-        // 1. Fetch the destination_id from the current paragraph
-		let item = storyData.story.chapters[chapterId].paragraphs[activeParagraphId];
+	} else if (paragraphType === PAR_TYPE.PASS_THRU) {
+        // DESTINATION ID: determine the destination_id from the current paragraph
+		let item = storyData.story.chapters[chapterId].paragraphs[getParagraphIndexById(chapterId, activeParagraphId)];
 		destinationId = getDestination(item);
+		// a PASS_THRU paragraph may have variables set in the choices array, in which case the choices array only has one element (choice 0)
+		if (item.choices) {
+			setVariables(item.choices[0]);
+		} else {
+			undoArray.push([]);
+			pushEmptyUndoEntry(paragraphsArray.length);
+		}
 		newParagraph(destinationId);
 	};
 
-	// If the paragraph has an image, display the image
+	// IMAGE: if the paragraph has an image, display the image
 	if (paragraphImage && displayImages) {
 		displayImage(spanElement, paragraphImage);
 	}
 
-	// Scroll to the bottom of the page after the full paragraph has been displayed
+	// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
 	window.scrollTo(0, document.body.scrollHeight);
 }
 function getDebugInfo(pIndex, paragraphId, paragraphType, paragraphImage) {
@@ -205,7 +206,7 @@ function displayImage(spanElement, paragraphImage) {
 	const img = document.createElement('img'); // Create an <img> element
 	const p = document.createElement('p'); // Create an <p> element, we will use this as a spacer
 
-	img.src = 'stories/01/' + paragraphImage; // Set the image source
+	img.src = 'stories/' + paragraphImage; // Set the image source
 	img.alt = 'Dynamically Added Image'; // Optionally set an alt attribute
 
 	// Append the image to the container
@@ -255,46 +256,30 @@ function activateKeyword(pIndex) {
 		}
 	});
 }
-function selectWord(newWord, keywordElement, pIndex) {
-	keywordElement.innerHTML = newWord;
+function selectWord(chosenWord, keywordElement, pIndex) {
+	keywordElement.innerHTML = chosenWord;
 	clearInterval(typingIntervalId);
 
-    // Remove the options' drop-down list
+    // Remove the options' list
 	const dropDown = document.getElementById('options');
 	if (dropDown) { 
 		dropDown.remove();
 	}
 
-	// 0. Cycle through the choices to find the destination_id
-	// 0.1 We retrieve the index of the paragraph in the JSON file, based on the paragraphID
+	// 1.3 Undo steps
+	undoVariables(pIndex);
+
+    // 0. Cycle through the choices to find the destination_id and set variables
+	// First, we retrieve the index of the paragraph in the JSON file, based on the paragraphID
 	let pIndexInJSON = getParagraphIndexById(chapterId, paragraphsArray[pIndex]);
 	let choices = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].choices;
 	let destinationId;
-	choices.forEach(item => {
-		if (item.text_body === newWord) {
-
-			// We set dynamic variables and inventory items
-			let variables = item.variables;
-			if (variables) {
-				variables.forEach(variable => {
-					dynamicVars[variable.type] = variable.value;
-
-					// Add/remove items from the inventory
-					if (variable.type == VAR_TYPE.INVENTORY_ITEM) {
-						if (variable.operation == VAR_OPERATION.ADD) {
-							inventory.push(variable.value);
-							updateInventory();
-						} else if (variable.operation == VAR_OPERATION.REMOVE) {
-                            let index = inventory.indexOf(variable.value);
-							if (index > -1) {
-								inventory.splice(index, 1);
-							}
-						}
-					}
-				});
-			}
+	choices.forEach(choice => {
+		if (choice.text_body === chosenWord) {
+            // We set variables and inventory items
+            setVariables(choice);
 			// Get the paragraph destination
-			destinationId = getDestination(item);
+			destinationId = getDestination(choice);
 		}	
 	});
 
@@ -307,16 +292,17 @@ function selectWord(newWord, keywordElement, pIndex) {
 		}
 	}	
 
-	// 1.2 Remove all elements in paragraphsArray after arrayIndex
-	paragraphsArray.splice(pIndex + 1);
+	// 1.2 Remove all elements in paragraphsArray after the index
+	paragraphsArray.length = pIndex + 1;
 
 	newParagraph(destinationId);
 }
-function getDestination(item) {
-	let destination = item.destination_id; // we set the default destination
-	if (item.conditionalDestinations) {
-		item.conditionalDestinations.forEach(i => {
-			if (i.condition == CONDITIONS.HAS_ITEM && playerHasItemInInventory(i.value)) {
+
+function getDestination(choice) {
+	let destination = choice.destination_id; // we set the default destination
+	if (choice.conditionalDestinations) {
+		choice.conditionalDestinations.forEach(i => {
+			if (i.condition === CONDITIONS.HAS_ITEM && playerHasItemInInventory(i.value)) {
 				// set a conditional destination
 				console.log(`Conditional destination: ${i.destination_id}`);
 				destination = i.destination_id;
@@ -326,14 +312,11 @@ function getDestination(item) {
 	} 
 	return destination;	
 }
-function playerHasItemInInventory(itemName) {
-	return inventory.includes(itemName);
-}
 function newParagraph(id) {
-	// 2. Add the new paragraphId (the new destination) to the paragraphsArray
+	// 1. Add the new paragraphId (the new destination) to the paragraphsArray
 	paragraphsArray.push(id);
 
-	// 2.1  Create a new paragraph container
+	// 2.  Create a new paragraph container
 	createParagraphContainer(paragraphsArray.length-1);
 
 	// 3.  Type the new paragraph on screen
