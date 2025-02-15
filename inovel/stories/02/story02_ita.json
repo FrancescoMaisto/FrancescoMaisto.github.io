@@ -79,13 +79,13 @@
 					{
 						"id": 4,
 						"type": "storyEnd",
-						"text_body": "Lo sguardo del servo tradiva un dolore ben più profondo di quello richiesto dal suo dovere. In quel momento straziante, mentre eseguiva a malincuore l'ordine, sentii una forza misteriosa agitarsi intorno a me — una promessa silenziosa che, anche mentre la mia fragile vita stava svanendo nelle gelide profondità del pozzo, la mia anima un giorno avrebbe albergato in un altro neonato. In quell’ultimo istante intriso di disperazione e speranza, nonostante non avessi neanche un nome, sentii dentro di me la flebile possibilità di una nuova vita.",
+						"text_body": "Lo sguardo del servo tradiva un dolore ben più profondo di quello richiesto dal suo dovere. In quel momento straziante, mentre eseguiva a malincuore l'ordine ricevuto, sentii una forza misteriosa agitarsi intorno a me — una promessa silenziosa che, anche mentre la mia fragile vita stava svanendo nelle gelide profondità del pozzo, la mia anima un giorno avrebbe albergato in un altro neonato. In quell’ultimo istante intriso di disperazione e speranza, nonostante non avessi neanche un nome, sentii dentro di me la flebile possibilità di una nuova esistenza.",
 						"image": "02/images/01_04_2.webp"
 					},
 					{
 						"id": 2,
 						"type": "regular",
-						"text_body": "Mio padre, benché uomo di grande potere, era visibilmente tormentato dai suoi rimorsi. Il suo cuore in conflitto esitò mentre pronunciava l'ordine che mi avrebbe condannata all'oblio — uno dei suoi servi avrebbe dovuto gettarmi nel vecchio pozzo del maniero. Riuscivo ancora a sentire la sommessa preghiera di mia madre riecheggiare nei freddi corridoi della magione — una litania di ███████ che portava in sè il peso dell'incertezza e una fragile possibilità.",
+						"text_body": "Mio padre, benché uomo di grande potere, era visibilmente agitato. La sua voce, di solito ferma e stentorea, vacillò per un attimo mentre pronunciava l'ordine che mi avrebbe condannata all'oblio — uno dei suoi servi avrebbe dovuto gettarmi nel vecchio pozzo del maniero. Riuscivo ancora a sentire la straziante preghiera di mia madre riecheggiare nei freddi corridoi della magione — una supplica di ███████ che, tra un singhiozzo e l'altro, portava in sè il peso dell'incertezza e una fragile possibilità.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -121,7 +121,7 @@
 					{
 						"id": 6,
 						"type": "storyEnd",
-						"text_body": "La mia caduta fu segnata dalla soffocante disperazione dell'addio di mia madre — un lamento senza speranza che preannunciava l'inevitabilità dell'oblio. L'implacabile oscurità del pozzo mi consumò interamente e, mentre sprofondavo nell'abbraccio delle sue fredde acque, sentii la mia fragile vita sfuggirmi di mano. La mia esistenza cancellata senza aver mai conosciuto il conforto di un vero nome.",
+						"text_body": "La mia caduta fu segnata dalla soffocante disperazione dell'addio di mia madre — un lamento senza speranza che preannunciava l'inevitabilità dell'oblio. L'implacabile oscurità del pozzo mi consumò interamente e, mentre sprofondavo nell'abbraccio delle sue acque gelide, sentii la mia fragile vita sfuggirmi di mano. La mia esistenza cancellata senza aver mai conosciuto il conforto di un vero nome.",
 						"image": "02/images/01_02.webp"
 					},
 					{
