@@ -15,6 +15,7 @@
 - [X] Ability to change numeric variables
 - [X] Conditional destinations based on whether the player has a certain item (i.e. a key)
 - [X] Make sure each Undo Array entry is an array of objects, as opposed to a single object per entry.
+- [ ] Each paragraph should have an extra property that dictates whether the paragraph is typed letter by letter or shown immediately.
 
 - [ ] Conditional destinations based on numeric variables (<,>, =)
 - [ ] Conditional destinations based on whether the player has visited a certain paragraph

@@ -22,8 +22,8 @@ body {
 	height: 100%;
 }
 #content {
-	margin-right: 3%;
-	margin-left: 3%;
+	margin-right: 5%;
+	margin-left: 5%;
 }
 #chapterTitle {
 	font-family: "Lacquer", serif;
@@ -75,17 +75,6 @@ img {
 .keyword-off {
 	position: relative;
 	font-weight: bold;
-}
-
-#highlight_word {
-	display: inline-block;
-	border-radius: 6px;
-	border: 1px solid #444;
-	text-align: center;
-	background-color: lightyellow;
-	color: var(--color-red);
-	font-size: 18px;
-	padding: 16px;
 }
 .options {
 	list-style-type: none;

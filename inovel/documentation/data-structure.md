@@ -15,7 +15,7 @@ A _Story_ has the following properties:
 | **chapterName** | _string_ | A string used for the chapter name. |
 | **endString** | _string_ | A string used for the end of the Story. |
 | **inventoryString** | _string_ | a string used for the name of the Inventory (i.e. backpack) |
-| **typingSpeed** | _int_ | the default time interval between each typed letter in milliseconds (i.e. 35) |
+| **typingSpeed** | _int_ | the default time interval between each typed letter in milliseconds (i.e. 35). If typing speed is 0 or lower, paragraphs are displayed immediately.|
 | **hasInventory** | _boolean_ | Whether or not the Story has an Inventory |
 | **variables** | _object_ | An array of objects where each object represents a Story's variable. This is used to declare all the variables needed in the Story. |
 | **chapters** | _array_ | An array of objects where each object represents a Chapter of the Story. |
@@ -89,18 +89,12 @@ Example:
 Paragraphs are the building blocks of an Interactive Novel. 
 Paragraphs can have the following properties:
 
-| Property | Data Type | Description |
-| --- | --- | --- |
-| **id** | _int_ | the name of the variable |
-| **title** | _any_ | the variable's default value |
-| **type** | _boolean_ | legal values: "storyStart", "regular", "storyEnd" |
-| **paragraphs** | _boolean_ | whether or not the variable is going to be displayed in the UI |
-
-    ID (unique, no two PARAGRAPHS have the same ID)
-    TEXT BODY (String)
-    KEYWORD (the keyword that the player can interact with, there can only be ONE KEYWORD for every PARAGRAPH)
-    CHOICES (A series of CHOICES that the player can pick from to replace the KEYWORD)
-    TYPE (chapterStart, regular, passThru, storyEnd, chapterEnd)
+| Property | Data Type | Requirement | Description |
+| --- | --- | --- | --- |
+| **id** | _int_ | _mandatory_ | a unique numeric identifier |
+| **text_body** | _string_ | _mandatory_ | The paragraph's text. Can contain HTML tags. HTML tags will be parsed and added to the complete version of the paragraph (as opposed to the paragraph typed character by character).|
+| **type** | _string_ | _mandatory_ | legal values: "storyStart", "regular", "passThru", "infoBox", "storyEnd". |
+| **image** | _string_ | _optional_ | the relative path to an image. The image is always displayed after the full paragraph has been shown to the reader.|
 
 ## Choices (array)
 A Choice is an option that the user can choose from the list that appears when the user clicks on a Keyword.
