@@ -52,7 +52,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "1: Un Dovere Crudele e Inesorabile",
+										"value": "1: Un dovere crudele e inesorabile",
 										"operation": "set"
 									}
 								]
@@ -63,7 +63,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "2: Un Addio con una Promessa",
+										"value": "2: Un addio con una promessa",
 										"operation": "set"
 									}
 								]
@@ -96,7 +96,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "3: Un Barlume di Vita tra le Tenebre",
+										"value": "3: Barlume di vita",
 										"operation": "set"
 									}
 								]
@@ -107,7 +107,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "4: L'Abisso del Dolore",
+										"value": "4: Abisso di dolore",
 										"operation": "set"
 									}
 								]
@@ -131,7 +131,7 @@
 					{
 						"id": 8,
 						"type": "infoBox",
-						"text_body": "<strong>FINALE {ending}</strong>.<br>Prova a cambiare le scelte precedenti per scoprire altri finali."
+						"text_body": "Prova a cambiare le scelte precedenti per scoprire altri finali."
 					}
 				]
 			}
