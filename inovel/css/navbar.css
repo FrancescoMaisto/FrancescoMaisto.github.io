@@ -100,15 +100,17 @@
 	}
 
 .infoBox {
-	display: inline-block;
+	display: block;
 	font-family: "Roboto Condensed", serif;
-	border-radius: 6px;
-	border: 1px solid #444;
+	border-radius: 10px;
+	border: 2px solid var(--color-red);
 	text-align: center;
-	background-color: lightyellow;
+	background-color: rgba(229, 255, 1, 0.3);
 	color: var(--color-red);
 	font-size: 18px;
 	padding: 16px;
+	width: 90%;
+	margin: 0 auto;
 }
 
 #debug {

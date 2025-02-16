@@ -183,8 +183,10 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 		}
 	};
 
-	// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
-	window.scrollTo(0, document.body.scrollHeight);
+	if (paragraphType !== PAR_TYPE.INFO_BOX) {
+		// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
+		window.scrollTo(0, document.body.scrollHeight);
+	}
 
 	// IMAGE: if the paragraph has an image, display the image
 	if (paragraphImage && displayImages) {
@@ -233,11 +235,7 @@ function displayImage(spanElement, paragraphImage) {
 	};
 }
 function displayGameOver(gameOver) {
-	if (gameOver == true) {
-		gameOverElement.innerHTML = text[1];
-	} else if (gameOver == false) {
-		gameOverElement.innerHTML = "";
-	}
+	gameOverElement.innerHTML = gameOver ? text[1] : "";
 }
 function highlightKeyword(paragraphText, keyword) {
 	const keywordRegex = new RegExp(`(${keyword})`, 'gi');
@@ -332,9 +330,7 @@ function newParagraph(paragraphId) {
 function createParagraphContainer(paragraphId, paragraphType) {
 	let spanElement = document.createElement("p");
 	spanElement.id = "par" + paragraphId;
-	if (paragraphType === PAR_TYPE.INFO_BOX) {
-		spanElement.className = PAR_TYPE.INFO_BOX;
-	}
+	spanElement.className = paragraphType;
 	container.appendChild(spanElement);
 }
 function createDropDown(keywordElement, pIndex) {

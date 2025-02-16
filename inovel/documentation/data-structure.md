@@ -95,6 +95,7 @@ Paragraphs can have the following properties:
 | **text_body** | _string_ | _mandatory_ | The paragraph's text. Can contain HTML tags. HTML tags will be parsed and added to the complete version of the paragraph (as opposed to the paragraph typed character by character).|
 | **type** | _string_ | _mandatory_ | legal values: "storyStart", "regular", "passThru", "infoBox", "storyEnd". |
 | **image** | _string_ | _optional_ | the relative path to an image. The image is always displayed after the full paragraph has been shown to the reader.|
+| **destination_id** | _string_ | _optional_ | only for paragraph types "passThru" and "storyEnd" (the latter when you want to display an infobox after the story has finished)|
 
 ## Choices (array)
 A Choice is an option that the user can choose from the list that appears when the user clicks on a Keyword.
