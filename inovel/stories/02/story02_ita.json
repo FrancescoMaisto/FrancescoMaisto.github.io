@@ -131,7 +131,7 @@
 					{
 						"id": 8,
 						"type": "infoBox",
-						"text_body": "Prova a cambiare le scelte precedenti per scoprire altri finali."
+						"text_body": "<strong>FINALE {ending}</strong>.<br>Prova a cambiare le scelte precedenti per scoprire altri finali."
 					}
 				]
 			}
