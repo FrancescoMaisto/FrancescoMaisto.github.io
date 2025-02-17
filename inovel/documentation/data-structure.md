@@ -60,7 +60,7 @@ Example:
 	{
 		"type": "number",
 		"name": "money",
-		"displayName": "Denari",
+		"displayName": "Gold Pieces",
 		"value": 100,
 		"displayInUI": true
 	}
@@ -72,16 +72,16 @@ A _Chapter_ is essentially a collection of _Paragraphs_.
 Properties:
 | Property | Data Type | Description |
 | --- | --- | --- |
-| **id** | _int_ | the name of the variable |
-| **title** | _any_ | the variable's default value |
-| **type** | _boolean_ | legal values: "storyStart", "regular", "storyEnd" |
-| **paragraphs** | _boolean_ | whether or not the variable is going to be displayed in the UI |
+| **id** | _int_ | The Chapter's unique numeric identifier. |
+| **title** | _string_ | The Chapter's title. |
+| **type** | _string_ | legal values: "storyStart", "regular", "storyEnd". |
+| **paragraphs** | _array of objects_ | An array of objects where each object is a Paragraph. |
 
 Example:
 
 ```json
 "id": 0,
-"title": "Il Cavaliere Errante",
+"title": "The Hooded Man",
 "type": "storyStart",
 "paragraphs": []
 ```
@@ -91,7 +91,7 @@ Paragraphs can have the following properties:
 
 | Property | Data Type | Requirement | Description |
 | --- | --- | --- | --- |
-| **id** | _int_ | _mandatory_ | a unique numeric identifier |
+| **id** | _int_ | _mandatory_ | The Paragraph's unique numeric identifier. |
 | **text_body** | _string_ | _mandatory_ | The paragraph's text. Can contain HTML tags. HTML tags will be parsed and added to the complete version of the paragraph (as opposed to the paragraph typed character by character).|
 | **type** | _string_ | _mandatory_ | legal values: "storyStart", "regular", "passThru", "infoBox", "storyEnd". |
 | **image** | _string_ | _optional_ | the relative path to an image. The image is always displayed after the full paragraph has been shown to the reader.|

@@ -114,11 +114,9 @@ function getParagraphObject(paragraphId) {
 }
 function setParagraphText(pIndex) {
 	if (pIndex < paragraphsArray.length) {
-
 		// We set the paragraph's plain text and html text
 		activeParagraphId = paragraphsArray[pIndex];
 		let pObj = getParagraphObject(activeParagraphId);
-
 		let i = 0;
 		typingIntervalId = setInterval(() => {   
 			if (pObj.paragraphText.charAt(i) == "<") {
@@ -127,7 +125,7 @@ function setParagraphText(pIndex) {
 				pObj.spanElement.innerHTML += tag;
 				i += tag.length;
 			} else {
-				// We display the paragraph text one character at a time
+				// Display the paragraph's text one character at a time
 				pObj.spanElement.innerHTML += pObj.paragraphText.charAt(i);
 				i++;
 				// Scroll to the bottom after each character is typed
@@ -136,7 +134,7 @@ function setParagraphText(pIndex) {
 				}
 			}
 			if (i >= pObj.paragraphText.length || pObj.paragraphType === PAR_TYPE.INFO_BOX || typingSpeed <= 0) {
-				// We clear the interval and display the full paragraph at once
+				// Clear the interval and display the full paragraph at once
 				clearInterval(typingIntervalId);
 				displayFullParagraph(pObj.spanElement, pObj.paragraphHtml, pObj.keyword, activeParagraphId, pObj.paragraphType, pObj.image);
 			}
