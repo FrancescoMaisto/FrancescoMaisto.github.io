@@ -103,10 +103,10 @@
 	display: block;
 	font-family: "Roboto Condensed", serif;
 	border-radius: 10px;
-	border: 2px solid var(--color-red);
+	border: 2px solid #444;
 	text-align: center;
 	background-color: rgba(255, 255, 255, 0.5);
-	color: var(--color-red);
+	color: #444;
 	font-size: 16px;
 	padding: 16px;
 	width: 90%;
