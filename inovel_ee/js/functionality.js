@@ -4,7 +4,7 @@
 // YED (Editor grafico per diagrammi) https://www.yworks.com/products/yed
 let debug = false;
 let displayImages = true;
-let typingSpeed = 35;
+let typingSpeed = 35; // Typing speed in milliseconds
 
 // VARS
 let storyData = {};
@@ -18,7 +18,7 @@ let text = [];
 
 // We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
-	fetch('stories/02/story02_ee.json')
+	fetch('stories/02/story02_eng.json')
 		.then(response => {
 			if (!response.ok) {
 				throw new Error('Network response was not ok ' + response.statusText);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 });
 function init() {
-	typingSpeed = storyData.story.typingSpeed; // Typing speed in milliseconds
+	typingSpeed = storyData.story.typingSpeed;
 
 	text[0] = storyData.story.chapterString;
 	text[1] = storyData.story.endString;
@@ -89,13 +89,13 @@ function typeText(pIndex) {
 	displayGameOver(false);
 	setParagraphText(pIndex);
 }
-function getParagraphObject(activeParagraphId) {
+function getParagraphObject(paragraphId) {
 
 	let pID = paragraphsArray.length - 1;
 	let spanElement = document.getElementById("par" + pID);
 
 	// We retrieve the index of the paragraph in the JSON file's paragraphs array, based on the paragraphID
-	let pIndexInJSON = getParagraphIndexById(chapterId, activeParagraphId);
+	let pIndexInJSON = getParagraphIndexById(chapterId, paragraphId);
 
 	let paragraphText = parseTextForVariables(storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].text_body);
 	let keyword = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].keyword;
@@ -114,19 +114,18 @@ function getParagraphObject(activeParagraphId) {
 }
 function setParagraphText(pIndex) {
 	if (pIndex < paragraphsArray.length) {
-
 		// We set the paragraph's plain text and html text
 		activeParagraphId = paragraphsArray[pIndex];
 		let pObj = getParagraphObject(activeParagraphId);
-
 		let i = 0;
-		typingIntervalId = setInterval(() => {
-            // We slice HTML tags such as <p> and <br> and add them to the span element
+		typingIntervalId = setInterval(() => {   
 			if (pObj.paragraphText.charAt(i) == "<") {
+				// We slice HTML tags such as <p> and <br> and add them to the span element
 				let tag = pObj.paragraphText.slice(i, pObj.paragraphText.indexOf(">", i) + 1);
 				pObj.spanElement.innerHTML += tag;
 				i += tag.length;
 			} else {
+				// Display the paragraph's text one character at a time
 				pObj.spanElement.innerHTML += pObj.paragraphText.charAt(i);
 				i++;
 				// Scroll to the bottom after each character is typed
@@ -134,7 +133,8 @@ function setParagraphText(pIndex) {
 					window.scrollTo(0, document.body.scrollHeight);
 				}
 			}
-			if (i >= pObj.paragraphText.length) {
+			if (i >= pObj.paragraphText.length || pObj.paragraphType === PAR_TYPE.INFO_BOX || typingSpeed <= 0) {
+				// Clear the interval and display the full paragraph at once
 				clearInterval(typingIntervalId);
 				displayFullParagraph(pObj.spanElement, pObj.paragraphHtml, pObj.keyword, activeParagraphId, pObj.paragraphType, pObj.image);
 			}
@@ -148,7 +148,7 @@ function parseTextForVariables(text) {
 }
 
 function getParagraphIndexById(chapterId, paragraphId) {
-	// finds the index of a paragraph in the JSON file's paragraphs array, based on the paragraphID
+	// Finds the index of a paragraph in the JSON file's paragraphs array, based on the paragraphID
 	return storyData.story.chapters[chapterId].paragraphs.findIndex(paragraph => paragraph.id === paragraphId);
 }
 function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, paragraphType, paragraphImage) {
@@ -159,10 +159,13 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 	if (keyword) {
 		activateKeyword(pIndex);
 	};
-	if (paragraphType === PAR_TYPE.STORY_END) {
-        // GAME OVER: if the paragraph type is "story_end", display the game over message
-		displayGameOver(true);
-	} else if (paragraphType === PAR_TYPE.PASS_THRU) {
+	if (paragraphType === PAR_TYPE.PASS_THRU || paragraphType === PAR_TYPE.STORY_END) {
+
+		if (paragraphType === PAR_TYPE.STORY_END) {
+			// GAME OVER: if the paragraph type is "story_end", display the game over message
+			displayGameOver(true);
+		}
+
         // DESTINATION ID: determine the destination_id from the current paragraph
 		let item = storyData.story.chapters[chapterId].paragraphs[getParagraphIndexById(chapterId, activeParagraphId)];
 		destinationId = getDestination(item);
@@ -173,11 +176,15 @@ function displayFullParagraph(spanElement, paragraphHtml, keyword, paragraphId, 
 			undoArray.push([]);
 			pushEmptyUndoEntry(paragraphsArray.length);
 		}
-		newParagraph(destinationId);
+		if (destinationId) {
+			newParagraph(destinationId);
+		}
 	};
 
-	// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
-	window.scrollTo(0, document.body.scrollHeight);
+	if (paragraphType !== PAR_TYPE.INFO_BOX) {
+		// SCROLL PAGE: scroll to the bottom of the page after the full paragraph has been displayed
+		window.scrollTo(0, document.body.scrollHeight);
+	}
 
 	// IMAGE: if the paragraph has an image, display the image
 	if (paragraphImage && displayImages) {
@@ -226,11 +233,7 @@ function displayImage(spanElement, paragraphImage) {
 	};
 }
 function displayGameOver(gameOver) {
-	if (gameOver == true) {
-		gameOverElement.innerHTML = text[1];
-	} else if (gameOver == false) {
-		gameOverElement.innerHTML = "";
-	}
+	gameOverElement.innerHTML = gameOver ? text[1] : "";
 }
 function highlightKeyword(paragraphText, keyword) {
 	const keywordRegex = new RegExp(`(${keyword})`, 'gi');
@@ -294,7 +297,6 @@ function selectWord(chosenWord, keywordElement, pIndex) {
 
 	// 1.2 Remove all elements in paragraphsArray after the index
 	paragraphsArray.length = pIndex + 1;
-
 	newParagraph(destinationId);
 }
 
@@ -312,19 +314,21 @@ function getDestination(choice) {
 	} 
 	return destination;	
 }
-function newParagraph(id) {
+function newParagraph(paragraphId) {
 	// 1. Add the new paragraphId (the new destination) to the paragraphsArray
-	paragraphsArray.push(id);
+	paragraphsArray.push(paragraphId);
 
 	// 2.  Create a new paragraph container
-	createParagraphContainer(paragraphsArray.length-1);
+	const paragraphType = getParagraphObject(paragraphId).paragraphType;
+	createParagraphContainer(paragraphsArray.length - 1, paragraphType);
 
 	// 3.  Type the new paragraph on screen
 	typeText(paragraphsArray.length - 1);
 }
-function createParagraphContainer(paragraphId) {
+function createParagraphContainer(paragraphId, paragraphType) {
 	let spanElement = document.createElement("p");
 	spanElement.id = "par" + paragraphId;
+	spanElement.className = paragraphType;
 	container.appendChild(spanElement);
 }
 function createDropDown(keywordElement, pIndex) {

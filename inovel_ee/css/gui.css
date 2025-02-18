@@ -99,6 +99,21 @@
 		background-color: rgba(0, 0, 0, 0.6);
 	}
 
+.infoBox {
+	display: block;
+	font-family: "Roboto Condensed", serif;
+	border-radius: 10px;
+	border: 2px solid #444;
+	text-align: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: #444;
+	font-size: 16px;
+	padding: 16px;
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
 #debug {
 	font-family: "Roboto Condensed", serif;
 	font-size: 14px;

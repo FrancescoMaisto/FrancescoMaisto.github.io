@@ -45,14 +45,14 @@ body {
 	height: 100%;
 }
 #content {
-	margin-right: 3%;
-	margin-left: 3%;
+	margin-right: 5%;
+	margin-left: 5%;
 }
 #chapterTitle {
 	font-family: "Libre Baskerville", serif;
 	font-size: 24px;
 	text-align: center;
-	color: white;
+	color: var(--color-red);
 }
 p {
 	font-family: "Libre Baskerville", serif;

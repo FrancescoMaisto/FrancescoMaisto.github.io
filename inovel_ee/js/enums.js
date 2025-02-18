@@ -1,9 +1,10 @@
 class PAR_TYPE {
     static CHAPTER_START = "chapterStart";
+    static CHAPTER_END = "chapterEnd";
     static REGULAR = "regular";
     static PASS_THRU = "passThru";
     static STORY_END = "storyEnd";
-    static CHAPTER_END = "chapterEnd";
+    static INFO_BOX = "infoBox";
 }
 class VAR_TYPE {
     static INVENTORY_ITEM = "inventoryItem";
