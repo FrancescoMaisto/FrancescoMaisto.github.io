@@ -78,14 +78,14 @@
 					{
 						"id": 3,
 						"type": "storyEnd",
-						"text_body": "The servant’s gaze brooked no dissent. Without a trace of empathy, he fulfilled my father’s command, throwing me into the depths of the ancient well. As the darkness closed in and the cold water swallowed me, I realized with a final, haunting clarity that I had never even been given a name.",
+						"text_body": "The servant’s gaze brooked no dissent. Without a trace of empathy, he fulfilled my father’s command, throwing me into the depths of the old well. As the darkness closed in and the cold water swallowed me, I realized with a final, haunting clarity that I had never even been given a name.",
 						"image": "02/images/01_01.webp",
 						"destination_id": 8
 					},
 					{
 						"id": 4,
 						"type": "storyEnd",
-						"text_body": "The servant’s gaze betrayed a sorrow far deeper than his duty demanded. In that heart-wrenching moment, as he reluctantly carried out the order, an otherworldly current stirred inside me — a silent vow that even as my fragile life ebbed away in the cold depths of the well, my soul would one day find rebirth in another newborn child. In that final moment of despair and hope intertwined, my destiny had whispered the faint promise of a new life.",
+						"text_body": "The servant’s gaze betrayed a sorrow far deeper than his duty demanded. In that heart-wrenching moment, as he reluctantly carried out the order, an otherworldly current stirred inside me — a silent vow that even as my fragile life ebbed away in the cold depths of the old well, my soul would one day find rebirth in another newborn child. In that final moment of despair and hope intertwined, my destiny had whispered the faint promise of a new life.",
 						"image": "02/images/01_04_2.webp",
 						"destination_id": 8
 					},
@@ -99,7 +99,7 @@
 					{
 						"id": 2,
 						"type": "regular",
-						"text_body": "My father, though a man of great power, was visibly tormented by inner regrets. His voice, usually firm and resoluted, trembled imperceptibly as he issued the decree to abandon me — by having me thrown into the manor's well. I could still hear my mother’s soft prayer echoing in the hushed corridors of the manor — a whispered litany of ███████ that carried the weight of uncertainty and a fragile possibility.",
+						"text_body": "My father, though a man of great power, was visibly tormented by inner regrets. His voice, usually firm and resolute, trembled imperceptibly as he issued the decree to abandon me — by having me thrown into the old manor's well. I could still hear my mother’s soft prayer echoing in the hushed corridors of the manor — a whispered litany of ███████ that carried the weight of uncertainty and a fragile possibility.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -129,14 +129,14 @@
 					{
 						"id": 5,
 						"type": "storyEnd",
-						"text_body": "As I was lowered into the ancient well, a warm, unexpected glow enveloped me. Defying the chill of fate, unseen hands lifted me from the brink, sparing me from certain death. Against all odds, I was rescued and given a chance to live — a chance to finally receive the name I still hadn't been given.",
+						"text_body": "As I was lowered into the old well, a warm, unexpected glow enveloped me. Defying the chill of fate, unseen hands lifted me from the brink, sparing me from certain death. Against all odds, I was rescued and given a chance to live — a chance to finally receive the name I still hadn't been given.",
 						"image": "02/images/01_03.webp",
 						"destination_id": 8
 					},
 					{
 						"id": 6,
 						"type": "storyEnd",
-						"text_body": "My descent was marked by the crushing desperation in my mother’s whispered farewell — a hopeless dirge that foretold the inevitability of oblivion. The relentless darkness of the well consumed me entirely, and as I sank into the embrace of its cold waters, I felt my fragile life slipping away. In that final, silent moment, I was left nameless, my existence erased without ever knowing the comfort of a true name.",
+						"text_body": "My descent was marked by the crushing desperation in my mother’s whispered farewell — a hopeless dirge that foretold the inevitability of oblivion. The relentless darkness of the old well consumed me entirely, and as I sank into the embrace of its cold waters, I felt my fragile life slipping away. In that final, silent moment, I was left nameless, my existence erased without ever knowing the comfort of a true name.",
 						"image": "02/images/01_02.webp",
 						"destination_id": 8
 					},
