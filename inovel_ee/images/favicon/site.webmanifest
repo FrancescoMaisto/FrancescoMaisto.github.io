@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Interactive Novel",
+  "short_name": "iNovel",
   "icons": [
     {
       "src": "/images/favicon/web-app-manifest-192x192.png",
