@@ -6,9 +6,10 @@
 		"stylesheet": "default.css",
 		"chapterString": "CAPITOLO",
 		"endString": "Fine.",
-		"inventoryString": "Inventario",
+		"inventoryName": "Inventario",
+		"inventoryEmpty": "L'inventario e' vuoto.",
 		"typingSpeed": 35,
-		"hasInventory":  true,
+		"hasInventory": true,
 		"variables": [
 			{
 				"type": "string",
@@ -19,8 +20,15 @@
 			{
 				"type": "number",
 				"name": "money",
-				"displayName": "Denari",
+				"displayName": "Denari : ",
 				"value": 0,
+				"displayInUI": true
+			},
+			{
+				"type": "number",
+				"name": "health",
+				"displayName": "Salute : ",
+				"value": 100,
 				"displayInUI": true
 			}
 		],
@@ -76,7 +84,6 @@
 						"type": "regular",
 						"text_body": "{characterName} era di umili natali. La madre, Costanza, era una contadina, mentre il padre, Ludovico, era un ███████.",
 						"keyword": "███████",
-						"image": "images/01_01.jpeg",
 						"choices": [
 							{
 								"text_body": "fabbro",
@@ -506,18 +513,7 @@
 						"id": 26,
 						"type": "passThru",
 						"text_body": "{characterName} prese i {money} denari, e con un profondo inchino si accomiatò dal Marchese.",
-						"destination_id": 1,
-						"choices": [
-							{
-								"variables": [
-									{
-										"type": "inventoryItem",
-										"value": "mazza ferrata",
-										"operation": "add"
-									}
-								]
-							}
-						]
+						"destination_id": 1
 					},
 					{
 						"id": 27,

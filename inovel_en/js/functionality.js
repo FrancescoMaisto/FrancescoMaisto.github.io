@@ -4,7 +4,7 @@
 // YED (Editor grafico per diagrammi) https://www.yworks.com/products/yed
 let debug = false;
 let displayImages = true;
-let typingSpeed = 35;
+let typingSpeed = 35; // Typing speed in milliseconds
 
 // VARS
 let storyData = {};
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 });
 function init() {
-	typingSpeed = storyData.story.typingSpeed; // Typing speed in milliseconds
+	typingSpeed = storyData.story.typingSpeed;
 
 	text[0] = storyData.story.chapterString;
 	text[1] = storyData.story.endString;

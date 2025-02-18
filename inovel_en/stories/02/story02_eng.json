@@ -37,7 +37,7 @@
 					{
 						"id": 1,
 						"type": "regular",
-						"text_body": "My father, driven by a cold and unyielding resolve, decreed without a hint of mercy that I be cast aside. His words were as sharp as the winter wind, leaving no space for compassion. That grim command was given to a loyal servant, whose eyes betrayed his inner conflict even as he prepared to carry out his dire duty — to dispose of me by throwing me into the manor's well. I remember the moment he drew near — his face set in a ███████ mask that hinted at the true nature of his intentions.",
+						"text_body": "My father, driven by a cold and unyielding resolve, decreed without a hint of mercy that I be cast aside. His words were as sharp as the winter wind, leaving no space for compassion. That grim command was given to a loyal servant, whose eyes betrayed his inner conflict even as he prepared to carry out his dire duty — to dispose of me by throwing me into the old manor's well. I remember the moment he drew near — his face set in a ███████ mask that hinted at the true nature of his intentions.",
 						"keyword": "███████",
 						"choices": [
 							{
@@ -92,7 +92,7 @@
 					{
 						"id": 7,
 						"type": "storyEnd",
-						"text_body": "The servant, overcome with compassion, could not bring himself to cast me into the well. Instead, under the cover of darkness, he wrapped me in a warm linen blanket and placed me gently into a wicker basket. Carrying me beyond the castle walls, he entrusted me to the lazy current of the nearby river, hoping that fate would be kinder to me than my father. As the basket drifted away, I heard him whisper a quiet prayer for my survival.",
+						"text_body": "The servant, overcome with compassion, could not bring himself to cast me into the old well. Instead, under the cover of darkness, he wrapped me in a warm linen blanket and placed me gently into a wicker basket. Carrying me beyond the castle walls, he entrusted me to the lazy current of the nearby river, hoping that fate would be kinder to me than my father had been. As the basket drifted away, I heard him whisper a quiet prayer for my survival.",
 						"image": "02/images/01_05.webp",
 						"destination_id": 8
 					},
