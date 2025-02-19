@@ -18,7 +18,10 @@ let text = [];
 
 // We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
-	fetch('stories/02/story02_eng.json')
+	showLanguageUI();
+});
+function fetchStory(JSONfileName) {
+	fetch(JSONfileName)
 		.then(response => {
 			if (!response.ok) {
 				throw new Error('Network response was not ok ' + response.statusText);
@@ -32,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		.catch(error => {
 			console.error('There was a problem with the fetch operation:', error);
 		});
-});
+}
 function init() {
 	typingSpeed = storyData.story.typingSpeed;
 
@@ -40,7 +43,7 @@ function init() {
 	text[1] = storyData.story.endString;
 	text[2] = storyData.story.inventoryName;
 	text[3] = storyData.story.inventoryEmpty;
-
+	
 	setStylesheet();
 	addResizeListener();
 	addClickPageListener();

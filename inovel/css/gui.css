@@ -114,6 +114,63 @@
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
+.language-selection-screen {
+	display: block;
+	height: 100%;
+	top: -200px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.language-button {
+	display: block;
+	color: #222;
+	background-color: #dddddd;
+	font-size: 30px;
+	padding: 12px;
+	font-family: "Roboto Condensed", "Noto Color Emoji", serif;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+	margin: 10px auto;
+	width: 60%;
+	border-radius: 10px;
+	border: 3px solid black;
+	transition: background-color 0.2s ease; /* Add transition for background color */
+}
+
+	.language-button:hover {
+		color: white;
+		background-color: black;
+	}
+
+	.language-button:active {
+		color: white;
+		background-color: var(--color-red);
+		transform: translateY(2px); /* Move the button 10 pixels down */
+		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+		/* box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3); /* Add inset shadow for pressed effect */
+	}
+
+.app-name {
+	display: block;
+	font-family: "Roboto Condensed", serif;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 90px;
+}
+
+.footer {
+	display: block;
+	font-family: "Roboto Condensed", serif;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 90px;
+}
+
+.logo {
+	width: 140px;
+	height: auto;
+}
+
 #debug {
 	font-family: "Roboto Condensed", serif;
 	font-size: 14px;

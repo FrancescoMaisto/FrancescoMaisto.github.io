@@ -8,7 +8,7 @@
 		"endString": "The End.",
 		"inventoryName": "",
 		"inventoryEmpty": "",
-		"typingSpeed": 55,
+		"typingSpeed": 60,
 		"hasInventory": false,
 		"variables": [
 		],
@@ -92,7 +92,7 @@
 					{
 						"id": 7,
 						"type": "storyEnd",
-						"text_body": "The servant, overcome with compassion, could not bring himself to cast me into the old well. Instead, under the cover of darkness, he wrapped me in a warm linen blanket and placed me gently into a wicker basket. Carrying me beyond the castle walls, he entrusted me to the lazy current of the nearby river, hoping that fate would be kinder to me than my father had been. As the basket drifted away, I heard him whisper a quiet prayer for my survival.",
+						"text_body": "The servant, overcome with compassion, could not bring himself to cast me into the old well. Instead, under the cover of darkness, he wrapped me in a warm linen blanket and placed me gently into a wicker basket. Carrying me beyond the castle walls, he entrusted me to the lazy current of the nearby river, hoping that fate would be kinder to me than my father ever was. As the basket drifted away, I heard him whisper a quiet prayer for my survival.",
 						"image": "02/images/01_05.webp",
 						"destination_id": 8
 					},

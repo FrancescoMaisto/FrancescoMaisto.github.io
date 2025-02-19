@@ -115,7 +115,7 @@ img {
 	padding-left: 0; /* Remove default padding */
 	margin-left: 0; /* Remove default margin */
 	position: absolute; /* Position it absolutely */
-	top: -30px; /* Move up by 10 pixels */
+	top: -30px; /* Move up by 30 pixels */
 	border: 2px solid grey; /* outline */
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
