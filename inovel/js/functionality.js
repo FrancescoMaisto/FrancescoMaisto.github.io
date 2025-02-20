@@ -1,4 +1,5 @@
-﻿const version = "0.003";
+﻿const versionNumber = "0.1.0";
+const copyright = '© Francesco Maisto / Cellar Ghost OÜ 2025';
 
 // SETTINGS
 // YED (Editor grafico per diagrammi) https://www.yworks.com/products/yed
@@ -18,7 +19,7 @@ let text = [];
 
 // We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
-	showLanguageUI();
+	createLanguageSelectionScreen();
 });
 function fetchStory(JSONfileName) {
 	fetch(JSONfileName)
@@ -43,13 +44,14 @@ function init() {
 	text[1] = storyData.story.endString;
 	text[2] = storyData.story.inventoryName;
 	text[3] = storyData.story.inventoryEmpty;
-	
+
+	createStoryScreen();	
 	setStylesheet();
 	addResizeListener();
 	addClickPageListener();
 	setDynamicVars();
 	createNavbar();
-	container = document.getElementById("text-placeholder");
+	container = document.getElementById("text-container");
 	gameOverElement = document.getElementById("game-over");
 	setChapterTitle(0);
 	newParagraph(0);
@@ -94,17 +96,18 @@ function typeText(pIndex) {
 }
 function getParagraphObject(paragraphId) {
 
-	let pID = paragraphsArray.length - 1;
-	let spanElement = document.getElementById("par" + pID);
+	const pID = paragraphsArray.length - 1;
+	const spanElement = document.getElementById("par" + pID);
 
 	// We retrieve the index of the paragraph in the JSON file's paragraphs array, based on the paragraphID
-	let pIndexInJSON = getParagraphIndexById(chapterId, paragraphId);
+	const pIndexInJSON = getParagraphIndexById(chapterId, paragraphId);
 
-	let paragraphText = parseTextForVariables(storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].text_body);
-	let keyword = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].keyword;
-	let paragraphHtml = highlightKeyword(paragraphText, keyword);
-	let paragraphType = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].type;
-	let image = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].image;
+	const paragraphText = parseTextForVariables(storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].text_body);
+	const keyword = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].keyword;
+	const paragraphHtml = highlightKeyword(paragraphText, keyword);
+
+	const paragraphType = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].type;
+	const image = storyData.story.chapters[chapterId].paragraphs[pIndexInJSON].image;
 
 	return {
 		"spanElement": spanElement,
@@ -248,12 +251,25 @@ function activateKeyword(pIndex) {
     let keywordId = "keyword" + pIndex;
 	const keywordElement = document.getElementById(keywordId);
 
+	// Add an image on top of the highlited word
+	setTimeout(() => {
+		const pointer = document.createElement('img');
+		pointer.id = 'cursor-finger';
+		pointer.className = 'cursor-finger';
+		pointer.src = 'images/gui/cursor_finger.png';
+		keywordElement.appendChild(pointer);
+	}, 1000); // 1000 milliseconds = 1 second
+
 	keywordElement.addEventListener("click", function (event) {
 		event.stopPropagation(); // Prevent the event from bubbling up to the document
 
 		// Check if the dropdown has been already created, if not, create one
 		const dropDownElement = document.getElementById('options');
 		if (!dropDownElement) {
+			const pointer = document.getElementById('cursor-finger');
+			if (pointer) {
+				pointer.remove();
+			}
 			createDropDown(keywordElement, pIndex);
         // if a dropdown exists but it doesn't belong to the current paragraph, remove it and create a new one
 		} else if (dropDownElement.dataset.pIndex != pIndex) {

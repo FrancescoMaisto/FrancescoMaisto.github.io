@@ -28,7 +28,6 @@ body {
 #chapterTitle {
 	font-family: "Lacquer", serif;
 	font-size: 32px;
-	text-align: center;
 	color: var(--color-red);
 }
 p {
@@ -52,20 +51,14 @@ img {
 	background-color: #850e0e;
 }
 
-#text-placeholder {
-	cursor: default;
-}
 #game-over {
 	font-weight: bold;
 }
+
 .keyword {
-	cursor: pointer;
 	color: #090909;
 	border-bottom: 5px solid var(--color-red);
-	position: relative;
-	transition: background .5s;
 	background-color: white;
-	/* filter: blur(2px); */
 }
 
 	.keyword:hover {

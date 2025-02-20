@@ -122,16 +122,18 @@
 }
 
 .language-button {
+	cursor: pointer; /* Show hand cursor on hover */
 	display: block;
-	color: #222;
-	background-color: #dddddd;
-	font-size: 30px;
-	padding: 12px;
 	font-family: "Roboto Condensed", "Noto Color Emoji", serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #222;
+	background-color: #dedede;
+	padding: 12px;
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 	margin: 10px auto;
-	width: 60%;
-	border-radius: 10px;
+	width: 300px;
+	border-radius: 40px;
 	border: 3px solid black;
 	transition: background-color 0.2s ease; /* Add transition for background color */
 }
@@ -144,10 +146,15 @@
 	.language-button:active {
 		color: white;
 		background-color: var(--color-red);
-		transform: translateY(2px); /* Move the button 10 pixels down */
+		transform: translateY(2px); /* Move the button down */
 		box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 		/* box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3); /* Add inset shadow for pressed effect */
 	}
+
+.logo {
+	width: 140px;
+	height: auto;
+}
 
 .app-name {
 	display: block;
@@ -162,13 +169,20 @@
 	font-family: "Roboto Condensed", serif;
 	font-size: 14px;
 	text-align: center;
+	width: 100%; /* Make it span the full width */
 	margin-top: 100px;
-	margin-bottom: 90px;
+	margin-bottom: 10px;
+	position: fixed; /* Fix the footer to the bottom of the viewport */
+	bottom: 0; /* Position it at the bottom */
 }
 
-.logo {
-	width: 140px;
-	height: auto;
+.version-number {
+	display: block;
+	font-family: "Roboto Condensed", serif;
+	font-size: 12px;
+	text-align: right;
+	color: grey;
+	margin-right: 20px;
 }
 
 #debug {
@@ -182,3 +196,59 @@
 	#debug:hover {
 		background-color: #850e0e;
 	}
+
+/* STORY SCREEN */
+
+.story-screen-container {
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+#chapterTitle {
+	text-align: center;
+}
+
+#text-container {
+	cursor: default;
+	margin-bottom: 140px;
+}
+
+.keyword {
+	position: relative;
+	cursor: pointer;
+	position: relative;
+	transition: background .5s;
+}
+
+.cursor-finger {
+	position: absolute;
+	left: 40%; /* Center horizontally */
+	top: 50%; /* Center vertically */
+	width: 30px;
+	height: 30px;
+	animation: pulse 2s infinite, fadeIn 0.5s forwards;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.5);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

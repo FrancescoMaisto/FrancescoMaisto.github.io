@@ -3,12 +3,20 @@
     { suffix: 'it', flag: '🇮🇹', displayName: 'Italiano' },
     { suffix: 'ee', flag: '🇪🇪', displayName: 'Eesti' }
 ];
-function showLanguageUI() {
+
+function createLanguageSelectionScreen() {
     document.body.style.backgroundColor = "white";
-    const content = document.getElementById('content');
+    const content = document.getElementById('body');
     const languageSelectionScreen = document.createElement('div');
     languageSelectionScreen.className = 'language-selection-screen';
-    content.appendChild(languageSelectionScreen); 
+    content.appendChild(languageSelectionScreen);
+
+    // VERSION NUMBER
+    const version = document.createElement('span');
+    version.className = 'version-number';
+    version.textContent = 'v ' + versionNumber;
+    languageSelectionScreen.appendChild(version);
+
 
     // LOGO
     createLogo(languageSelectionScreen);
@@ -28,7 +36,7 @@ function showLanguageUI() {
     // FOOTER
     const footer = document.createElement('span');
     footer.className = 'footer';
-    footer.textContent = '© Francesco Maisto / Cellar Ghost OÜ 2025';
+    footer.textContent = copyright;
     languageSelectionScreen.appendChild(footer);
 }
 function createLogo(parent){
@@ -45,8 +53,59 @@ function createLogo(parent){
     appName.textContent = 'Interactive Novel';
     parent.appendChild(appName);
 }
-function createNavbar() {
 
+function createStoryScreen() {
+
+    /* LAYOUT STRUCTURE OF THE STORY SCREEN
+
+    <body id="body">
+        <div class="storyScreenContainer"></div>
+            <div id="navbar"></div>
+            <div id="gui"></div>
+            <div id="content">
+                <p id="chapterTitle"></p>
+                <p id="text-container"></p>
+                <p id="game-over"></p>
+                <p id="spacer1">&nbsp;</p>
+                <div id="dropdown-list"></div>
+            </div>
+    </body>
+    */
+    const body = document.getElementById('body');
+
+    const storyScreenContainer = document.createElement('div');
+    storyScreenContainer.className = 'story-screen-container';
+    body.appendChild(storyScreenContainer);
+
+    const navbar = document.createElement('div');
+    navbar.id = 'navbar';
+    storyScreenContainer.appendChild(navbar);
+
+    const gui = document.createElement('div');
+    gui.id = 'gui';
+    storyScreenContainer.appendChild(gui);
+
+    const content = document.createElement('div');
+    gui.id = 'content';
+    storyScreenContainer.appendChild(content);
+
+    const chapterTitle = document.createElement('p');
+    chapterTitle.id = 'chapterTitle';
+    content.appendChild(chapterTitle);
+
+    const text = document.createElement('p');
+    text.id = 'text-container';
+    content.appendChild(text);
+
+    const gameOver = document.createElement('p');
+    gameOver.id = 'game-over';
+    content.appendChild(gameOver);
+
+    const dropdownList = document.createElement('div');
+    dropdownList.id = 'dropdown-list';
+    content.appendChild(dropdownList);
+};
+function createNavbar() {
     const navbar = document.getElementById('navbar');
 
     // We create the Inventory Button
