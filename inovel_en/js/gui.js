@@ -22,6 +22,8 @@ function createLanguageSelectionScreen() {
     createLogo(languageSelectionScreen);
 
     // BUTTONS
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'buttons-container';
     languages.forEach(language => {
         const button = document.createElement('button');
         button.className = "language-button";
@@ -30,8 +32,9 @@ function createLanguageSelectionScreen() {
             languageSelectionScreen.remove();
             fetchStory('stories/02/story02_' + language.suffix + '.json');
         };
-        languageSelectionScreen.appendChild(button);
+        buttonsContainer.appendChild(button);
     });
+    languageSelectionScreen.appendChild(buttonsContainer);
 
     // FOOTER
     const footer = document.createElement('span');
