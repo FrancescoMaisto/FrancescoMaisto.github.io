@@ -84,7 +84,7 @@
 					{
 						"id": 3,
 						"type": "storyEnd",
-						"text_body": "Lo sguardo del servo non ammetteva dissenso. Senza alcuna traccia di empatia, il servo eseguì l'ordine di mio padre, gettandomi nelle profondità del vecchio pozzo. Mentre l'oscurità si chiudeva su di me e l'acqua gelida mi inghiottiva, realizzai con chiarezza spettrale che non mi era stato concesso neanche un nome.<p><strong>Fine.</strong>",
+						"text_body": "Lo sguardo del servo non ammetteva dissenso. Senza alcuna traccia di empatia, il servo eseguì l'ordine di mio padre, gettandomi nelle profondità del vecchio pozzo. Mentre l'oscurità si chiudeva su di me e l'acqua gelida mi inghiottiva, realizzai con chiarezza spettrale che non mi era  stato concesso neanche un nome.<p><strong>Fine.</strong>",
 						"image": "02/images/01_01.webp",
 						"destination_id": 8
 					},
@@ -135,7 +135,7 @@
 					{
 						"id": 5,
 						"type": "storyEnd",
-						"text_body": "Mentre venivo calata nel vecchio pozzo, un calore inaspettato mi avvolse. Sfuggendo al gelo del destino, mani invisibili mi sollevarono dal baratro, risparmiandomi una morte certa. Contro ogni previsione, fui salvata da una forza ignota che mi concesse una possibilità di vivere — la possibilità di ricevere finalmente il nome che non mi era ancora stato dato.<p><strong>Fine.</strong>",
+						"text_body": "Mentre venivo calata nel vecchio pozzo, un calore inaspettato mi avvolse. Sfuggendo al gelo del destino, mani invisibili mi sollevarono dal baratro, risparmiandomi una morte certa. Contro ogni previsione, fui salvata da una forza ignota che mi concesse una possibilità di vivere — la possibilità di ricevere finalmente il nome che non avevo ancora ricevuto.<p><strong>Fine.</strong>",
 						"image": "02/images/01_03.webp",
 						"destination_id": 8
 					},
