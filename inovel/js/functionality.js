@@ -1,4 +1,4 @@
-﻿const versionNumber = "0.1.1";
+﻿const versionNumber = "0.1.2";
 const copyright = '© Francesco Maisto / Cellar Ghost OÜ 2025';
 
 // SETTINGS
