@@ -1,7 +1,7 @@
 :root {
 	--color-green: #04AA6D;
 	--color-red: #850e0e;  /* A muted red */
-	--hover-color: yellow; /* Orange */
+	--hover-color: yellow;
 }
 .lacquer-regular {
 	font-family: "Lacquer", serif;
@@ -22,7 +22,7 @@ body {
 p {
 	font-family: "Lacquer", serif;
 	font-size: 26px;
-	color: #222222;
+	color: #333;
 	line-height: 1.6;
 }
 img {
@@ -35,7 +35,7 @@ img {
 }
 
 .keyword {
-	color: #090909;
+	color: #222;
 	border-bottom: 5px solid var(--color-red);
 	background-color: white;
 }
@@ -68,5 +68,5 @@ img {
 	}
 	.options li:hover {
 		color: white;
-		background-color: #222222;
+		background-color: #222;
 	}
