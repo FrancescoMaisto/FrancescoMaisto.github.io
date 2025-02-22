@@ -67,20 +67,40 @@
 										"operation": "set"
 									}
 								]
+							},
+							{
+								"text_body": "liigutatud",
+								"destination_id": 7,
+								"variables": [
+									{
+										"name": "ending",
+										"value": "5: Lootuse Jõgi",
+										"operation": "set"
+									}
+								]
 							}
 						]
 					},
 					{
 						"id": 3,
 						"type": "storyEnd",
-						"text_body": "Teenija pilk ei lubanud vastuhakku. Ilma igasuguse empaatiata täitis ta markii käsu, visates mind sügavasse vanasse kaevu. Kui pimedus mu üle sulgus ja külm vesi mind neelas, mõistsin kõhedust tekitava selgusega, et mulle polnud kunagi isegi nime antud.",
-						"image": "02/images/01_01.webp"
+						"text_body": "Teenija pilk ei lubanud vastuhakku. Ilma igasuguse empaatiata täitis ta markii käsu, visates mind sügavasse vanasse kaevu. Kui pimedus mu üle sulgus ja külm vesi mind neelas, mõistsin kõhedust tekitava selgusega, et mulle polnud kunagi isegi nime antud.<p><strong>Lõpp.</strong>",
+						"image": "02/images/01_01.webp",
+						"destination_id": 8
 					},
 					{
 						"id": 4,
 						"type": "storyEnd",
-						"text_body": "Teenija pilk reetis palju sügavama valu, kui tema kohustus eeldas. Selles valusas hetkes, kui ta vastumeelselt käsku täitis, tundsin enda ümber salapärast jõudu — vaikset lubadust, et isegi kui mu habras elu hääbus kaevu jäises sügavuses, elaks mu hing ühel päeval edasi teises vastsündinus. Selles viimases, nii meeleheitel kui ka lootusest kantud silmapilgus, tundsin hoolimata oma nimetusest õrna võimalust uueks eluks.",
-						"image": "02/images/01_04_2.webp"
+						"text_body": "Teenija pilk reetis palju sügavama valu, kui tema kohustus eeldas. Selles valusas hetkes, kui ta vastumeelselt käsku täitis, tundsin enda ümber salapärast jõudu — vaikset lubadust, et isegi kui mu habras elu hääbus kaevu jäises sügavuses, elaks mu hing ühel päeval edasi teises vastsündinus. Selles viimases, nii meeleheitel kui ka lootusest kantud silmapilgus, tundsin hoolimata oma nimetusest õrna võimalust uueks eluks.<p><strong>Lõpp.</strong>",
+						"image": "02/images/01_04_2.webp",
+						"destination_id": 8
+					},
+					{
+						"id": 7,
+						"type": "storyEnd",
+						"text_body": "Teenija, kaastundest üle ujutatud, ei suutnud mind vanasse kaevu visata. Öö katte all mässis ta mind hoopis sooja linasesse tekki ja asetas õrnalt vitspunutud korvi. Viies mind lossi müüride taha, usaldas ta mu lähedal asuva jõe nukrale hoovusele, lootuses, et saatus kohtleb mind leebemalt kui mu isa. Kui korv voolu mööda kaugemale triivis, kuulsin teda sosistamas vaikset palvet minu ellujäämise eest.<p><strong>Lõpp.</strong>",
+						"image": "02/images/01_05.webp",
+						"destination_id": 8
 					},
 					{
 						"id": 2,
@@ -115,19 +135,21 @@
 					{
 						"id": 5,
 						"type": "storyEnd",
-						"text_body": "Kui mind vanasse kaevu lasti, ümbritses mind ootamatu soojus. Põgenedes saatuse külmuse eest, tõstsid nähtamatud käed mind kuristikust, päästes mind kindlast surmast. Kõigi võimaluste vastu olin päästetud ja mulle anti elu — võimalus lõpuks nimi saada.",
-						"image": "02/images/01_03.webp"
+						"text_body": "Kui mind vanasse kaevu lasti, ümbritses mind ootamatu soojus. Põgenedes saatuse külmuse eest, tõstsid nähtamatud käed mind kuristikust, päästes mind kindlast surmast. Kõigi võimaluste vastu olin päästetud ja mulle anti elu — võimalus lõpuks nimi saada.<p><strong>Lõpp.</strong>",
+						"image": "02/images/01_03.webp",
+						"destination_id": 8
 					},
 					{
 						"id": 6,
 						"type": "storyEnd",
-						"text_body": "Mu langust tähistas ema lootusetu hüvastijätt — lootuseta ohe, mis kuulutas unustuse paratamatust. Kaevu halastamatu pimedus neelas mind täielikult ning kui vajusin tema jäisesse embusesse, tundsin, kuidas mu haprana hoitud elu käest libises. Mu eksistents kustutati, ilma et oleksin kunagi kogenud tõelise nime lohutust.",
-						"image": "02/images/01_02.webp"
+						"text_body": "Mu langust tähistas ema lootusetu hüvastijätt — lootuseta ohe, mis kuulutas unustuse paratamatust. Kaevu halastamatu pimedus neelas mind täielikult ning kui vajusin tema jäisesse embusesse, tundsin, kuidas mu haprana hoitud elu käest libises. Mu eksistents kustutati, ilma et oleksin kunagi kogenud tõelise nime lohutust.<p><strong>Lõpp.</strong>",
+						"image": "02/images/01_02.webp",
+						"destination_id": 8
 					},
 					{
 						"id": 8,
-						"type": "regular",
-						"text_body": "<span id='highlight_word'><strong>Lõpp {ending}</strong>. Proovi muuta varasemaid valikuid, et näha teisi lõppe.</span>"
+						"type": "infoBox",
+						"text_body": "<strong>Lõpp {ending}.</strong><br>Proovi muuta varasemaid valikuid, et näha teisi lõppe."
 					}
 				]
 			}

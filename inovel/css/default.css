@@ -33,20 +33,8 @@
 	font-weight: 900;
 	font-style: normal;
 }
-html {
-	scroll-behavior: smooth;
-}
 body {
-	background-color: #dddddd;
-	margin-top: 0;
-	margin-bottom: 15%;
-	margin-right: 0;
-	margin-left: 0;
-	height: 100%;
-}
-#content {
-	margin-right: 5%;
-	margin-left: 5%;
+	background-color: #ddd;
 }
 #chapterTitle {
 	font-family: "Libre Baskerville", serif;
@@ -63,16 +51,6 @@ img {
 	display: block;     /* Removes any space below the image */
 	margin: 0 auto; 	/* Horizontally center the image inside the container */
 }
-#debug {
-	font-size: 13px;
-	color: white;
-	background-color: var(--color-red);
-	line-height: 2;
-}
-
-#debug:hover {
-	background-color: #850e0e;
-}
 
 #game-over {
 	font-weight: bold;
@@ -86,11 +64,6 @@ img {
 	.keyword:hover {
 		background-color: var(--color-red);
 	}
-
-.keyword-off {
-	position: relative;
-	font-weight: bold;
-}
 
 #highlight_word {
 	display: inline-block;
@@ -120,8 +93,12 @@ img {
 		/*font-weight: bold;*/
 		border: 1px solid lightgrey; /* outline */
 		padding: 10px;
+		user-select: none; /* Standard */
+		-webkit-user-select: none; /* Safari */
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
 	}
-.options li:hover {
-	color: white;
-	background-color: #222222;
-}
+	.options li:hover {
+		color: white;
+		background-color: #222222;
+	}

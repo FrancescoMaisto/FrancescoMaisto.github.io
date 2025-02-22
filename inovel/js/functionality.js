@@ -1,4 +1,4 @@
-﻿const versionNumber = "0.1.0";
+﻿const versionNumber = "0.1.1";
 const copyright = '© Francesco Maisto / Cellar Ghost OÜ 2025';
 
 // SETTINGS
@@ -9,8 +9,6 @@ let typingSpeed = 35; // Typing speed in milliseconds
 
 // VARS
 let storyData = {};
-let chapterString;
-let chapterTitle;
 let chapterId;
 let activeParagraphId;
 let paragraphsArray = [];
@@ -59,12 +57,11 @@ function init() {
 
 function setStylesheet() {
 	// We fetch the stylesheet filename from the JSON file and apply it to the document
-	let stylesheet;
+	let stylesheet = 'css/default.css';
 	if (storyData.story.stylesheet) {
 		stylesheet = 'css/' + storyData.story.stylesheet;
 	} else {
 		console.error('The story has no style sheet specified, so I am using the default stylesheet.', error);
-		stylesheet = 'css/default.css';
 	}
 	document.getElementById('theme-stylesheet').setAttribute('href', stylesheet);
 }
@@ -80,15 +77,15 @@ function addClickPageListener() {
 
 		// Show full paragraph immediately when the user clicks anywhere on the page
 		clearInterval(typingIntervalId);
-		let pObj = getParagraphObject(activeParagraphId);
+		const pObj = getParagraphObject(activeParagraphId);
 		displayFullParagraph(pObj.spanElement, pObj.paragraphHtml, pObj.keyword, activeParagraphId, pObj.paragraphType, pObj.image);
     });
 }
 function setChapterTitle(chapterNum) {
-	chapterString = storyData.story.chapterString;
-	chapterTitle = storyData.story.chapters[chapterNum].title;
+	const chapterString = storyData.story.chapterString;
+	const chapterTitle = storyData.story.chapters[chapterNum].title;
 	chapterId = storyData.story.chapters[chapterNum].id;
-	document.getElementById("chapterTitle").innerHTML = "<b>" + chapterString + " " + (chapterId+1) + "</b><br>" + chapterTitle;
+	document.getElementById("chapterTitle").innerHTML = "<strong>" + chapterString + " " + (chapterId+1) + "</strong><br>" + chapterTitle;
 }
 function typeText(pIndex) {
 	displayGameOver(false);

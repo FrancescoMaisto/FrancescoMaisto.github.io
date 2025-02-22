@@ -52,7 +52,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "1: crudele dovere",
+										"value": "1: Crudele dovere",
 										"operation": "set"
 									}
 								]
@@ -63,7 +63,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "2: nuova esistenza",
+										"value": "2: Nuova esistenza",
 										"operation": "set"
 									}
 								]
@@ -74,7 +74,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "5: fiume di speranza",
+										"value": "5: Fiume di speranza",
 										"operation": "set"
 									}
 								]
@@ -98,7 +98,7 @@
 					{
 						"id": 7,
 						"type": "storyEnd",
-						"text_body": "Il servo, sopraffatto dalla compassione, non ebbe il cuore di gettarmi nel vecchio pozzo. Col favore dell'oscurità, mi avvolse invece in una calda coperta di lino e mi adagiò delicatamente in un cesto di vimini. Portandomi oltre le mura del castello, mi affidò alla mesta corrente del fiume vicino, sperando che il destino fosse più clemente verso di me di quanto non lo fosse stato mio padre. Mentre il cesto si allontanava alla deriva, lo sentii sussurrare una silenziosa preghiera per la mia sopravvivenza.<p><strong>Fine.</strong>",
+						"text_body": "Il servo, sopraffatto dalla compassione, non ebbe il cuore di gettarmi nel vecchio pozzo. Col favore dell'oscurità, mi avvolse invece in una calda coperta di lino e mi adagiò delicatamente in un cesto di vimini. Portandomi oltre le mura del castello, mi affidò alla mesta corrente del fiume vicino, sperando che il destino fosse più clemente verso di me di quanto non lo fosse stato mio padre. Mentre il cesto si allontanava alla deriva, lo sentii recitare sommessamente una preghiera per la mia sopravvivenza.<p><strong>Fine.</strong>",
 						"image": "02/images/01_05.webp",
 						"destination_id": 8
 					},
@@ -114,7 +114,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "3: barlume di vita",
+										"value": "3: Barlume di vita",
 										"operation": "set"
 									}
 								]
@@ -125,7 +125,7 @@
 								"variables": [
 									{
 										"name": "ending",
-										"value": "4: abisso di dolore",
+										"value": "4: Abisso di dolore",
 										"operation": "set"
 									}
 								]

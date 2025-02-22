@@ -4,6 +4,17 @@
 	font-weight: 100;
 	font-style: normal;
 }
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 0 0 15% 0;
+	height: 100%;
+}
+/**************************** 
+TOP GUI BAR
+****************************/
+
 #navbar {
 	position: sticky;
 	z-index: 9999; /* High value to ensure it's on top */
@@ -15,15 +26,25 @@
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
-#navbar a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
+	#navbar a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+
+	#navbar a:hover {
+		background-color: #555;
+		color: var(--hover-color);
+	}
+
+	#navbar a.active {
+		background-color: var(--color-red);
+		color: white;
+	}
 
 .counter {
 	display: inline-block;
@@ -33,25 +54,14 @@
 	font-size: 17px;
 }
 
-.counter_value {
-	color: white;
-	font-weight: 700;
-}
+	.counter_value {
+		color: white;
+		font-weight: 700;
+	}
 
 	.counter:hover {
 		cursor: pointer;
 		color: var(--hover-color);
-	}
-
-
-#navbar a:hover {
-	background-color: #555;
-	color: var(--hover-color);
-}
-
-	#navbar a.active {
-		background-color: var(--color-red);
-		color: white;
 	}
 
 #gui {
@@ -73,27 +83,27 @@
 	color: white;
 	padding: 6px;
 }
-.inventory-empty {
-	display: inline-block;
-	font-family: "Roboto Condensed", serif;
-	font-size: 16px;
-	color: #eec9c9;
-	text-decoration: none;
-	padding: 7px;
-	margin: 4px;
-}
-.inventory-item {
-	display: inline-block;
-	border-radius: 6px;
-	border: 1px solid #444;
-	background-color: #222;
-	font-family: "Roboto Condensed", serif;
-	font-size: 16px;
-	color: white;
-	text-decoration: none;
-	padding: 7px;
-	margin: 4px;
-}
+	.inventory-empty {
+		display: inline-block;
+		font-family: "Roboto Condensed", serif;
+		font-size: 16px;
+		color: #eec9c9;
+		text-decoration: none;
+		padding: 7px;
+		margin: 4px;
+	}
+	.inventory-item {
+		display: inline-block;
+		border-radius: 6px;
+		border: 1px solid #444;
+		background-color: #222;
+		font-family: "Roboto Condensed", serif;
+		font-size: 16px;
+		color: white;
+		text-decoration: none;
+		padding: 7px;
+		margin: 4px;
+	}
 	.inventory-item:hover {
 		border: 1px solid #666;
 		background-color: rgba(0, 0, 0, 0.6);
@@ -114,12 +124,27 @@
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* LANGUAGE SELECTION SCREEN */
+/**************************** 
+LANGUAGE SELECTION SCREEN
+****************************/
 
 .language-selection-screen {
 	display: block;
 	height: 100%;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: white;
+}
+
+.logo {
+	width: 140px;
+	height: auto;
+}
+
+.app-name {
+	display: block;
+	font-family: "Roboto Condensed", serif;
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 90px;
 }
 
 .buttons-container {
@@ -156,19 +181,6 @@
 		/* box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.3); /* Add inset shadow for pressed effect */
 	}
 
-.logo {
-	width: 140px;
-	height: auto;
-}
-
-.app-name {
-	display: block;
-	font-family: "Roboto Condensed", serif;
-	font-size: 18px;
-	text-align: center;
-	margin-bottom: 90px;
-}
-
 .footer {
 	display: block;
 	font-family: "Roboto Condensed", serif;
@@ -180,7 +192,6 @@
 	position: fixed; /* Fix the footer to the bottom of the viewport */
 	bottom: 0; /* Position it at the bottom */
 }
-
 .version-number {
 	display: block;
 	font-family: "Roboto Condensed", serif;
@@ -190,19 +201,14 @@
 	margin-right: 20px;
 }
 
-#debug {
-	font-family: "Roboto Condensed", serif;
-	font-size: 14px;
-	color: white;
-	background-color: var(--color-red);
-	line-height: 2;
+/********************** 
+STORY SCREEN 
+**********************/
+
+#content {
+	margin-right: 5%;
+	margin-left: 5%;
 }
-
-	#debug:hover {
-		background-color: #850e0e;
-	}
-
-/* STORY SCREEN */
 
 .story-screen-container {
 	margin-right: 5%;
@@ -235,25 +241,27 @@
 }
 
 @keyframes pulse {
-	0% {
-		transform: scale(1);
-	}
-
-	50% {
-		transform: scale(1.5);
-	}
-
-	100% {
-		transform: scale(1);
-	}
+	0% {transform: scale(1);}
+	50% {transform: scale(1.5);}
+	100% {transform: scale(1);}
 }
 
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }
+
+/********************** 
+DEBUG 
+**********************/
+#debug {
+	font-family: "Roboto Condensed", serif;
+	font-size: 14px;
+	color: white;
+	background-color: var(--color-red);
+	line-height: 2;
+}
+
+	#debug:hover {
+		background-color: #850e0e;
+	}

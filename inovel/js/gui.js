@@ -21,7 +21,7 @@ function createLanguageSelectionScreen() {
     // LOGO
     createLogo(languageSelectionScreen);
 
-    // BUTTONS
+    // LANGUAGE SELECTION BUTTONS
     const buttonsContainer = document.createElement('div');
     buttonsContainer.className = 'buttons-container';
     languages.forEach(language => {
@@ -62,7 +62,7 @@ function createStoryScreen() {
     /* LAYOUT STRUCTURE OF THE STORY SCREEN
 
     <body id="body">
-        <div class="storyScreenContainer"></div>
+        <div class="storyScreenContainer">
             <div id="navbar"></div>
             <div id="gui"></div>
             <div id="content">
@@ -72,6 +72,7 @@ function createStoryScreen() {
                 <p id="spacer1">&nbsp;</p>
                 <div id="dropdown-list"></div>
             </div>
+        </div>
     </body>
     */
     const body = document.getElementById('body');
