@@ -1,6 +1,15 @@
 # JSON Data Structure of a Story
 [Markdown formatting guidelines](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
+## Table of Contents
+1. [Story](#Story)
+	* [Variables](#Variables)
+2. [Chapter](#Chapter)
+3. [Paragraph](#Paragraph)
+4. [Choice](#Choice)
+    * [Variables](#Variables)
+    * [Conditional Destinations](#Conditional-Destinations)
+
 ## Story
 A _Story_ is a collection of _Chapters_.
 
@@ -11,7 +20,7 @@ A _Story_ has the following properties:
 | **title** | _string_ | The title of the Story. |
 | **author** | _string_ | The author of the Story. |
 | **date** | _date_ | The date when the story was first published |
-| **stylesheet** | _string_ | The file name of the .css stylesheet. |
+| **stylesheet** | _string_ | Every story can have a bespoke CSS stylesheet. This is the stylesheet's file name. |
 | **chapterName** | _string_ | A string used for the chapter name. |
 | **endString** | _string_ | A string used for the end of the Story. |
 | **inventoryString** | _string_ | a string used for the name of the Inventory (i.e. backpack) |
@@ -23,10 +32,10 @@ A _Story_ has the following properties:
 Example:
 
 ```json
-"storyTitle": "Hamlet",
-"author": "William Shakespeare",
-"date": "2025-01-14",
-"stylesheet": "default.css",
+"storyTitle": "The Lord of the Rings",
+"author": "J.R.R. Tolkien",
+"date": "1954-07-11",
+"stylesheet": "fantasy.css",
 "chapterString": "Chapter",
 "endString": "The End.",
 "inventoryString": "Inventory",
@@ -37,7 +46,7 @@ Example:
 ```
 
 ### Variables
-An array of objects where each object represents a _Story_'s variable. The _variables_ array is used to declare all the variables that are going to be used in the Story. Each variable object has the following properties:
+An array of objects where each object represents a _Story_'s variable. The _Variables_ array is used to declare all the variables that are going to be used in the _Story_. Each variable object has the following properties:
 
 | Property | Data Type | Requirement | Description |
 | --- | --- | --- | --- |
@@ -60,9 +69,9 @@ Example:
 	{
 		"type": "number",
 		"name": "money",
-		"displayName": "Gold Pieces",
 		"value": 100,
-		"displayInUI": true
+		"displayInUI": true,
+		"displayName": "Gold Pieces"
 	}
 ]
 ```
@@ -74,38 +83,37 @@ Properties:
 | --- | --- | --- |
 | **id** | _int_ | The Chapter's unique numeric identifier. |
 | **title** | _string_ | The Chapter's title. |
-| **type** | _string_ | legal values: "storyStart", "regular", "storyEnd". |
 | **paragraphs** | _array of objects_ | An array of objects where each object is a Paragraph. |
 
 Example:
 
 ```json
 "id": 0,
-"title": "The Hooded Man",
-"type": "storyStart",
+"title": "The Fellowship of the Ring",
 "paragraphs": []
 ```
 ## Paragraph
-Paragraphs are the building blocks of an Interactive Novel. 
-Paragraphs can have the following properties:
+Paragraphs are the building blocks of a _Story_. 
+Paragraphs have the following properties:
 
 | Property | Data Type | Requirement | Description |
 | --- | --- | --- | --- |
 | **id** | _int_ | _mandatory_ | The Paragraph's unique numeric identifier. |
 | **text_body** | _string_ | _mandatory_ | The paragraph's text. Can contain HTML tags. HTML tags will be parsed and added to the complete version of the paragraph (as opposed to the paragraph typed character by character).|
-| **type** | _string_ | _mandatory_ | legal values: "storyStart", "regular", "passThru", "infoBox", "storyEnd". |
+| **type** | _string_ | _mandatory_ | legal values: "regular", "passThru", "infoBox". |
 | **image** | _string_ | _optional_ | the relative path to an image. The image is always displayed after the full paragraph has been shown to the reader.|
-| **destination_id** | _string_ | _optional_ | only for paragraph types "passThru" and "storyEnd" (the latter when you want to display an infobox after the story has finished)|
+| **destination_id** | _string_ | _optional_ | only for paragraph of type "passThru" and "infoBox" (the latter when you want to display an infobox in the middle of a story)|
 
-## Choices (array)
-A Choice is an option that the user can choose from the list that appears when the user clicks on a Keyword.
-Each Choice typically dictates the next Paragraph that is going to be displayed.
+## Choice
+A _Choice_ is an option that the user can choose from the UI list that appears when they click on a Keyword.
+Each _Choice_ has a destination_id, that dictates what's the next _Paragraph_ that is going to be displayed if the user picks that particular choice.
+Optionally, a _Choice_ can modify one or more _Story_ variables.
 
 | Property | Data Type | Requirement | Description |
 | --- | --- | --- | --- |
 | **text_body** | _string_ | _mandatory_ | The Choice's text |
 | **destination_id** | _int_ | _mandatory_ | The default Paragraph id that is going to be displayed if the user selects the Choice. This can be overridden by _conditionalDestinations_ (see below).|
-| **variables** | _array of objects_ | _optional_ | An array of objects where each object represents a change to a game's variable. |
+| **variables** | _array of objects_ | _optional_ | An array of objects where each object represents a change to the value of a _Story_'s variable. |
 | **conditionalDestinations** | _array of objects_ | _optional_ | An array of objects where each object represents a condition that, if met, will set a different destination id than the default one. |
 
 Example:
@@ -126,8 +134,8 @@ Example:
 ]
 ```
 
-### Variables (array)
-An optional array of objects where each object represents a request to update the value of a game's variable.
+### Variables
+An optional array of objects where each object represents a change of the value of a _Story_'s variable.
 
 | Property | Data Type | Description |
 | --- | --- | --- |
@@ -146,7 +154,7 @@ Example:
 ]
 ```
 
-### Conditional Destinations (array)
+### Conditional Destinations
 An array of objects where each object represents a condition that, if met, will set a different destination id than the default one.
 
 | Property | Data Type | Description |
