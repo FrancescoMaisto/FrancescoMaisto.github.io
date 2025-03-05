@@ -1,0 +1,87 @@
+{
+  "story": {
+    "title": "Sample Story",
+    "author": "John Smith",
+    "date": "2025-01-14",
+    "stylesheet": "default.css",
+    "chapterString": "STORY",
+    "endString": "The End.",
+    "inventoryName": "",
+    "inventoryEmpty": "",
+    "typingSpeed": 60,
+    "hasInventory": false,
+    "variables": [],
+    "chapters": [
+      {
+        "id": 0,
+        "title": "Il Castello di Carloffo",
+        "type": "storyStart",
+        "paragraphs": [
+          {
+            "id": 0,
+            "type": "interactive",
+            "text_body": "You walk into a room with two doors. You decide to open the door on the {keyword}.",
+            "choices": [
+              {
+                "text_body": "Left",
+                "destination_id": 1,
+                "position": [
+                  399,
+                  357
+                ]
+              },
+              {
+                "text_body": "Right",
+                "destination_id": 2,
+                "position": [
+                  547,
+                  358
+                ]
+              }
+            ],
+            "position": [
+              472,
+              242
+            ]
+          },
+          {
+            "id": 1,
+            "type": "interactive",
+            "text_body": "Here goes the text of another paragraph of the story with a {keyword}.",
+            "position": [
+              399,
+              483
+            ]
+          },
+          {
+            "id": 2,
+            "type": "passThru",
+            "text_body": "You open the door on the right, a monster comes out and kills you.",
+            "destination_id": 3,
+            "position": [
+              544,
+              483
+            ]
+          },
+          {
+            "id": 3,
+            "type": "infoBox",
+            "text_body": "The End.",
+            "position": [
+              544,
+              612
+            ]
+          }
+        ],
+        "position": [
+          473,
+          129
+        ]
+      }
+    ],
+    "position": [
+      474,
+      20
+    ]
+  }
+}

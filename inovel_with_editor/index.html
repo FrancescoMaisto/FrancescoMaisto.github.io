@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Story Editor</title>
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="editor/css/style.css" />
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/png" href="editor/images/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="editor/images/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="editor/images/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="editor/images/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="editor/images/favicon/site.webmanifest" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+   <!-- implement the responsive navbar eventually:
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_responsive
+    -->
+  <div class="navbar"> 
+    <div class="navbarText">STORY</div>
+    <button id="newStory" class="button">📗 New</button>
+    <button id="loadStory" class="button">🔼 Load...</button>
+    <button id="saveStory" class="button">💾 Save...</button>
+    <button id="testStory" class="button">📲 Test</button>
+    <div class="navbarText">BLOCKS</div>
+    <button id="newBlock_Interactive" class="button">👉 Interactive</button>
+    <button id="newBlock_PassThru" class="button">🚪 Pass-through</button>
+    <button id="newBlock_InfoBox" class="button">💡 Info Box</button>
+  </div>
+  <input type="file" id="fileInput" accept=".json" style="display:none;">
+  <!-- Editor container -->
+  <div id="editor" class="editor">
+    <!-- SVG overlay for drawing connection lines -->
+    <svg id="svgCanvas" class="svg-overlay">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#000" />
+        </marker>
+      </defs>
+    </svg>
+  </div>
+  
+  <!-- Confirmation Dialog -->
+  <div id="dialogOverlay" class="dialog-overlay"></div>
+  <div id="confirmationDialog" class="confirmation-dialog">
+    <div class="dialog-header">Delete Block</div>
+    <div class="dialog-message">Are you sure you want to delete this block?</div>
+    <div class="dialog-buttons">
+      <button id="dialogOK" class="dialog-button dialog-button-ok">OK</button>
+      <button id="dialogCancel" class="dialog-button dialog-button-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Properties Panel -->
+  <div id="propertiesPanel" class="properties-panel">
+    <button id="closePropertiesPanel" class="close-button">X</button>
+  </div>
+
+  <div id="appContainer"></div>
+
+  <!-- Load the Properties Panel code before the main script -->
+  <script src="editor/js/properties_panel.js"></script>
+  <script src="editor/js/script.js"></script>
+  <script src="editor/js/navbar.js"></script>
+</body>
+</html>

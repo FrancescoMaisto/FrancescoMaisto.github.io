@@ -1,0 +1,597 @@
+{
+	"story": {
+		"title": "Il Marchese di Corvonero",
+		"author": "Francesco Maisto",
+		"date": "2025-01-14",
+		"stylesheet": "default.css",
+		"chapterString": "CHAPTER",
+		"endString": "The End.",
+		"inventoryName": "Inventory",
+		"inventoryEmpty": "The inventory is empty",
+		"typingSpeed": 35,
+		"hasInventory": true,
+		"variables": [
+			{
+				"type": "string",
+				"name": "characterName",
+				"value": "",
+				"displayInUI": false
+			},
+			{
+				"type": "string",
+				"name": "disease",
+				"value": "",
+				"displayInUI": false
+			},
+			{
+				"type": "number",
+				"name": "money",
+				"displayName": "Coins :",
+				"value": 0,
+				"displayInUI": true
+			},
+			{
+				"type": "string",
+				"name": "time",
+				"displayName": "Calendar :",
+				"value": "Day 1, 10:30 AM",
+				"displayInUI": true
+			}
+		],
+		"chapters": [
+			{
+				"id": 0,
+				"title": "The Marquis of Ravenclaw",
+				"type": "storyStart",
+				"paragraphs": [
+					{
+						"id": 0,
+						"type": "interactive",
+						"text_body": "This is the story of a knight errant born and raised in the village of Saint Garganus who, through a series of unfortunate events, found himself in the service of the devious Marquis of Ravenclaw. His name was Sir {keyword}.",
+						"choices": [
+							{
+								"text_body": "Reginald Crumblepot",
+								"destination_id": 24,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Reginald",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "Bartholomew Grubstone",
+								"destination_id": 24,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Bartholomew",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "Percival Ticklebottom",
+								"destination_id": 24,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Percival",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "Sir Thaddeus Puddleduck",
+								"destination_id": 24,
+								"variables": [
+									{
+										"name": "characterName",
+										"value": "Thaddeus",
+										"operation": "set"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 1,
+						"type": "interactive",
+						"text_body": "{characterName} was of humble birth. His mother, Costanza, was a peasant, while his father, Lodovico, was {keyword}.",
+						"image": "images/01_01.jpeg",
+						"choices": [
+							{
+								"text_body": "a blacksmith",
+								"destination_id": 2
+							},
+							{
+								"text_body": "an apothecary",
+								"destination_id": 4
+							}
+						]
+					},
+					{
+						"id": 2,
+						"type": "interactive",
+						"text_body": "Before setting off on his quest, Lodovico asked his son if he needed anything.<p>«Father, to tell the truth, I could really use a new {keyword}», {characterName} replied.",
+						"choices": [
+							{
+								"text_body": "suit of armor",
+								"destination_id": 3,
+								"variables": [
+									{
+										"type": "inventoryItem",
+										"value": "suit of armor",
+										"operation": "add"
+									}
+								]
+							},
+							{
+								"text_body": "sword",
+								"destination_id": 3,
+								"variables": [
+									{
+										"type": "inventoryItem",
+										"value": "sword",
+										"operation": "add"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 3,
+						"type": "interactive",
+						"text_body": "Lodovico went into the back room and returned shortly after with a very valuable {inventoryItem}. {characterName} took it, thanked his father and without wasting any more time set out for Sant'Eufebio's church.<p>He arrived there almost at {keyword}.",
+						"choices": [
+							{
+								"text_body": "midnight",
+								"destination_id": 10
+							},
+							{
+								"text_body": "dawn",
+								"destination_id": 9
+							}
+						]
+					},
+					{
+						"id": 4,
+						"type": "interactive",
+						"text_body": "Before setting off on his quest, Lodovico asked his son if he needed anything.<p>«Father, to tell the truth, I could really use one of those {keyword} flasks of yours.», replied {characterName}.",
+						"choices": [
+							{
+								"text_body": "holy water",
+								"destination_id": 8,
+								"variables": [
+									{
+										"type": "inventoryItem",
+										"value": "holy water",
+										"operation": "add"
+									}
+								]
+							},
+							{
+								"text_body": "healing wine",
+								"destination_id": 8,
+								"variables": [
+									{
+										"type": "inventoryItem",
+										"value": "healing wine",
+										"operation": "add"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 8,
+						"type": "interactive",
+						"text_body": "Lodovico went into the back room and returned shortly after with a small flask of {inventoryItem}. {characterName} took it, thanked his father and without wasting any more time set out for Sant'Eufebio's church.<p>He arrived there almost at {keyword}.",
+						"choices": [
+							{
+								"text_body": "mezzanotte",
+								"destination_id": 10
+							},
+							{
+								"text_body": "l'alba",
+								"destination_id": 9
+							}
+						]
+					},
+					{
+						"id": 7,
+						"type": "interactive",
+						"text_body": "Stava proprio esplorando la cripta di quella basilica quando, alla fine di uno stretto corridoio in pietra, arrivò in una piccola stanza con due grosse porte di legno.<p>La porta di sinistra aveva un bassorilievo raffigurante un teschio, mentre quella di destra era rinforzata da borchie di ferro battuto. {characterName} decise di aprire la porta di {keyword}.",
+						"choices": [
+							{
+								"text_body": "sinistra",
+								"destination_id": 6,
+								"conditionalDestinations": [
+									{
+										"condition": "hasItem",
+										"value": "corazza",
+										"destination_id": 15
+									}
+								]
+							},
+							{
+								"text_body": "destra",
+								"destination_id": 5
+							}
+						]
+					},
+					{
+						"id": 5,
+						"type": "interactive",
+						"text_body": "Una rete di ragnatele teneva la porta quasi incollata agli stipiti. {characterName} la spinse con forza e la porta si aprì con un cigolio sinistro. Al di là di essa, una stanza oscura, illuminata solo da un fascio di luce proveniente da una piccola apertura nel soffitto. Un immondo tanfo di {keyword} lo investì.",
+						"choices": [
+							{
+								"text_body": "carne putrefatta",
+								"destination_id": 10
+							},
+							{
+								"text_body": "uova marce",
+								"destination_id": 11
+							}
+						]
+					},
+					{
+						"id": 6,
+						"type": "passThru",
+						"text_body": "Aprì senza indugio la porta col teschio. Al di là di essa, un'oscurità impenetrabile.<p>Una folata di vento gelido proveniente dall'interno gli sferzò il volto incappucciato e un attimo dopo fu investito da un nugolo di dardi da balestra. L'ultimo suo pensiero, mentre si accasciava sanguinante sul freddo pavimento della cripta, fu: «una dannata trappola!»."
+					},
+					{
+						"id": 9,
+						"type": "passThru",
+						"text_body": "Il sole stava per sorgere dietro l'appennino e l'antica basilica già proiettava lunghe ombre nella valle verdeggiante.",
+						"destination_id": 7
+					},
+					{
+						"id": 10,
+						"type": "passThru",
+						"text_body": "Despite the growing darkness, the moon was in its first quarter, and the ancient basilica, illuminated by that pale light, stood out ghostly against the dark grass expanse of the valley.",
+						"destination_id": 7
+					},
+					{
+						"id": 11,
+						"type": "interactive",
+						"text_body": "{characterName} arrivo' in una stanza con due porte una a nord e l'altra a sud. Decise di entrare nella porta a {keyword}",
+						"choices": [
+							{
+								"text_body": "nord",
+								"destination_id": 12
+							},
+							{
+								"text_body": "sud",
+								"destination_id": 14
+							}
+						]
+					},
+					{
+						"id": 12,
+						"type": "interactive",
+						"text_body": "{characterName} apri' la porta di nord ed entro' in una stanza in cui c'era un forziere. {characterName} decise allora di {keyword}.",
+						"choices": [
+							{
+								"text_body": "aprire il forziere",
+								"destination_id": 13
+							},
+							{
+								"text_body": "tornare indietro",
+								"destination_id": 11
+							}
+						]
+					},
+					{
+						"id": 13,
+						"type": "interactive",
+						"text_body": "{characterName} cerco' di aprire il forziere. Purtroppo il forziere sembrava essere chiuso a chiave.{characterName} decise allora di {keyword}.",
+						"choices": [
+							{
+								"text_body": "scassinare la serratura",
+								"destination_id": 13
+							},
+							{
+								"text_body": "tornare indietro",
+								"destination_id": 11
+							}
+						]
+					},
+					{
+						"id": 14,
+						"type": "interactive",
+						"text_body": "{characterName} apri' la porta di sud ed entro' in una stanza in cui c'era una statua. {characterName} decise allora di {keyword}.",
+						"choices": [
+							{
+								"text_body": "esaminare la statua",
+								"destination_id": 13
+							},
+							{
+								"text_body": "tornare indietro",
+								"destination_id": 11
+							}
+						]
+					},
+					{
+						"id": 15,
+						"type": "interactive",
+						"text_body": "Aprì senza indugio la porta col teschio. Al di là di essa, un'oscurità impenetrabile.<p>Una folata di vento gelido proveniente dall'interno gli sferzò il volto incappucciato e un attimo dopo fu investito da un nugolo di dardi acuminati.<p>Alcuni lo avevano mancato, andandosi a conficcare nella parete alle sue spalle, ma altri lo avevano colpito al petto.<p>Com'era possibile allora che fosse ancora vivo? La <strong>corazza</strong> che il padre gli aveva dato prima di partire lo aveva salvato!<p>Appena si fu ripreso dal gran spavento {characterName} decise di {keyword}",
+						"choices": [
+							{
+								"text_body": "richiudere la porta",
+								"destination_id": 16
+							},
+							{
+								"text_body": "entrare",
+								"destination_id": 17
+							}
+						]
+					},
+					{
+						"id": 16,
+						"type": "interactive",
+						"text_body": "{characterName} si trovava in una piccola stanza con due grosse porte di legno.<p>La porta di sinistra aveva un bassorilievo raffigurante un teschio, mentre quella di destra era rinforzata da borchie di ferro battuto. {characterName} decise di aprire la porta di {keyword}.",
+						"choices": [
+							{
+								"text_body": "sinistra",
+								"destination_id": 6,
+								"conditionalDestinations": [
+									{
+										"condition": "hasItem",
+										"value": "corazza",
+										"destination_id": 15
+									}
+								]
+							},
+							{
+								"text_body": "destra",
+								"destination_id": 5
+							}
+						]
+					},
+					{
+						"id": 17,
+						"type": "interactive",
+						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa. Le pareti erano affrescate con scene di caccia. Nonostante gli affreschi fossero ormai danneggiati dal tempo e dall'umidità, era ancora possibile distinguere le sagome di nobili a cavallo, cervi, orsi e cinghiali.<p>Dall'altra parte della stanza c'era una grossa balestra montata su un trespolo di legno.<p>Al centro della stanza troneggiava una rozza bara di legno lunga più di due metri.<p>{characterName} decise allora di {keyword}.",
+						"choices": [
+							{
+								"text_body": "prendere la balestra",
+								"destination_id": 19,
+								"variables": [
+									{
+										"type": "inventoryItem",
+										"value": "balestra",
+										"operation": "add"
+									}
+								]
+							},
+							{
+								"text_body": "aprire la bara",
+								"destination_id": 18
+							},
+							{
+								"text_body": "uscire dalla stanza",
+								"destination_id": 5
+							}
+						]
+					},
+					{
+						"id": 18,
+						"type": "interactive",
+						"text_body": "Il coperchio della bara era bloccato da un grosso catenaccio. {characterName} decise allora di {keyword}.",
+						"choices": [
+							{
+								"text_body": "aprire il catenaccio",
+								"destination_id": 19,
+								"conditionalDestinations": [
+									{
+										"condition": "hasItem",
+										"value": "chiave",
+										"destination_id": 20
+									}
+								]
+							},
+							{
+								"text_body": "lasciar perdere",
+								"destination_id": 17
+							}
+						]
+					},
+					{
+						"id": 19,
+						"type": "passThru",
+						"text_body": "{characterName} sollevò la pesante balestra dal trespolo che la sosteneva e se la mise a tracolla. Era un grosso balestrone di quelli come li facevano una volta, non certo leggero, ma gli sarebbe potuto tornare utile.",
+						"destination_id": 20
+					},
+					{
+						"id": 20,
+						"type": "interactive",
+						"text_body": "Sulla parete opposta alla porta c'era il supporto di legno che prima sosteneva una grossa balestra.<p>Al centro della stanza troneggiava una grossa bara di legno lunga più di due metri.<p>{characterName} decise allora di {keyword}.",
+						"choices": [
+							{
+								"text_body": "aprire la bara",
+								"destination_id": 18
+							},
+							{
+								"text_body": "uscire dalla stanza",
+								"destination_id": 21
+							}
+						]
+					},
+					{
+						"id": 21,
+						"type": "interactive",
+						"text_body": "{characterName} tornò nella stanza con le due grosse porte di legno.<p>La porta di sinistra era aperta e aveva un bassorilievo raffigurante un teschio, quella di destra invece aveva delle borchie di ferro battuto ed era chiusa.<p>Alcuni dardi da balestra erano conficcati in una delle pareti. {characterName} decise di {keyword}.",
+						"choices": [
+							{
+								"text_body": "raccogliere i dardi",
+								"destination_id": 22,
+								"variables": [
+									{
+										"type": "inventoryItem",
+										"value": "dardi",
+										"operation": "add"
+									}
+								]
+							},
+							{
+								"text_body": "aprire la porta chiusa",
+								"destination_id": 5
+							}
+						]
+					},
+					{
+						"id": 22,
+						"type": "interactive",
+						"text_body": "{characterName} estrasse alcuni dardi da balestra che si erano conficcati nella parete.<p>Nella stanza c'erano due grosse porte di legno: la porta di sinistra era aperta e aveva un bassorilievo raffigurante un teschio, quella di destra invece aveva delle borchie di ferro battuto ed era chiusa.<p> {characterName} decise di {keyword}.",
+						"choices": [
+							{
+								"text_body": "aprire la porta chiusa",
+								"destination_id": 5
+							},
+							{
+								"text_body": "entrare nella porta a sinistra",
+								"destination_id": 20
+							}
+						]
+					},
+					{
+						"id": 23,
+						"type": "passThru",
+						"text_body": "Si trovava ora in una piccola stanza dal soffitto basso, senza porte nè finestre. All'interno l'aria umida puzzava di muffa. Le pareti erano affrescate con scene di caccia. Nonostante gli affreschi fossero ormai danneggiati dal tempo e dall'umidità, era ancora possibile distinguere le sagome di uomini a cavallo e animali selvatici.",
+						"destination_id": 7
+					},
+					{
+						"id": 24,
+						"type": "interactive",
+						"text_body": "On a sad morning of a cloudy day of March the Marquis summoned {characterName} to his manor to give him a task: he was to find the ancient reliquary of Saint Euphebius, which was said to be hidden in the catacombs of the eponymous church.<p>Legend had it that the dust of the saint's bones, mixed in certain doses with holy water and mercury salts, was able to cure any ailment.<p>The Marquis had in fact been suffering from a serious form of {keyword} for some time, which kept him in bed for most of the day.",
+						"choices": [
+							{
+								"text_body": "tubercolosis",
+								"destination_id": 25,
+								"variables": [
+									{
+										"name": "disease",
+										"value": "tubercolosis",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "syphilis",
+								"destination_id": 25,
+								"variables": [
+									{
+										"name": "disease",
+										"value": "syphilis",
+										"operation": "set"
+									}
+								]
+							},
+							{
+								"text_body": "housemaid's knee",
+								"destination_id": 25,
+								"variables": [
+									{
+										"name": "disease",
+										"value": "housemaid's knee",
+										"operation": "set"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 25,
+						"type": "interactive",
+						"text_body": "«Bring me the <span id='highlight_word'>reliquary of Saint Euphebius</span> and I will reward you with 500 coins.» said the Marquis. «Here, take these {keyword}, consider them an advance for the travel expenses. You will get the remainder of your reward when you have delivered the reliquary to me.»",
+						"choices": [
+							{
+								"text_body": "50 coins",
+								"destination_id": 26,
+								"variables": [
+									{
+										"name": "money",
+										"value": "50",
+										"operation": "add"
+									}
+								]
+							},
+							{
+								"text_body": "100 coins",
+								"destination_id": 26,
+								"variables": [
+									{
+										"name": "money",
+										"value": "100",
+										"operation": "add"
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": 26,
+						"type": "passThru",
+						"text_body": "{characterName} took the <span id='highlight_word'>coins</span>, and with a deep bow took leave of the Marquis.",
+						"destination_id": 1
+					},
+					{
+						"id": 27,
+						"type": "interactive",
+						"text_body": "Si recò infine al mercato. Il formaggio costava 20 denari, mentre il pane di segale ne costava 30. {characterName} decise di acquistare del {keyword}",
+						"choices": [
+							{
+								"text_body": "formaggio",
+								"destination_id": 1,
+								"variables": [
+									{
+										"name": "money",
+										"value": "20",
+										"operation": "remove"
+									},
+									{
+										"type": "inventoryItem",
+										"value": "formaggio",
+										"operation": "add"
+									}
+								]
+							},
+							{
+								"text_body": "pane di segale",
+								"destination_id": 1,
+								"variables": [
+									{
+										"name": "money",
+										"value": "30",
+										"operation": "remove"
+									},
+									{
+										"type": "inventoryItem",
+										"value": "pane di segale",
+										"operation": "add"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"id": 1,
+				"title": "The End",
+				"type": "passThru",
+				"paragraphs": [
+					{
+						"id": 0,
+						"text_body": "You reach the village and find safety.",
+						"keyword": "village",
+						"choices": [],
+						"type": "ChapterEnd"
+					}
+				]
+			}
+		]
+	}
+}

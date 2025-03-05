@@ -1,0 +1,104 @@
+:root {
+	--accent-color: #dd3333; /* A muted red */
+	--hover-color: yellow; /* Orange */
+}
+
+/* Headers Font */
+.press-start-2p-regular {
+	font-family: "Press Start 2P", serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Paragraphs Font */
+.pixelify-sans-400 {
+	font-family: "Pixelify Sans", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 24px;
+	background-color: #eaeaea;
+	margin-top: 5%;
+	margin-bottom: 15%;
+	margin-right: 5%;
+	margin-left: 5%;
+	height: 100%;
+}
+
+#chapterTitle {
+	font-family: "Press Start 2P", serif;
+	font-size: 20px;
+	text-align: center;
+	color: black;
+}
+p {
+	font-family: "Pixelify Sans", serif;
+	color: black;
+	line-height: 1.6;
+}
+img {
+	display: block;     /* Removes any space below the image */
+	margin: 0 auto; 	/* Horizontally center the image inside the container */
+}
+#debug {
+	font-size: 13px;
+	color: white;
+	background-color: var(--accent-color);
+	line-height: 2;
+}
+
+#text-container {
+	cursor: default;
+}
+#game-over {
+	font-weight: bold;
+}
+.keyword {
+	cursor: pointer;
+	color: #090909;
+	border-bottom: 4px solid var(--accent-color);
+	position: relative;
+	transition: background .4s;
+	background-color: white;
+	/* filter: blur(2px); */
+}
+
+	.keyword:hover {
+		background-color: black;
+		color: var(--accent-color);
+	}
+
+.keyword-off {
+	position: relative;
+	font-weight: bold;
+}
+.options {
+	list-style-type: none;
+	padding-left: 0; /* Remove default padding */
+	margin-left: 0; /* Remove default margin */
+	position: absolute; /* Position it absolutely */
+	top: -30px; /* Move up by 10 pixels */
+	border: 2px solid grey; /* outline */
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+	.options li {
+		cursor: pointer; /* Show hand cursor on hover */
+		color: var(--accent-color);
+		background-color: white;
+		font-family: "Pixelify Sans", serif;
+		/*font-weight: bold;*/
+		border: 2px solid black; /* outline */
+		padding: 10px;
+		transition: background .2s;
+	}
+	.options li:hover {
+		color: white;
+		background-color: black;
+	}

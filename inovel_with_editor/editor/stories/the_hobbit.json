@@ -1,0 +1,95 @@
+{
+  "story": {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "date": "2025-01-14",
+    "stylesheet": "default.css",
+    "chapterString": "STORY",
+    "endString": "The End.",
+    "inventoryName": "",
+    "inventoryEmpty": "",
+    "typingSpeed": 60,
+    "hasInventory": false,
+    "variables": [],
+    "chapters": [
+      {
+        "id": 0,
+        "title": "",
+        "paragraphs": [
+          {
+            "id": 0,
+            "type": "interactive",
+            "text_body": "Bilbo Baggins walked into a room with two doors. He decided to open the door on the {keyword}.",
+            "choices": [
+              {
+                "text_body": "Left",
+                "destination_id": 1,
+                "position": [
+                  412,
+                  309
+                ]
+              },
+              {
+                "text_body": "Right",
+                "destination_id": 2,
+                "position": [
+                  592,
+                  305
+                ]
+              }
+            ],
+            "position": [
+              496,
+              157
+            ],
+            "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/two_doors.jpeg"
+          },
+          {
+            "id": 1,
+            "type": "passThru",
+            "text_body": "Bilbo opened the door on the left, Gandalf came out of it and gave him a big hug.",
+            "destination_id": "4",
+            "position": [
+              412,
+              437
+            ]
+          },
+          {
+            "id": 2,
+            "type": "passThru",
+            "text_body": "Bilbo opened the door on the right, Gollum came out of it and strangled him.",
+            "destination_id": 3,
+            "position": [
+              589,
+              425
+            ]
+          },
+          {
+            "id": 3,
+            "type": "infoBox",
+            "text_body": "Poor Bilbo, he wasn't expecting that!<p><strong>The End.</strong></p>",
+            "position": [
+              582,
+              582
+            ],
+            "image": "https://media.tenor.com/images/6696f6ae27a70eae70534e7714b1d650/tenor.gif"
+          },
+          {
+            "id": 4,
+            "type": "infoBox",
+            "text_body": "... and then they lived happily thereafter.<p><strong>The End.</strong></p>",
+            "position": [
+              415,
+              588
+            ],
+            "image": "https://i.pinimg.com/originals/76/8c/6d/768c6d02baaac12092285141a01dc5dd.gif"
+          }
+        ]
+      }
+    ],
+    "position": [
+      498,
+      34
+    ]
+  }
+}
