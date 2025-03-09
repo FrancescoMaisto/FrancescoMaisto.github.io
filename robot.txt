@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /inovel/
+Disallow: /inovel_ee/
+Disallow: /inovel_en/
