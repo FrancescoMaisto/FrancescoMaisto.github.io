@@ -20,7 +20,7 @@ let keywordString = "keyword";
 function initStory(data) {
 	console.log(`Data: ${data}`);
     storyData = JSON.parse(data.storyData);
-	debug = data.isDebug;
+	debug = storyData.story.isDebug;
 	console.log(`Story title: ${storyData.story.title}`);
 	console.log(storyData);
     init();

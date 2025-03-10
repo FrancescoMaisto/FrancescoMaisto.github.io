@@ -394,14 +394,15 @@ function updateDataFromPanel(blockId, property, newValue) {
       newValue = Number(newValue);
     } else if (property === 'hasInventory') {
       newValue = (newValue.toLowerCase() === 'true');
+    } else if (property === 'title') {
+      updateLabel(blockId, "keyword-label", newValue);
     }
     currentData.story[property] = newValue;
 
     if (property === "starting_id"){      
       // We validate the starting ID
       startingIdElement = document.querySelector('[data-property="starting_id"]');
-      validateUInt(startingIdElement, newValue);
-      
+      validateUInt(startingIdElement, newValue);      
       updateStoryConnection();
       updateConnections();
     }
@@ -447,20 +448,7 @@ function updateDataFromPanel(blockId, property, newValue) {
   // *******************************************************
   else if (blockId.startsWith('paragraph-')) {
   const [ , chapterIndex, paragraphIndex] = blockId.split('-').map(Number);
-  if (property === 'id') {
-    newValue = Number(newValue);
-    currentData.story.chapters[chapterIndex].paragraphs[paragraphIndex][property] = newValue;
-    // Update the div with class "id-label"   
-    const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
-    if (blockElem) {
-      blockElem.dataset.jsonId = newValue;
-      const idLabel = blockElem.querySelector('.id-label');
-      if (idLabel) {
-        idLabel.innerText = "ID: " + newValue;
-      }
-      updateConnections();
-    }
-  } else if (property === 'destination_id') {
+  if (property === 'destination_id') {
 
     // Only add destination_id to currentData if the value is NOT empty/null/undefined
     if (!newValue || newValue.trim() === "") {
@@ -490,19 +478,8 @@ function updateDataFromPanel(blockId, property, newValue) {
     }
   } else if (property === 'text_body') {
     // Update data
-    currentData.story.chapters[chapterIndex].paragraphs[paragraphIndex][property] = newValue;
-    
-    // Update block's text preview - find the *first* destination-label
-    const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
-    if (blockElem) {
-      blockElem.title = newValue;
-      const textLabels = Array.from(blockElem.getElementsByClassName('textbody-label'));
-      // Get the last one which is our text preview
-      const textLabel = textLabels[textLabels.length - 1];
-      if (textLabel) {
-        textLabel.innerText = newValue;
-      }
-    }
+    currentData.story.chapters[chapterIndex].paragraphs[paragraphIndex][property] = newValue;    
+    updateLabel(blockId, "textbody-label", newValue, true);
   } else {
     currentData.story.chapters[chapterIndex].paragraphs[paragraphIndex][property] = newValue;
   }
@@ -531,14 +508,7 @@ function updateDataFromPanel(blockId, property, newValue) {
         updateConnections();
       }
     } else if (property === 'text_body') {
-      // Update the UI element with the new text value
-      const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
-      if (blockElem) {
-        const textLabel = blockElem.querySelector('.keyword-label');
-        if (textLabel) {
-          textLabel.innerText = newValue;
-        }
-      }
+      updateLabel(blockId, "keyword-label", newValue);
     }
   }
 }

@@ -388,7 +388,6 @@ function drawDestinationConnector(fromBlock, toBlock, svgCanvas) {
   line.setAttribute("marker-end", "url(#arrowChapterParagraph)");
   svgCanvas.appendChild(line);
 }
-
 function getMarkerUrl(connType) {
   // Return appropriate marker URL based on connection type.
   if (connType === "story-chapter") return "url(#arrowStoryChapter)";
@@ -396,7 +395,6 @@ function getMarkerUrl(connType) {
   if (connType === "paragraph-choice") return "url(#arrowParagraphChoice)";
   return "url(#arrow)";
 }
-
 function drawConnection(fromBlock, toBlock, connType, svgCanvas) {
   const { x: x1, y: y1 } = getBlockCenter(fromBlock);
   const { x: x2, y: y2 } = getEdgePoint(toBlock, x1, y1);
@@ -423,6 +421,15 @@ function updateStoryConnection(){
       }
       return conn;
     });
+  }
+}
+
+function updateLabel(blockId, labelName, newValue, tooltip = false) {
+  const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
+  if (blockElem) {
+    const label = blockElem.querySelector("." + labelName);
+    if (label) { label.innerText = newValue; }
+    if (tooltip){ blockElem.title = newValue; }
   }
 }
 

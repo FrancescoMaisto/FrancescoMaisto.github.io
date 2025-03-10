@@ -11,6 +11,7 @@
     "typingSpeed": 60,
     "starting_id": 0,
     "variables": [],
+    "isDebug": true,
     "chapters": [
       {
         "id": 0,
@@ -25,22 +26,22 @@
                 "text_body": "Left",
                 "destination_id": 1,
                 "position": [
-                  412,
-                  309
+                  385,
+                  280
                 ]
               },
               {
                 "text_body": "Right",
                 "destination_id": 2,
                 "position": [
-                  592,
-                  305
+                  559,
+                  281
                 ]
               }
             ],
             "position": [
-              496,
-              157
+              474,
+              161
             ],
             "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/two_doors.jpeg"
           },
@@ -50,18 +51,18 @@
             "text_body": "Bilbo opened the door on the left, Gandalf came out of it and gave him a big hug.",
             "destination_id": "4",
             "position": [
-              412,
-              437
+              382,
+              394
             ]
           },
           {
             "id": 2,
             "type": "passThru",
             "text_body": "Bilbo opened the door on the right, Gollum came out of it and strangled him.",
-            "destination_id": 3,
+            "destination_id": "3",
             "position": [
-              589,
-              425
+              555,
+              394
             ]
           },
           {
@@ -69,8 +70,8 @@
             "type": "infoBox",
             "text_body": "Poor Bilbo, he wasn't expecting that!<p><strong>The End.</strong></p>",
             "position": [
-              582,
-              582
+              556,
+              537
             ],
             "image": "https://media.tenor.com/images/6696f6ae27a70eae70534e7714b1d650/tenor.gif"
           },
@@ -79,8 +80,8 @@
             "type": "infoBox",
             "text_body": "... and then they lived happily thereafter.<p><strong>The End.</strong></p>",
             "position": [
-              415,
-              588
+              378,
+              535
             ],
             "image": "https://i.pinimg.com/originals/76/8c/6d/768c6d02baaac12092285141a01dc5dd.gif"
           }
@@ -88,8 +89,8 @@
       }
     ],
     "position": [
-      498,
-      34
+      474,
+      50
     ]
   }
 }

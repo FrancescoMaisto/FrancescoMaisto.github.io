@@ -278,7 +278,7 @@ DEBUG
 	font-family: "Roboto Condensed", serif;
 	font-size: 14px;
 	color: white;
-	background-color: var(--color-red);
+	background-color: #dd3333;
 	line-height: 2;
 }
 #debug:hover {

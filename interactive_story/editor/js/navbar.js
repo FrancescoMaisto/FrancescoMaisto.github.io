@@ -122,7 +122,7 @@ document.getElementById("saveStory").addEventListener("click", () => {
   currentData.story.chapters.forEach(chapter => {
     chapter.paragraphs.forEach(para => {
       if (para.destination_id === undefined || para.destination_id === null || String(para.destination_id).trim() === "") {
-        console.error("ATTENTION! Paragraph ID = " + para.id + " [TYPE = " + para.type + "] had an empty/null/undefined 'destination_id' in the data structure (currentData) that I had to remove. For the future, please make sure that empty/null/undefined 'destination_id's never get added to currentData in the first place!");
+        console.warn("ATTENTION! Paragraph ID = " + para.id + " [TYPE = " + para.type + "] had an empty/null/undefined 'destination_id' in the data structure (currentData) that I had to remove. For the future, please make sure that empty/null/undefined 'destination_id's never get added to currentData in the first place!");
         delete para.destination_id;
       }
     });
