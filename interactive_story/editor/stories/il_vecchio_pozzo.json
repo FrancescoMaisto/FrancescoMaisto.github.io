@@ -1,0 +1,262 @@
+{
+  "story": {
+    "title": "Il Vecchio Pozzo",
+    "author": "Francesco Maisto",
+    "date": "2025-01-14",
+    "stylesheet": "spooky.css",
+    "chapterString": "STORIA",
+    "endString": "Fine.",
+    "inventoryName": "",
+    "inventoryEmpty": "",
+    "typingSpeed": 55,
+    "starting_id": 0,
+    "variables": [
+      {
+        "type": "string",
+        "name": "ending",
+        "value": "",
+        "displayInUI": false
+      }
+    ],
+    "chapters": [
+      {
+        "id": 0,
+        "title": "Il Vecchio Pozzo",
+        "paragraphs": [
+          {
+            "id": 0,
+            "type": "interactive",
+            "text_body": "Nacqui in una gelida notte d'inverno, i miei flebili vagiti riecheggiavano tra le fredde mura di pietra del maniero. Ero la figlia del Marchese di Corvonero — un uomo il cui formidabile potere dipendeva tanto dal proprio onore quanto dalla propria reputazione. Fui concepita in una relazione proibita con la sua giovane domestica, Agnese, mia madre. La mia stessa esistenza era uno scandalo, ero la testimonianza vivente del suo tradimento. Fin dal mio primo respiro, fu chiaro che sarei stata scartata quale simbolo della sua infedeltà. In quel buio e fatale momento, compresi che il mio destino sarebbe dipeso dalla natura della sua anima — un'anima che era inequivocabilmente {keyword}.",
+            "choices": [
+              {
+                "text_body": "spietata",
+                "destination_id": 1,
+                "position": [
+                  410,
+                  254
+                ]
+              },
+              {
+                "text_body": "tormentata",
+                "destination_id": 2,
+                "position": [
+                  654,
+                  251
+                ]
+              }
+            ],
+            "position": [
+              519,
+              131
+            ]
+          },
+          {
+            "id": 1,
+            "type": "interactive",
+            "text_body": "Mio padre, con fredda e inflessibile risolutezza e senza un briciolo di pietà, ordinò che mi si facesse sparire. Le sue parole, sferzanti come il vento invernale, non lasciavano spazio alla compassione, nè alla speranza. Il cupo compito fu affidato a un suo servo leale, i cui occhi tradivano un conflitto interiore mentre si preparava a eseguire il terribile ordine — sbarazzarsi di me gettandomi nel vecchio pozzo. Ricordo il momento in cui mi si avvicinò — sul suo volto celava un'espressione {keyword} che lasciava presagire la vera natura delle sue intenzioni.",
+            "choices": [
+              {
+                "text_body": "stoica",
+                "destination_id": 3,
+                "variables": [
+                  {
+                    "name": "ending",
+                    "value": "1: Crudele dovere",
+                    "operation": "set"
+                  }
+                ],
+                "position": [
+                  126,
+                  502
+                ]
+              },
+              {
+                "text_body": "angosciata",
+                "destination_id": 4,
+                "variables": [
+                  {
+                    "name": "ending",
+                    "value": "2: Nuova esistenza",
+                    "operation": "set"
+                  }
+                ],
+                "position": [
+                  272,
+                  506
+                ]
+              },
+              {
+                "text_body": "commossa",
+                "destination_id": 7,
+                "variables": [
+                  {
+                    "name": "ending",
+                    "value": "5: Fiume di speranza",
+                    "operation": "set"
+                  }
+                ],
+                "position": [
+                  431,
+                  507
+                ]
+              }
+            ],
+            "position": [
+              279,
+              380
+            ]
+          },
+          {
+            "id": 3,
+            "type": "passThru",
+            "text_body": "Lo sguardo del servo non ammetteva dissenso. Senza alcuna traccia di empatia, il servo eseguì l'ordine di mio padre, gettandomi nelle profondità del vecchio pozzo. Mentre l'oscurità si chiudeva su di me e l'acqua gelida mi inghiottiva, realizzai con chiarezza spettrale che non mi era stato concesso neanche un nome.<p><strong>Fine.</strong>",
+            "destination_id": 8,
+            "position": [
+              130,
+              641
+            ]
+          },
+          {
+            "id": 4,
+            "type": "passThru",
+            "text_body": "Lo sguardo del servo tradiva un dolore ben più profondo di quello richiesto dal suo dovere. In quel momento straziante, mentre eseguiva a malincuore l'ordine ricevuto, sentii una forza misteriosa agitarsi dentro di me — una promessa silenziosa che, nonostante la mia fragile vita stesse svanendo nelle gelide profondità del pozzo, la mia anima un giorno avrebbe albergato in un altro neonato. In quell’ultimo istante, intriso di disperazione e speranza, sentii dentro di me la flebile possibilità di una nuova esistenza.<p><strong>Fine.</strong>",
+            "destination_id": "9",
+            "position": [
+              276,
+              643
+            ]
+          },
+          {
+            "id": 7,
+            "type": "passThru",
+            "text_body": "Il servo, sopraffatto dalla compassione, non ebbe il cuore di gettarmi nel vecchio pozzo. Col favore dell'oscurità, mi avvolse invece in una calda coperta di lino e mi adagiò delicatamente in un cesto di vimini. Portandomi oltre le mura del castello, mi affidò alla mesta corrente del fiume vicino, sperando che il destino fosse più clemente verso di me di quanto non lo fosse stato mio padre. Mentre il cesto si allontanava alla deriva, lo sentii recitare sommessamente una preghiera per la mia sopravvivenza.<p><strong>Fine.</strong>",
+            "destination_id": "10",
+            "position": [
+              432,
+              641
+            ]
+          },
+          {
+            "id": 2,
+            "type": "interactive",
+            "text_body": "Mio padre, benché uomo di grande potere, era visibilmente agitato. La sua voce, di solito ferma e risoluta, vacillò per un attimo mentre pronunciava l'ordine che mi avrebbe condannata all'oblio — uno dei suoi servi avrebbe dovuto gettarmi nel vecchio pozzo del maniero. Riuscivo ancora a sentire la straziante preghiera di mia madre riecheggiare nei freddi corridoi della magione — una supplica di {keyword} che, tra un singhiozzo e l'altro, portava in sè il peso dell'incertezza e una fragile possibilità.",
+            "choices": [
+              {
+                "text_body": "speranza",
+                "destination_id": 5,
+                "variables": [
+                  {
+                    "name": "ending",
+                    "value": "3: Barlume di vita",
+                    "operation": "set"
+                  }
+                ],
+                "position": [
+                  720,
+                  509
+                ]
+              },
+              {
+                "text_body": "sconforto",
+                "destination_id": 6,
+                "variables": [
+                  {
+                    "name": "ending",
+                    "value": "4: Abisso di dolore",
+                    "operation": "set"
+                  }
+                ],
+                "position": [
+                  904,
+                  511
+                ]
+              }
+            ],
+            "position": [
+              810,
+              376
+            ]
+          },
+          {
+            "id": 5,
+            "type": "passThru",
+            "text_body": "Mentre venivo calata nel vecchio pozzo, un calore inaspettato mi avvolse. Sfuggendo al gelo del destino, mani invisibili mi sollevarono dal baratro, risparmiandomi una morte certa. Contro ogni previsione, fui salvata da una forza ignota che mi concesse una possibilità di vivere — la possibilità di ricevere finalmente il nome che non mi era ancora stato dato.<p><strong>Fine.</strong>",
+            "destination_id": "11",
+            "position": [
+              722,
+              645
+            ]
+          },
+          {
+            "id": 6,
+            "type": "passThru",
+            "text_body": "La mia caduta fu segnata dalla soffocante disperazione dell'addio di mia madre — un lamento senza speranza che preannunciava l'inevitabilità dell'oblio. L'implacabile oscurità del pozzo mi consumò interamente e, mentre sprofondavo nell'abbraccio delle sue acque gelide, sentii la mia fragile vita sfuggirmi di mano. La mia esistenza cancellata senza aver mai conosciuto il conforto di un vero nome.<p><strong>Fine.</strong>",
+            "destination_id": "12",
+            "position": [
+              907,
+              644
+            ]
+          },
+          {
+            "id": 8,
+            "type": "infoBox",
+            "text_body": "<strong>FINALE {ending}</strong><br>Prova a cambiare le scelte precedenti per scoprire altri finali.",
+            "position": [
+              128,
+              829
+            ],
+            "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/01_01.webp"
+          },
+          {
+            "id": 9,
+            "type": "infoBox",
+            "text_body": "<strong>FINALE {ending}</strong><br>Prova a cambiare le scelte precedenti per scoprire altri finali.",
+            "position": [
+              278,
+              826
+            ],
+            "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/01_04_2.webp"
+          },
+          {
+            "id": 10,
+            "type": "infoBox",
+            "text_body": "<strong>FINALE {ending}</strong><br>Prova a cambiare le scelte precedenti per scoprire altri finali.",
+            "position": [
+              439,
+              827
+            ],
+            "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/01_05.webp"
+          },
+          {
+            "id": 11,
+            "type": "infoBox",
+            "text_body": "<strong>FINALE {ending}</strong><br>Prova a cambiare le scelte precedenti per scoprire altri finali.",
+            "position": [
+              717,
+              824
+            ],
+            "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/01_03.webp"
+          },
+          {
+            "id": 12,
+            "type": "infoBox",
+            "text_body": "<strong>FINALE {ending}</strong><br>Prova a cambiare le scelte precedenti per scoprire altri finali.",
+            "position": [
+              911,
+              823
+            ],
+            "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/01_02.webp"
+          }
+        ],
+        "position": [
+          525,
+          137
+        ]
+      }
+    ],
+    "position": [
+      515,
+      20
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+:root {
+	--color-page: #fbf0da;
+	--color-text: #564832;
+	--color-title: #332d24;
+	--color-keyword: #352d1e;
+	--color-keyword_bg: #fff;
+	--color-keyword_hover: #ddd3be;
+	--color-options_txt: #c04d4d;
+}
+body {
+	background-color: var(--color-page);
+	background-image: url('../images/backgrounds/paper_sepia.jpg');
+}
+#storyTitle {
+	font-family: "Cinzel Decorative", serif;
+	font-size: 30px;
+	color: var(--color-title);
+}
+p {
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	color: var(--color-text);
+	line-height: 1.6;
+}
+.keyword {
+	color: var(--color-keyword);
+	border-bottom: 5px solid var(--color-options_txt); /* underline */
+	background-color: var(--color-keyword_bg);
+}
+.keyword:hover {
+	background-color: var(--color-keyword_hover);
+}
+.options {
+	border: 2px solid grey; /* outline */
+}
+.options li {
+	color: var(--color-options_txt);
+	background-color: #ffffff;
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	border: 1px solid lightgrey; /* outline */
+}
+.options li:hover {
+	color: white;
+	background-color: var(--color-keyword);
+}

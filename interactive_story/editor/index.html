@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Interactive Story - Editor (Alpha) by Francesco Maisto">
+  <meta name="author" content="Francesco Maisto">
+
+  <!-- OPEN GRAPH Properties -->
+  <meta property="og:site_name" content="Interactive Story - Editor (Alpha) by Francesco Maisto">
+  <meta property="og:title" content="The Old Well">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://francescomaisto.github.io/inovel_with_editor/">
+  <meta property="og:description" content="Interactive Novel - Shape your own story while you read it">
+  <meta property="og:image" content="https://francescomaisto.github.io/inovel/images/favicon/web-app-manifest-512x512.png">
+
+  <title>Interactive Story - Editor (Alpha)</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+   <!-- implement the responsive navbar eventually:
+    https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_responsive
+    -->
+  <div class="navbar">
+    <img class="" src="">
+    <img class="app-icon" src="../reader/images/favicon/favicon-96x96.png" alt="Interactive Story - Editor (Alpha) by Francesco Maisto" title="Interactive Story - Editor (Alpha) by Francesco Maisto">
+    <span class="logo">Interactive Story - Editor (Alpha)</span>
+    <div class="navbarText">STORY
+      <button id="newStory" class="button" title="Start a new Story">New</button>
+      <button id="loadStory" class="button" title="Load a Story">Load...</button>
+      <button id="saveStory" class="button" title="Save a Story">Save...</button>
+      <button id="playStory" class="button" title="Test a Story (opens a new window)">▶ Play</button>
+    </div>
+    <div class="navbarText">ADD BLOCK
+      <button id="newBlock_Interactive" class="button" title="Add a new Interactive block">👉 Interactive</button>
+      <button id="newBlock_PassThru" class="button" title="Add a new Pass-through block">⏬ Pass-through</button>
+      <button id="newBlock_InfoBox" class="button" title="Add a new Info Box block">💡 Info Box</button>
+    </div>
+  </div>
+  <input type="file" id="fileInput" accept=".json" style="display:none;">
+  <!-- Editor container -->
+  <div id="editor" class="editor">
+    <!-- SVG overlay for drawing connection lines -->
+    <svg id="svgCanvas" class="svg-overlay">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+          <path d="M0,0 L0,6 L6,3 z" fill="#000" />
+        </marker>
+      </defs>
+    </svg>
+  </div>
+  
+  <!-- Confirmation Dialog -->
+  <div id="dialogOverlay" class="dialog-overlay"></div>
+  <div id="confirmationDialog" class="confirmation-dialog">
+    <div class="dialog-header">Delete Block</div>
+    <div class="dialog-message">Are you sure you want to delete this block?</div>
+    <div class="dialog-buttons">
+      <button id="dialogOK" class="dialog-button dialog-button-ok">OK</button>
+      <button id="dialogCancel" class="dialog-button dialog-button-cancel">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Properties Panel -->
+  <div id="propertiesPanel" class="properties-panel">
+    <button id="closePropertiesPanel" class="close-button">X</button>
+  </div>
+  <!-- Load the Properties Panel code before the main script -->
+  <script src="js/properties_panel.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/navbar.js"></script>
+</body>
+</html>

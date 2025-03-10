@@ -1,0 +1,38 @@
+{
+  "story": {
+    "title": "New Story",
+    "author": "Author Name",
+    "date": "2025-12-31",
+    "stylesheet": "default.css",
+    "chapterString": "STORY",
+    "endString": "The End.",
+    "inventoryName": "",
+    "inventoryEmpty": "",
+    "typingSpeed": 60,
+    "starting_id": 0,
+    "hasInventory": false,
+    "variables": [],
+    "chapters": [
+      {
+        "id": 0,
+        "title": "",
+        "paragraphs": [
+          {
+            "id": 0,
+            "type": "interactive",
+            "text_body": "This is your first paragraph, and this is a {keyword}. The text in the keyword tag will be replaced by whatever text is in the choice that the user will select. Add Choices using the 'Add Choice' button.",
+            "choices": [],
+            "position": [
+              504,
+              190
+            ]
+          }
+        ]
+      }
+    ],
+    "position": [
+      508,
+      54
+    ]
+  }
+}

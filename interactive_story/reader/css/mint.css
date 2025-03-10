@@ -1,0 +1,49 @@
+:root {
+	--color-page: #c5e7ce;
+	--color-text: #3a5042;
+	--color-title: #253129;
+	--color-keyword: #253129;
+	--color-keyword_bg: #e8ffee;
+	--color-keyword_hover: #a2c7ab;
+	--color-options_txt: #ee3a34;
+    --color-options_bg: #ffffff;
+    --color-options_txt_hover: #fff;
+    --color-options_bg_hover: #4d6354;
+    --color-options_border: #2c3b31;
+}
+body {
+	background-color: var(--color-page);
+}
+#storyTitle {
+	font-family: "Cinzel Decorative", serif;
+	font-size: 30px;
+	color: var(--color-title);
+}
+p {
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	color: var(--color-text);
+	line-height: 1.6;
+}
+.keyword {
+	color: var(--color-keyword);
+	border-bottom: 5px solid var(--color-options_txt); /* underline */
+	background-color: var(--color-keyword_bg);
+}
+.keyword:hover {
+	background-color: var(--color-keyword_hover);
+}
+.options {
+	border: 2px solid var(--color-options_border); /* outline */
+}
+.options li {
+	color: var(--color-options_txt);
+	background-color: var(--color-options_bg);
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	border: 1px solid var(--color-options_border); /* outline */
+}
+.options li:hover {
+	color: var(--color-options_txt_hover);
+	background-color: var(--color-options_bg_hover);
+}

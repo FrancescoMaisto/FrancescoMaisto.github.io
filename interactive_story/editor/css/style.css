@@ -1,0 +1,619 @@
+/******************************************************************************
+VARIABLES
+******************************************************************************/
+
+:root {
+  --color-ui-interaction: #007bff;
+
+  --color-ui-green: #00a149;
+  --color-ui-green-hover: #03833c;
+
+  --color-ui-red: #f54355;
+  --color-ui-red-hover: #bd2130;
+
+  --color-line-story: #797979;
+  --color-line-chapter: #797979;
+  --color-line-paragraph: #797979;
+  --color-line-choice: #797979;
+
+  --color-block-bg-top-story: #97e494;
+  --color-block-bg-top-chapter: #f0e9c0;
+  --color-block-bg-top-interactive: #afd2ff;
+  --color-block-bg-top-passthru: #e0c5ff;
+  --color-block-bg-top-infobox: #f5f396;
+  --color-block-bg-top-choice: #fac0eb;
+
+  --color-block-bg-bottom: #ffffff;
+
+  --color-block-outline: #474747;
+  --color-property-outline: #cccccc;
+}
+
+/* Use Roboto Condensed for all text */
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/******************************************************************************
+NAVIGATION BAR
+******************************************************************************/
+.navbar {
+	position: sticky;
+	z-index: 9999; /* High value to ensure it's on top */
+	top: 0;
+	overflow: hidden;
+  padding: 3px 0px;
+	background-color: #000000;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+/* Common button styles */
+.navbar .button {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  min-width: 80px;
+  padding: 4px 10px;
+  margin: 0 3px;
+  background-color: #505050;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.navbar .button:hover {
+  border: 1px solid #888;
+  background-color: #858585;
+}
+#playStory{
+  background-color: var(--color-ui-red);
+  border: 1px solid var(--color-ui-red-hover);
+}
+#playStory:hover{  
+  background-color: var(--color-ui-red-hover);
+  border: 1px solid var(--color-ui-red);
+}
+.navbarText {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #ffffff;
+  background-color: black;
+  border-radius: 6px;
+  font-size: 0.9em;
+  padding: 6px 6px 6px 6px;
+  margin: 0px 0px 0px 36px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo{
+  font-family: 'Inter', sans-serif;
+  color: #57bcff;
+  font-size: 1em;
+  padding: 0px 20px 0px 4px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.app-icon{
+  display: inline-block;
+  border-radius: 6px;
+  width: 38px;
+  height: 38px;
+  vertical-align: middle;
+  margin: 0;
+}
+/******************************************************************************
+EDITOR & CANVAS
+******************************************************************************/
+.editor {
+  position: relative;
+  width: 100%;
+  height: 600vh;  /* Increased height */
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  background-image: url('../images/bg.png');
+  background-repeat: repeat;
+  overflow: hidden;  /* Add this to contain the selection box */
+  z-index: 0;
+}
+/* SVG overlay covers the editor */
+.svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* Allow mouse events to pass through */
+  z-index: 0;
+}
+#svgCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;  /* This is crucial - allows clicking through the SVG */
+  z-index: 1;  /* Add this */
+}
+/******************************************************************************
+FLOWCHART BLOCKS
+******************************************************************************/
+/* Draggable block styling with flexible height for multiple lines */
+.block {
+  position: absolute;
+  width: 130px;
+  min-height: 78px;
+  border: 2px solid var(--color-block-outline);
+  border-radius: 7px;
+  cursor: move;
+  text-align: left;
+  user-select: none;
+  padding-left: 4px;
+  padding-right: 4px;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: 0px 0px 5px white;
+  z-index: 2;
+}
+/* Animation for new blocks */
+@keyframes flash-border {
+  0%, 100% { border-color: var(--color-block-outline); }
+  50% { border-color: rgb(255, 189, 90); }
+}
+.flash-animation {
+  animation: flash-border 0.2s ease-in-out 4;
+}
+.block:hover{
+  color: var(--color-ui-interaction);
+  border: 2px solid var(--color-ui-interaction);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+/* Specific styles for each type of block */
+.block.story {
+  background: linear-gradient(to bottom, var(--color-block-bg-top-story) 23px, var(--color-block-bg-bottom) 20%);
+}
+.block.chapter {
+  background: linear-gradient(to bottom, var(--color-block-bg-top-chapter) 23px, var(--color-block-bg-bottom) 20%);
+}
+.block.interactive {
+  background: linear-gradient(to bottom, var(--color-block-bg-top-interactive) 23px, var(--color-block-bg-bottom) 20%);
+}
+.block.passthru {
+  background: linear-gradient(to bottom, var(--color-block-bg-top-passthru) 23px, var(--color-block-bg-bottom) 20%);
+}
+.block.infobox {
+  background: linear-gradient(to bottom, var(--color-block-bg-top-infobox) 23px, var(--color-block-bg-bottom) 20%);
+}
+.block.choice {
+  background: linear-gradient(to bottom, var(--color-block-bg-top-choice) 23px, var(--color-block-bg-bottom) 20%);
+}
+.selection-box {
+  position: absolute;
+  border: 2px dotted #007bff;
+  background-color: rgba(0, 123, 255, 0.1);
+  pointer-events: none;
+  z-index: 3;  /* Higher than blocks */
+  display: none;  /* Initially hidden */
+}
+/* Style for selected block */
+.block.selected {
+  border: 3px solid var(--color-ui-interaction);
+  box-shadow: 3px 3px rgba(0, 123, 255, 1), 6px 6px 5px rgba(0, 0, 0, 0.8);
+}
+.block.multi-selected {
+  border: 3px solid var(--color-ui-interaction);
+  box-shadow: 3px 3px rgba(0, 123, 255, 1), 6px 6px 5px rgba(0, 0, 0, 0.8);
+}
+/******************************************************************************
+LINES (CONNECTORS) & ARROWS (MARKERS)
+******************************************************************************/
+
+/* Line connector styles */
+.connector-story-chapter {
+  stroke: var(--color-line-story);
+  stroke-width: 2;
+}
+.connector-chapter-paragraph {
+  stroke: var(--color-line-chapter);
+  stroke-width: 2;
+}
+.connector-paragraph-choice {
+  stroke: var(--color-line-paragraph);
+  stroke-width: 2;
+}
+/* Connector styles for Choice->Paragraph */
+.connector-choice-all {
+  stroke: var(--color-line-choice);
+  stroke-width: 2;
+}
+/* Arrow marker styles */
+.marker-story-chapter {
+  fill: var(--color-line-story);
+}
+.marker-chapter-paragraph {
+  fill: var(--color-line-chapter);
+}
+.marker-paragraph-choice {
+  fill: var(--color-line-paragraph);
+}
+/* Marker styles for Choice->Paragraph */
+.marker-choice-all {
+  fill: var(--color-line-choice);
+}
+/******************************************************************************
+PROPERTIES PANEL
+******************************************************************************/
+/*-----------------------------------------------------------------------------
+PROPERTIES PANEL > HEADER
+-----------------------------------------------------------------------------*/
+/* Properties panel header */
+#bg-header {
+  font-size: 1.8em;
+  font-weight: bold;
+  user-select: none;
+  display: inline-block; /* Ensure the header and button are on the same line */
+  vertical-align: middle; /* Vertically align the header */
+  margin-top: 0; /* Align the header with the close button */
+  margin-bottom: 20px;
+  padding: 13px 10px 10px 10px;
+  width: 100%;
+  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.4);
+}
+.bg-story {
+  background-color: var(--color-block-bg-top-story);
+}
+.bg-chapter {
+  background-color: var(--color-block-bg-top-chapter);
+}
+.bg-interactive {
+  background-color: var(--color-block-bg-top-interactive);
+}
+.bg-passthru {
+  background-color: var(--color-block-bg-top-passthru);
+}
+.bg-infobox {
+  background-color: var(--color-block-bg-top-infobox);
+}
+.bg-choice {
+  background-color: var(--color-block-bg-top-choice);
+}
+.close-button {
+  position: absolute;
+  top: 22px; /* Adjust top position to align with the header */
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-ui-red);
+  color: white;
+  border: 3px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  padding: 0;
+  z-index: 1001; /* Ensure the button is above the panel content */
+  vertical-align: middle; /* Vertically align the button */
+}
+
+.close-button:hover {
+  background-color: var(--color-ui-red-hover);
+}
+/*-----------------------------------------------------------------------------
+PROPERTIES PANEL > PROPERTIES
+-----------------------------------------------------------------------------*/
+/* Properties panel styling */
+.properties-panel {
+  position: fixed;
+  top: 40px; /* Increase this to move the whole panel down */
+  right: 0px;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.8);
+  border-left: 1px solid #797979;
+  padding: 0px 0px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  /* transition: right 0.2s ease-in-out; /* Add smooth transition */
+  display: none; /* Hidden by default */
+  z-index: 1000; /* Ensure the panel is above other elements */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+.properties-panel p {
+  margin: 0px 12px 5px 13px;
+}
+.property {
+  font-size: 16px;
+  color: black;
+  padding: 10px 25px 10px 10px;
+  background-color: #eeeeee;
+  border: 1px solid var(--color-property-outline);
+  position: relative;
+  border-radius: 6px;
+}
+.editable-property {
+  background-color: #fdfdfd;
+}
+.editable {
+  display: inline;
+  /*width: calc(100% - 25px); /* Make room for the button */
+}
+.editable[data-property="image"] {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 240px; /* Adjust as needed */
+}
+/*-----------------------------------------------------------------------------
+PROPERTIES PANEL > INPUT FIELDS
+-----------------------------------------------------------------------------*/
+/* Styles for editable inputs in Properties Panel */
+.property-input {
+  /* width: calc(100% - 100px); /* Account for the edit button */
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  padding: 4px;
+  margin: 2px 0;
+  border: 2px solid #007bff;
+  border-radius: 3px;
+}
+.property-textarea {
+  width: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  padding: 4px;
+  margin: 2px 0;
+  border: 2px solid #007bff;
+  border-radius: 3px;
+  resize: vertical;
+  min-height: 60px;
+}
+/* Select dropdown (for themes)*/
+.dropdown {
+  font-family: 'Roboto Condensed', sans-serif;
+  width: 150px;
+  padding: 3px;
+  border: 1px solid var(--color-property-outline);
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+  margin-left: 20px;
+}
+/* On focus */
+.dropdown:focus {
+  border-color: var(--color-ui-interaction);
+}
+/* Dropdown options */
+.dropdown option {
+  background: #ecf0f1;
+  color: #202020;
+  padding: 10px;
+}
+/*-----------------------------------------------------------------------------
+PROPERTIES PANEL > BUTTONS
+-----------------------------------------------------------------------------*/
+/* Common styles for edit and save buttons */
+.edit-save-button {
+  width: 18px;
+  height: 18px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  position: absolute;
+  right: 5px;
+  top: 4px;
+}
+.edit-save-button:hover {
+  background-color: var(--color-ui-interaction);
+}
+/* Common styles for edit and save buttons */
+.image-preview-icon {
+  width: 18px;
+  height: 18px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  position: absolute;
+  right: 30px;
+  top: 3px;
+}
+.image-preview-icon:hover {
+  background-color: var(--color-ui-green);
+}
+/* Image preview tooltip */
+.image-preview-tooltip {
+  position: fixed;
+  font-size: 0.8em;
+  color: white;
+  text-shadow: 
+    -2px -2px 0 black,  
+    2px -2px 0 black,
+    -2px  2px 0 black,
+    2px  2px 0 black; /* Creates the outline effect */
+  text-align: center;
+  max-width: 200px;
+  background-color: white;
+  border: 2px solid #dbdbdb;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  display: none;
+  z-index: 10000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.image-preview-tooltip.error {
+  font-size: 14px;
+  text-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  color: red;
+}
+/* Panel buttons container */
+.panel-buttons-container {
+  position: absolute;
+  bottom: 25px; /* Adjust bottom position to align with the panel */
+  left: 0;
+  right: 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.new-choice-button, .delete-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 12px 16px;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.new-choice-button {
+  background-color: var(--color-ui-green);
+}
+.new-choice-button:hover {
+  background-color: var(--color-ui-green-hover);
+}
+.delete-button {
+  background-color: var(--color-ui-red);
+}
+.delete-button:hover {
+  background-color: var(--color-ui-red-hover);
+}
+/* Remove old container styles */
+.new-choice-container, .button-container {
+  border: none;
+  display: none;
+}
+
+/*******************************************************************************
+ * LABELS for Flowchart Blocks
+ ******************************************************************************/
+
+ /* Style for for Choice keywords and Story name */
+.keyword-label {
+  color: black;
+  font-size: 0.9em;
+  margin-top: 6px;
+}
+
+/* Style for Paragraph IDs */
+.id-label {
+  color: #252525;
+  font-size: 0.9em;
+  margin-top: 6px;
+}
+
+/* Style for Destination IDs */
+.destination-label {
+  color: #252525;
+  font-size: 0.8em;
+  border-top: 1px solid #cacaca;
+  margin-top: 3px;
+  padding-top: 6px;
+}
+
+/* Style for Text-body */
+.textbody-label {
+  color: #575757;
+  font-size: 0.8em;
+  border-top: 1px solid #cacaca;
+  margin-top: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+/*-----------------------------------------------------------------------------
+CONFIRMATION DIALOG
+-----------------------------------------------------------------------------*/
+/* Dialog overlay - covers entire screen with semi-transparent black */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10000; /* Higher than navbar's z-index (9999) */
+  display: none;
+}
+/* Confirmation dialog styling */
+.confirmation-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35); /* Enhanced shadow */
+  z-index: 10001; /* Higher than overlay */
+  min-width: 300px;
+  display: none;
+}
+/* Dialog header styling */
+.dialog-header {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+/* Dialog message styling */
+.dialog-message {
+  margin-bottom: 20px;
+  color: #666;
+}
+/* Dialog buttons container */
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+/* Dialog button common styles */
+.dialog-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+/* Cancel button specific style */
+.dialog-button-cancel {
+  background-color: #6c757d;
+}
+.dialog-button-cancel:hover {
+  background-color: #5a6268;
+}
+/* OK button specific style */
+.dialog-button-ok {
+  background-color: var(--color-ui-red);
+}
+.dialog-button-ok:hover {
+  background-color: var(--color-ui-red-hover);
+}

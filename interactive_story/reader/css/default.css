@@ -1,0 +1,41 @@
+:root {
+	--color-green: #04AA6D;
+	--color-red: #dd3333; /* A muted red */
+	--hover-color: yellow; /* Orange */
+}
+body {
+	background-color: #ddd;
+}
+#storyTitle {
+	font-family: "Cinzel Decorative", serif;
+	font-size: 24px;
+	color: var(--color-red);
+}
+p {
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	color: #222222;
+	line-height: 1.6;
+}
+.keyword {
+	color: #090909;
+	border-bottom: 5px solid var(--color-red);  /* underline */
+	background-color: white;
+}
+.keyword:hover {
+	background-color: var(--color-red);
+}
+.options {
+	border: 2px solid grey; /* outline */
+}
+.options li {
+	color: var(--color-red);
+	background-color: #ffffff;
+	font-family: "Libre Baskerville", serif;
+	font-size: 26px;
+	border: 1px solid lightgrey; /* outline */
+}
+.options li:hover {
+	color: white;
+	background-color: #222;
+}
