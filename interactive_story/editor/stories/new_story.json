@@ -20,7 +20,7 @@
           {
             "id": 0,
             "type": "interactive",
-            "text_body": "This is your first paragraph, and this is a {keyword}. The text in the keyword tag will be replaced by whatever text is in the choice that the user will select. Add Choices using the 'Add Choice' button.",
+            "text_body": "This is the starting paragraph of your story, and this is a {keyword}. Clicking on the keyword tag will present the reader with a list of choices. Add choices using the '🎯 Add Choice' button below.",
             "choices": [],
             "position": [
               504,

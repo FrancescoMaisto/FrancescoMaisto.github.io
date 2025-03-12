@@ -173,7 +173,6 @@ function createFlowchart(currentData) {
       
       const paraBlock = createBlock(paraId, headerText, paraX, paraY);
       blocks[paraId] = paraBlock;
-      // connections.push({ from: chapterId, to: paraId });
 
       // Store paragraph block by its JSON id for connection lookup
       paragraphBlocksByJsonId[para.id] = paraBlock;
@@ -402,6 +401,16 @@ function drawConnection(fromBlock, toBlock, connType, svgCanvas) {
   line.setAttribute("marker-end", getMarkerUrl(connType));
   svgCanvas.appendChild(line);
 }
+
+function updateLabel(blockId, labelName, newValue, tooltip = false) {
+  const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
+  if (blockElem) {
+    const label = blockElem.querySelector("." + labelName);
+    if (label) { label.innerText = newValue; }
+    if (tooltip){ blockElem.title = newValue; }
+  }
+}
+
 function updateStoryConnection(){
   // Update Story block connection based on starting_id
   if (currentData && currentData.story && currentData.story.starting_id != null) {
@@ -421,15 +430,6 @@ function updateStoryConnection(){
       }
       return conn;
     });
-  }
-}
-
-function updateLabel(blockId, labelName, newValue, tooltip = false) {
-  const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
-  if (blockElem) {
-    const label = blockElem.querySelector("." + labelName);
-    if (label) { label.innerText = newValue; }
-    if (tooltip){ blockElem.title = newValue; }
   }
 }
 
@@ -727,7 +727,7 @@ function createNewParagraph(type) {
   const newParagraph = {
     id: newId,
     type: type,
-    text_body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.",
+    text_body: "",
   };
 
   // We add the paragraph to the first chapter (you might want to let users choose the chapter later)
@@ -750,12 +750,16 @@ function createNewParagraph(type) {
   createIdLabel(newId, block);
 
   if (type === 'interactive') {
-    // We add a {keyword} tag to the text_body for 'interactive' type paragraphs
-    const str = newParagraph.text_body;
-    newParagraph.text_body = str.slice(0, str.length - 1) + " {keyword}" + str.slice(str.length - 1);
-  } else if (type === 'passThru' || type === 'infoBox') {
-    // We add destination label for passThru and infoBox types
+    // We add a {keyword} tag to the text_body for 'interactive' blocks
+    newParagraph.text_body = "This is an Interactive block. Replace this text with the text of your choice and don't forget to add a {keyword} tag. Then create new Choices blocks using the 'add a choice' button to continue the story.";
+  } else if (type === 'passThru') {
+    // We add destination label for passThru blocks
     createDestIdLabel("", block);
+    newParagraph.text_body = "This is a Pass-Through block. Replace this text with the text of your choice.";
+  } else if (type === 'infoBox') {
+    // We add destination label for infoBox blocks
+    createDestIdLabel("", block);
+    newParagraph.text_body = "This is an Info-Box block. Replace this text with the text of your choice.";
   }
 
   // Add a label for the text_body

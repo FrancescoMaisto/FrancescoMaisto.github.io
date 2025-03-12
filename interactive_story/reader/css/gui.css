@@ -2,7 +2,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	margin: 0 0 15% 0;
+	margin: 0;
 	height: 100%;
 }
 .paragraph-image {
@@ -38,7 +38,7 @@ TOP GUI BAR
 	/* High value to ensure it's on top */
 	top: 0;
 	overflow: hidden;
-	background-color: #333;
+	background-color: #0f0f0f;
 	font-family: "Roboto Condensed", serif;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
@@ -53,11 +53,11 @@ TOP GUI BAR
 	font-size: 17px;
 }
 #navbar a:hover {
-	background-color: #555;
+	background-color: #dd3333;
 	color: var(--hover-color);
 }
 #navbar a.active {
-	background-color: var(--color-red);
+	background-color: #dd3333;
 	color: white;
 }
 .counter {
@@ -73,7 +73,7 @@ TOP GUI BAR
 }
 .counter:hover {
 	cursor: pointer;
-	color: var(--hover-color);
+	color: #dd3333;
 }
 #gui {
 	position: fixed;
@@ -217,12 +217,8 @@ LANGUAGE SELECTION SCREEN
 STORY SCREEN 
 **********************/
 #content {
-	margin-right: 5%;
-	margin-left: 5%;
-}
-.story-screen-container {
-	margin-right: 5%;
-	margin-left: 5%;
+	margin-right: 7%;
+	margin-left: 7%;
 }
 #storyTitle {
 	text-align: center;

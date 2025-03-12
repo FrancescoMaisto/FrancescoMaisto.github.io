@@ -15,6 +15,8 @@ const themes = [
 // Flag to check if we're editing the image property
 let isEditingImage = false;
 
+let newChoicePosition = {x: 100, y: 100};
+
 // Calculate the number of rows for a textarea based on the text length
 function calculateTextareaRows(text) {
   const avgCharsPerLine = 30;
@@ -150,13 +152,16 @@ function createNewChoice(paragraphBlock) {
     targetParagraph.choices = [];
   }
 
+  newChoicePosition.x = newChoicePosition.x < -200 ? 100 : newChoicePosition.x - 15;
+  newChoicePosition.y = newChoicePosition.y > 300 ? 100 : newChoicePosition.y + 15;
+
   // Create new choice data
   const newChoice = {
     text_body: "New Choice",
     destination_id: "",
     position: [
-      parseInt(paragraphBlock.style.left) + 150,
-      parseInt(paragraphBlock.style.top) + 150
+      parseInt(paragraphBlock.style.left) + newChoicePosition.x,
+      parseInt(paragraphBlock.style.top) + newChoicePosition.y
     ]
   };
 
@@ -339,20 +344,20 @@ function displayProperties(blockId) {
     // Get block for checking type
     const block = document.querySelector(`[data-id="${blockId}"]`);
     
-    // Add Choice button first (if block is interactive)
+    // Add Choice button (if block is interactive)
     if (block && block.dataset.type === 'interactive') {
       const newChoiceButton = document.createElement('button');
-      newChoiceButton.innerText = '🎯 Add Choice';
-      newChoiceButton.title = 'Add a new choice to this interactive block';
+      newChoiceButton.innerText = TEXT.BUTTON_ADD_CHOICE;
+      newChoiceButton.title = TEXT.BUTTON_ADD_CHOICE_TOOLTIP;
       newChoiceButton.classList.add('new-choice-button');
       newChoiceButton.addEventListener('click', () => createNewChoice(block));
       buttonsContainer.appendChild(newChoiceButton);
     }
     
-    // Add Delete button second
+    // Add Delete button
     const deleteButton = document.createElement('button');
-    deleteButton.innerText = '🗑️ Delete...';
-    deleteButton.title = 'Delete this block';
+    deleteButton.innerText = TEXT.BUTTON_DELETE;
+    deleteButton.title = TEXT.BUTTON_DELETE_TOOLTIP;
     deleteButton.classList.add('delete-button');
     deleteButton.addEventListener('click', () => deleteBlock(blockId));
     buttonsContainer.appendChild(deleteButton);
@@ -513,6 +518,24 @@ function updateDataFromPanel(blockId, property, newValue) {
   }
 }
 
+function setConfirmationDialogText(type){
+  // Set the text for the confirmation dialog
+  const dialogHeader = document.getElementById('dialogHeader');
+  const dialogMessage = document.getElementById('dialogMessage');
+  const dialogOK = document.getElementById('dialogOK');
+  const dialogCancel = document.getElementById('dialogCancel');
+
+  if (type === 'deleteBlock') {
+    dialogHeader.innerText = TEXT.DIALOG_HEADER_DELETE;
+    dialogMessage.innerHTML = TEXT.DIALOG_MESSAGE_DELETE;
+  } else if (type === 'newStory') {
+    dialogHeader.innerText = TEXT.DIALOG_HEADER_NEWSTORY;
+    dialogMessage.innerHTML = TEXT.DIALOG_MESSAGE_NEWSTORY; 
+  }
+  dialogOK.innerText = TEXT.DIALOG_BUTTON_OK;
+  dialogCancel.innerText = TEXT.DIALOG_BUTTON_CANCEL;
+}
+
 // Showing a confirmation dialog
 function showConfirmationDialog(onConfirm) {
   // Get dialog elements
@@ -551,6 +574,7 @@ function showConfirmationDialog(onConfirm) {
 }
 
 function deleteBlock(blockId) {
+  setConfirmationDialogText("deleteBlock");
   showConfirmationDialog(() => {
     const block = document.querySelector(`[data-id="${blockId}"]`);
     if (!block) return;
@@ -563,7 +587,7 @@ function deleteBlock(blockId) {
       const paragraph = currentData.story.chapters[chapterIndex].paragraphs.splice(paragraphIndex, 1)[0];
       delete paragraphBlocksByJsonId[paragraphId];
       
-      // Remove all choice blocks associated with the deleted paragraph block
+      // Remove all choice blocks associated with the deleted paragraph block, if any
       if (paragraph.choices) {
         paragraph.choices.forEach((_, choiceIndex) => {
           const choiceId = `choice-${chapterIndex}-${paragraphIndex}-${choiceIndex}`;
@@ -709,7 +733,7 @@ function setupImagePreview() {
 }
 
 /* Helper function that checks if a variable is a valid unsigned integer 
-and if so, updates its text field */
+and updates the color of its text field */
 function validateUInt(textField, variable){
   if (textField) {
     // Regular expression to match an unsigned integer

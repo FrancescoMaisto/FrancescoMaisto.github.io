@@ -586,7 +586,8 @@ CONFIRMATION DIALOG
 }
 /* Dialog message styling */
 .dialog-message {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  line-height: 1.7; /* Sets line height to 1.5 times the font size */
   color: #666;
 }
 /* Dialog buttons container */

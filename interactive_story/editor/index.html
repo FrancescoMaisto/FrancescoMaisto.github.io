@@ -39,7 +39,7 @@
     -->
   <div class="navbar">
     <img class="app-icon" src="../reader/images/favicon/favicon-96x96.png" alt="Interactive Story - Editor (Alpha) by Francesco Maisto" title="Interactive Story Editor by Francesco Maisto">
-    <div class="logo">Interactive Story Editor (v.0.1.1 Alpha)</div>
+    <div class="logo">Interactive Story Editor (v.0.2.0 Alpha)</div>
     <div class="navbarText">STORY
       <button id="newStory" class="button" title="Start a new Story">New</button>
       <button id="loadStory" class="button" title="Load a Story">Load...</button>
@@ -68,11 +68,11 @@
   <!-- Confirmation Dialog -->
   <div id="dialogOverlay" class="dialog-overlay"></div>
   <div id="confirmationDialog" class="confirmation-dialog">
-    <div class="dialog-header">Delete Block</div>
-    <div class="dialog-message">Are you sure you want to delete this block?</div>
+    <div class="dialog-header" id="dialogHeader"></div>
+    <div class="dialog-message" id="dialogMessage"></div>
     <div class="dialog-buttons">
-      <button id="dialogOK" class="dialog-button dialog-button-ok">OK</button>
-      <button id="dialogCancel" class="dialog-button dialog-button-cancel">Cancel</button>
+      <button id="dialogOK" class="dialog-button dialog-button-ok"></button>
+      <button id="dialogCancel" class="dialog-button dialog-button-cancel"></button>
     </div>
   </div>
 
@@ -81,6 +81,7 @@
     <button id="closePropertiesPanel" class="close-button">X</button>
   </div>
   <!-- Load the Properties Panel code before the main script -->
+  <script src="js/text.js"></script>
   <script src="js/properties_panel.js"></script>
   <script src="js/editor.js"></script>
   <script src="js/navbar.js"></script>

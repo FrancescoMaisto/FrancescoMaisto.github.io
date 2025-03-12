@@ -55,7 +55,6 @@ function createLogo(parent){
     appName.textContent = 'Interactive Novel';
     parent.appendChild(appName);
 }
-
 function createStoryScreen() {
 
     /* LAYOUT STRUCTURE OF THE STORY SCREEN

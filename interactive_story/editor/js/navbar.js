@@ -167,17 +167,21 @@ document.getElementById("newStory").addEventListener("click", async () => {
             throw new Error('Failed to load new JSON template');
         }
         const loadedData = await response.json();
-
-        setPropertiesPanelVisibility(false);
-        cleanupOldFlowchart(loadedData);
-        createFlowchart(loadedData);
-
+        loadNewSTory(loadedData);
     } catch (error) {
         console.error("Error creating new story:", error);
         alert("Error creating new story. Please check if the template file exists.");
     }
 });
 
+function loadNewSTory(loadedData) {
+  setConfirmationDialogText("newStory");
+  showConfirmationDialog(() => {
+    cleanupOldFlowchart(loadedData);
+    createFlowchart(loadedData);
+    setPropertiesPanelVisibility(false);
+  });
+}
 /*****************************************************************
  LOAD STORY BUTTON
  *****************************************************************/

@@ -3,7 +3,7 @@
     "title": "Il Marchese di Corvonero",
     "author": "Francesco Maisto",
     "date": "2025-01-14",
-    "stylesheet": "default.css",
+    "stylesheet": "sepia.css",
     "chapterString": "CHAPTER",
     "endString": "The End.",
     "inventoryName": "Inventory",
@@ -119,7 +119,6 @@
             "id": 1,
             "type": "interactive",
             "text_body": "{characterName} was of humble birth. His mother, Costanza, was a peasant, while his father, Lodovico, was {keyword}.",
-            "image": "images/01_01.jpeg",
             "choices": [
               {
                 "text_body": "a blacksmith",
@@ -139,7 +138,7 @@
               }
             ],
             "position": [
-              682,
+              680,
               1059
             ]
           },
