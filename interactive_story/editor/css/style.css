@@ -572,8 +572,8 @@ CONFIRMATION DIALOG
   background-color: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35); /* Enhanced shadow */
-  z-index: 10001; /* Higher than overlay */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  z-index: 10001; /* Higher than overlay (10000) */
   min-width: 300px;
   display: none;
 }
@@ -582,12 +582,14 @@ CONFIRMATION DIALOG
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d8d8;  
   color: #333;
 }
 /* Dialog message styling */
 .dialog-message {
   margin-bottom: 30px;
-  line-height: 1.7; /* Sets line height to 1.5 times the font size */
+  line-height: 1.7;
   color: #666;
 }
 /* Dialog buttons container */

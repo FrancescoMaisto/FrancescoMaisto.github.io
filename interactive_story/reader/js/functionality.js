@@ -16,14 +16,23 @@ let typingIntervalId;
 let text = [];
 let keywordString = "keyword";
 
+const stories = {
+	oldwell: "../editor/stories/il_vecchio_pozzo.json",
+	hobbit: "../editor/stories/the_hobbit.json"
+}
+
 // We are receiving a message from the editor, we parse the JSON file and start the story
-function initStory(data) {
+function parseStory(data) {
 	console.log(`Data: ${data}`);
     storyData = JSON.parse(data.storyData);
 	debug = storyData.story.isDebug;
 	console.log(`Story title: ${storyData.story.title}`);
 	console.log(storyData);
     init();
+}
+
+function loadStory(story) {
+	fetchStory(stories[story]);
 }
 
 // We load the JSON file

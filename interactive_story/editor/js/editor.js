@@ -325,7 +325,6 @@ function createBlock(id, label, left, top, shouldFlash = false) {
   
   return block;
 }
-
 // Add these helper functions above updateConnections:
 function setupMarkers(svgCanvas) {
   // Clear any existing defs
@@ -357,7 +356,6 @@ function setupMarkers(svgCanvas) {
 
   svgCanvas.appendChild(defs);
 }
-
 // New helper to draw a connector from a Choice block to a Paragraph block
 function drawConnectorChoiceToParagraph(fromBlock, toBlock, container) {
   const { x: x1, y: y1 } = getBlockCenter(fromBlock);
@@ -372,7 +370,6 @@ function drawConnectorChoiceToParagraph(fromBlock, toBlock, container) {
   line.setAttribute("marker-end", "url(#arrowChoiceAll)");
   container.appendChild(line);
 }
-
 // New helper to draw destination connectors
 function drawDestinationConnector(fromBlock, toBlock, svgCanvas) {
   const { x: x1, y: y1 } = getBlockCenter(fromBlock);
@@ -401,7 +398,6 @@ function drawConnection(fromBlock, toBlock, connType, svgCanvas) {
   line.setAttribute("marker-end", getMarkerUrl(connType));
   svgCanvas.appendChild(line);
 }
-
 function updateLabel(blockId, labelName, newValue, tooltip = false) {
   const blockElem = document.querySelector(`.block[data-id="${blockId}"]`);
   if (blockElem) {
@@ -410,7 +406,6 @@ function updateLabel(blockId, labelName, newValue, tooltip = false) {
     if (tooltip){ blockElem.title = newValue; }
   }
 }
-
 function updateStoryConnection(){
   // Update Story block connection based on starting_id
   if (currentData && currentData.story && currentData.story.starting_id != null) {
@@ -689,7 +684,6 @@ function setupSelectionBox() {
     });
 }
 
-// Move this function outside setupSelectionBox if it isn't already
 function rectsOverlap(rect1, rect2) {
     return !(rect1.right < rect2.left || 
             rect1.left > rect2.right || 
@@ -749,18 +743,19 @@ function createNewParagraph(type) {
   // Add label with the paragraph ID
   createIdLabel(newId, block);
 
+  let newParagraphText = "";
   if (type === 'interactive') {
-    // We add a {keyword} tag to the text_body for 'interactive' blocks
-    newParagraph.text_body = "This is an Interactive block. Replace this text with the text of your choice and don't forget to add a {keyword} tag. Then create new Choices blocks using the 'add a choice' button to continue the story.";
+    newParagraphText = TEXT.NEW_PARAGRAPH_INTERACTIVE;
   } else if (type === 'passThru') {
     // We add destination label for passThru blocks
     createDestIdLabel("", block);
-    newParagraph.text_body = "This is a Pass-Through block. Replace this text with the text of your choice.";
+    newParagraphText = TEXT.NEW_PARAGRAPH_PASSTHRU;
   } else if (type === 'infoBox') {
     // We add destination label for infoBox blocks
     createDestIdLabel("", block);
-    newParagraph.text_body = "This is an Info-Box block. Replace this text with the text of your choice.";
+    newParagraphText = TEXT.NEW_PARAGRAPH_INFOBOX;
   }
+  newParagraph.text_body = block.title = newParagraphText;
 
   // Add a label for the text_body
   createTextBodyLabel(newParagraph.text_body, block);

@@ -21,10 +21,13 @@
     <script src="js/gui.js"></script>
     <script src="js/functionality.js"></script>
     <script>
-        // Listen for story data from editor window
-        window.addEventListener('message', function(event) {
-            parseStory(event.data);
-        });
+        window.onload = function () {
+            // Get the query parameters from the URL
+            // example: https://francescomaisto.github.io/interactive_story/reader/reader.html?story=oldwell
+            const params = new URLSearchParams(window.location.search);
+            const story = params.get("story"); // Extract "action" parameter            
+            loadStory(story); // Load the story    
+        };
     </script>
 
     <!-- Fav Icon -->
