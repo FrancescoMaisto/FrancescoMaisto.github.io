@@ -16,10 +16,7 @@ let typingIntervalId;
 let text = [];
 let keywordString = "keyword";
 
-const stories = {
-	oldwell: "../editor/stories/il_vecchio_pozzo.json",
-	hobbit: "../editor/stories/the_hobbit.json"
-}
+const storiesDir = "../editor/stories/";
 
 // We are receiving a message from the editor, we parse the JSON file and start the story
 function parseStory(data) {
@@ -30,13 +27,13 @@ function parseStory(data) {
 	console.log(storyData);
     init();
 }
-
+// We are receiving a variable from the URL, we use it to load the story
 function loadStory(story) {
-	fetchStory(stories[story]);
+	fetchStory(storiesDir + story + ".json");
 }
 
-// We load the JSON file
 /*
+// We load the JSON file
 document.addEventListener('DOMContentLoaded', () => {
 	createLanguageSelectionScreen();
 });
@@ -280,17 +277,16 @@ function displayImage(spanElement, paragraphImage) {
 	img.alt = 'Image'; // Optionally set an alt attribute
 
 	// Append the image to the container
-	spanElement.appendChild(p); // Add the image to the container
-	spanElement.appendChild(img); // Add the image to the container
+	spanElement.appendChild(p);
+	spanElement.appendChild(img);
 
 	// Wait until the image has loaded to access its natural width
 	img.onload = function () {
 		const parentWidth = spanElement.offsetWidth;  // Width of the parent container
 		const imageWidth = img.naturalWidth;        // Original width of the image
-
 		// Resize the image only if the original width is greater than the parent width
 		if (imageWidth > parentWidth) {
-			img.style.width = '100%';  // Resize the image to fill the parent's width
+			img.style.width = '90%';  // Resize the image to fill the parent's width
 			img.style.height = 'auto'; // Maintain the aspect ratio
 		}
 	};

@@ -6,9 +6,13 @@ body {
 	height: 100%;
 }
 .paragraph-image {
-	border-radius: 10px;
 	display: block;
+	max-width: 500px;
+	border-radius: 10px;
 	margin: 0 auto; /* Horizontally center the image inside the container */
+}
+.paragraph-image:active {
+	transform: scale(1.2); /* Scale the image by 10% */
 }
 #game-over {
 	font-weight: bold;

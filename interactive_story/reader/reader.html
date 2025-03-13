@@ -3,32 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Story Reader - Story Preview</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Interactive Story - Reader by Francesco Maisto">
+    <meta name="author" content="Francesco Maisto">
 
-    <!-- Fonts from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lacquer&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+    <!-- OPEN GRAPH Properties -->
+    <meta property="og:site_name" content="Interactive Story">
+    <meta property="og:title" content="Reader">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://francescomaisto.github.io/interactive_story/reader">
+    <meta property="og:description" content="Interactive Story - Shape your story while you read it">
+    <meta property="og:image" content="https://francescomaisto.github.io/interactive_story/reader/images/favicon/web-app-manifest-512x512.png">
 
-    <!-- Stylesheets -->
-    <link id="theme-stylesheet" rel="stylesheet" href="css/default.css">
-    <link id="theme-stylesheet" rel="stylesheet" href="css/gui.css">
-
-    <!-- JavaScript -->
-    <script src="js/enums.js"></script>
-    <script src="js/variables.js"></script>
-    <script src="js/inventory.js"></script>
-    <script src="js/gui.js"></script>
-    <script src="js/functionality.js"></script>
-    <script>
-        window.onload = function () {
-            // Get the query parameters from the URL
-            // example: https://francescomaisto.github.io/interactive_story/reader/reader.html?story=oldwell
-            const params = new URLSearchParams(window.location.search);
-            const story = params.get("story"); // Extract "action" parameter            
-            loadStory(story); // Load the story    
-        };
-    </script>
+    <title>Interactive Story - Reader</title>
 
     <!-- Fav Icon -->
     <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
@@ -37,14 +24,27 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
 
-    <!-- OPEN GRAPH Properties -->
-    <meta property="og:site_name" content="Interactive Novel">
-    <meta property="og:title" content="The Old Well">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://francescomaisto.github.io/inovel/">
-    <meta property="og:description" content="Interactive Novel - Shape your own story while you read it">
-    <meta property="og:image" content="https://francescomaisto.github.io/inovel/images/favicon/web-app-manifest-512x512.png">
+    <!-- Stylesheets -->
+    <link id="theme-stylesheet" rel="stylesheet" href="css/default.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="css/gui.css">
+
+    <!-- Fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lacquer&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
 </head>
 <body id="body">
+    <!-- JavaScript -->
+    <script src="js/enums.js"></script>
+    <script src="js/variables.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/gui.js"></script>
+    <script src="js/functionality.js"></script>
+    <script>
+        // Listen for story data from editor window
+        window.addEventListener('message', function(event) {
+            parseStory(event.data);
+        });
+    </script>    
 </body>
 </html>

@@ -21,7 +21,7 @@ document
  *****************************************************************/
 // Variables declaration
 let appWindow = null; // Store reference to the opened window
-const url = "../reader/index.html";
+const url = "../reader/reader.html";
 const windowName = "StoryPreview";
 const windowFeatures = "width=600,height=900,resizable=yes,scrollbars=yes";
 
