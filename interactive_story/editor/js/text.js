@@ -2,7 +2,7 @@ class TEXT {
     static DIALOG_HEADER_DELETE = "Delete Block?";
     static DIALOG_HEADER_NEWSTORY = "Start a new story?";
     static DIALOG_MESSAGE_DELETE = "Are you sure you want to delete this block?";
-    static DIALOG_MESSAGE_NEWSTORY = "Starting a new story will delete the current story.<br>Make sure to save the current story if you want to keep it.";
+    static DIALOG_MESSAGE_NEWSTORY = "Starting a new story will delete the current story.<br>Make sure to save your work.";
     static DIALOG_BUTTON_OK = "OK";
     static DIALOG_BUTTON_CANCEL = "Cancel";
 

@@ -401,6 +401,8 @@ function updateDataFromPanel(blockId, property, newValue) {
       newValue = (newValue.toLowerCase() === 'true');
     } else if (property === 'title') {
       updateLabel(blockId, "keyword-label", newValue);
+    }else if (property === 'author') {
+      updateLabel(blockId, "destination-label", newValue);
     }
     currentData.story[property] = newValue;
 

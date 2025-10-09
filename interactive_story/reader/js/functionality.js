@@ -282,7 +282,7 @@ function displayImage(spanElement, paragraphImage) {
 
 	// Wait until the image has loaded to access its natural width
 	img.onload = function () {
-		const parentWidth = spanElement.offsetWidth;  // Width of the parent container
+		const parentWidth = img.parentElement.offsetWidth;  // Width of the parent container
 		const imageWidth = img.naturalWidth;        // Original width of the image
 		// Resize the image only if the original width is greater than the parent width
 		if (imageWidth > parentWidth) {

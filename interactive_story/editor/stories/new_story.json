@@ -20,7 +20,7 @@
           {
             "id": 0,
             "type": "interactive",
-            "text_body": "This is the starting paragraph of your story, and this is a {keyword}. Clicking on the keyword tag will present the reader with a list of choices. Add choices using the '🎯 Add Choice' button below.",
+            "text_body": "This is the starting block of your story, and this is a {keyword}. Clicking on the keyword tag will present the reader with a list of choices. Add choices using the '🎯 Add Choice' button below.",
             "choices": [],
             "position": [
               504,

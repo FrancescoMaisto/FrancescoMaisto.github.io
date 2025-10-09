@@ -8,7 +8,7 @@
 	--color-options_txt: #ee3a34;
     --color-options_bg: #ffffff;
     --color-options_txt_hover: #fff;
-    --color-options_bg_hover: #4d6354;
+    --color-options_bg_hover: #187e38;
     --color-options_border: #2c3b31;
 }
 body {
@@ -35,6 +35,8 @@ p {
 }
 .options {
 	border: 2px solid var(--color-options_border); /* outline */
+	background-color: var(--color-options_border);
+	border-radius: 10px;
 }
 .options li {
 	color: var(--color-options_txt);
@@ -42,6 +44,7 @@ p {
 	font-family: "Libre Baskerville", serif;
 	font-size: 26px;
 	border: 1px solid var(--color-options_border); /* outline */
+	border-radius: 10px;
 }
 .options li:hover {
 	color: var(--color-options_txt_hover);

@@ -34,14 +34,14 @@
                 "text_body": "Right",
                 "destination_id": 2,
                 "position": [
-                  559,
-                  281
+                  553,
+                  279
                 ]
               }
             ],
             "position": [
-              474,
-              161
+              470,
+              159
             ],
             "image": "https://framais.wordpress.com/wp-content/uploads/2025/03/two_doors.jpeg"
           },
@@ -61,8 +61,8 @@
             "text_body": "Bilbo opened the door on the right, Gollum came out of it and strangled him.",
             "destination_id": "3",
             "position": [
-              555,
-              394
+              556,
+              391
             ]
           },
           {
@@ -71,7 +71,7 @@
             "text_body": "Poor Bilbo, he wasn't expecting that!<p><strong>The End.</strong></p>",
             "position": [
               556,
-              537
+              534
             ],
             "image": "https://media.tenor.com/images/6696f6ae27a70eae70534e7714b1d650/tenor.gif"
           },
@@ -80,8 +80,8 @@
             "type": "infoBox",
             "text_body": "... and then they lived happily thereafter.<p><strong>The End.</strong></p>",
             "position": [
-              378,
-              535
+              379,
+              532
             ],
             "image": "https://i.pinimg.com/originals/76/8c/6d/768c6d02baaac12092285141a01dc5dd.gif"
           }
@@ -89,8 +89,8 @@
       }
     ],
     "position": [
-      474,
-      50
+      472,
+      47
     ]
   }
 }

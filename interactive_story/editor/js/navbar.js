@@ -23,7 +23,10 @@ document
 let appWindow = null; // Store reference to the opened window
 const url = "../reader/reader.html";
 const windowName = "StoryPreview";
-const windowFeatures = "width=600,height=900,resizable=yes,scrollbars=yes";
+const windowWidth = 600; // Set the desired width of the new window
+const leftPosition = screen.width - windowWidth; // Calculate the left position to align the window to the right side
+
+const windowFeatures = `width=${windowWidth},height=${screen.height},left=${leftPosition},top=0,resizable=yes,scrollbars=yes`;
 
 document
   .getElementById("playStory")
