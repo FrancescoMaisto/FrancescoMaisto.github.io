@@ -40,13 +40,13 @@ function randomInt(min, max) {
 // Render mileage/condition/mods info
 function renderCarInfo(car) {
 
-    console.log('Rendering car:', car);
-
     Promise.all([
+        // Load mileage tiers and mod rarities in parallel
         loadMileageTiers(),
         (typeof loadModRarity === 'function' ? loadModRarity() : Promise.resolve([]))
     ]).then(function(results) {
 
+        // Ensure container exists. If not, create it and insert after tier select
         var container = document.getElementById('car-display');
         if (!container) {
             container = document.createElement('div');
@@ -56,11 +56,13 @@ function renderCarInfo(car) {
             else document.body.appendChild(container);
         }
 
+        // SAFETY CHECK
         if (!car) {
             container.textContent = 'No car available for the selected tier.';
             return;
         }
 
+        // MILEAGE & CONDITION
         var tiers = results[0];
         var modRarities = results[1];
         if (!tiers.length) return;
@@ -93,7 +95,7 @@ function renderCarInfo(car) {
 
         // RENDER ON SCREEN, line by line with delay
         var lines = [
-            '<strong>MODEL:</strong> ' + escapeHtml(car.name) + '<br><br>',
+            '<br><strong>MODEL:</strong> ' + escapeHtml(car.name) + '<br><br>',
             '<strong>Mileage:</strong> ' + numberWithCommas(mileage) + ' miles <br>',
             '<strong>Condition:</strong> ' + condition + '% <br><br>',
             '<strong>Number of Mods:</strong> ' + mods + '<br>'
@@ -106,11 +108,21 @@ function renderCarInfo(car) {
             '<strong>Price after depreciation:</strong> $ ' + numberWithCommas(price.toFixed(0)) + '<br>',
             '<strong>FINAL PRICE (with mods):</strong> $ ' + numberWithCommas(priceFinal.toFixed(0)) + '<br>'
         ]);
+
+        // RENDER ON CONSOLE, for debugging
+        console.log('Rendering car:', car);
+        console.log('Mileage Tier:', tier);
+
+        // Clear previous info
         var old = document.getElementById('mileage-info');
         if (old) old.remove();
+        
+        // Create new info div
         var infoDiv = document.createElement('div');
         infoDiv.id = 'mileage-info';
         container.appendChild(infoDiv);
+        
+        // SHOW LINES ONE BY ONE
         function showLine(i) {
             if (i >= lines.length) return;
             infoDiv.insertAdjacentHTML('beforeend', lines[i]);

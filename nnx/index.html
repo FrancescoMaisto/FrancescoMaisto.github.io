@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NNX Random Car Generator</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <!-- Stylesheets
     <link id="theme-stylesheet" rel="stylesheet" href="css/default.css">
@@ -22,11 +22,16 @@
     -->
     <script src="js/functionality.js"></script>
     <script src="js/mod_rarity.js"></script>
-    <script src="js/mileage.js"></script>
+    <script src="js/render_car.js"></script>
 
 </head>
 <body id="body">
-    <h1>NNX Random Car Generator</h1>
+    <!-- Logo and title in flex container -->
+    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+        <img src="images/nnx_logo.png" alt="Nitro Nation X Logo" style="width: 10%; height: auto; display: block; margin-left: 10px; margin-right: 0;" />
+        <h1>Random Car Generator</h1>
+    </div>
+    
     <label for="tier-select">Select car tier</label>
     <select id="tier-select" aria-label="Car tier selector">
         <option value="" selected disabled>Choose tier</option>
