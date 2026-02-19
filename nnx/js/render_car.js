@@ -145,7 +145,7 @@ function renderCarInfo(car) {
         // Start with model name and selected colors
         var lines = [
                 '<br><span class="title">CAR</span><br>',
-            '<strong>Model:</strong> ' + escapeHtml(car.name) + '<br>',
+            '<span class="car-model">' + escapeHtml(car.name) + '</span><br>',
                 '<br><span class="title">MILEAGE</span><br>',
             '<strong>Mileage:</strong> ' + numberWithCommas(mileage) + ' miles <br>',
             '<strong>Condition:</strong> ' + condition + '% <br>',
