@@ -1,0 +1,601 @@
+[
+  {
+    "id": "000",
+    "name": "Nissan GTR Nismo (R35)",
+    "tier": 1,
+    "price": 99000,
+    "power": 562,
+    "exterior_colors": [
+      { "color_name": "Matte - Gray (KBL)", "weight": 1 },
+      { "color_name": "Solid - Stealth Gray (KCE)", "weight": 1 },
+      { "color_name": "Solid - Red (A54)", "weight": 1 },
+      { "color_name": "Metallic - Super Silver QUADCOAT (KAB)", "weight": 1 },
+      { "color_name": "Pearl - Jet Black (GAG)", "weight": 1 },
+      { "color_name": "Pearl - White TRICOAT (QAB)", "weight": 1 },
+      { "color_name": "Color shift - Midnight OPAL (LAG)", "weight": 1 },
+      { "color_name": "Metallic - Bayside Blue QUADCOAT (RCB)", "weight": 1 },
+      { "color_name": "Metallic - Millennium Jade (JW0)", "weight": 1 },
+      { "color_name": "Pearl - Midnight Purple (DAP)", "weight": 1 },
+      { "color_name": "Metallic - Gun (KAD)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black leather - carbon fiber", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Recaro Black carbon fiber skeleton bucket", "weight": 1 }
+    ]
+  },
+  {
+    "id": "001",
+    "name": "Audi RS5",
+    "tier": 2,
+    "price": 57000,
+    "power": 444,
+    "exterior_colors": [
+      { "color_name": "Solid - Nardo grey (LY7C)", "weight": 1 },
+      { "color_name": "Metallic - Nogaro blue (LZ5M)", "weight": 1 },
+      { "color_name": "Metallic - Floret silver (LZ7G)", "weight": 1 },
+      { "color_name": "Metallic - Glacier white (LS9R)", "weight": 1 },
+      { "color_name": "Metallic - Mythos black (LY9T)", "weight": 1 },
+      { "color_name": "Metallic - Navarra blue (LX5H)", "weight": 1 },
+      { "color_name": "Metallic - Sonoma green (LX6R)", "weight": 1 },
+      { "color_name": "Metallic - Progressive red (LY3Q)", "weight": 1 },
+      { "color_name": "Metallic - Ascari blue (LX5F/9W)", "weight": 1 },
+      { "color_name": "Pearl - Daytona grey (LZ7S)", "weight": 1 },
+      { "color_name": "Pearl - Misano Red (LZ3M)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic - Piano black trim", "weight": 30 },
+      { "color_name": "Black plastic - Carbon trim", "weight": 60 },
+      { "color_name": "Black plastic - Aluminum race trim", "weight": 10 }
+    ],
+    "interior_color": [
+      { "color_name": "Black with white stiching", "weight": 1 },
+      { "color_name": "Black with red stiching", "weight": 1 },
+      { "color_name": "Lunar silver with white stichign", "weight": 1 },
+      { "color_name": "Brown with black stiching", "weight": 1 },
+      { "color_name": "White with white stiching", "weight": 1 }
+    ]
+  },
+  {
+    "id": "002",
+    "name": "VW Jetta VR6",
+    "tier": 4,
+    "price": 12000,
+    "power": 172,
+    "exterior_colors": [
+      { "color_name": "Solid - Tornadorot (G2, G2G2, LY3D)", "weight": 1 },
+      { "color_name": "Solid - Schwarz (9000)", "weight": 1 },
+      { "color_name": "Solid - Candy White (B4, B9A, 9021, 9930, LB9A)", "weight": 1 },
+      { "color_name": "Metallic - Ascot Gray (A7U, LA7U)", "weight": 1 },
+      { "color_name": "Metallic - Montana Green (B6Z, LB6Z)", "weight": 1 },
+      { "color_name": "Metallic - Brilliant Black (R8, A9V, 9009, LA9V)", "weight": 1 },
+      { "color_name": "Metallic - Sequoia Green (5C, L2, G6S, LG6S)", "weight": 1 },
+      { "color_name": "Metallic - Mulberry (G4, G6R, LG6R)", "weight": 1 },
+      { "color_name": "Metallic - Windsor Blue (N5Y, LG5R)", "weight": 1 },
+      { "color_name": "Metallic - Dark Teal Metallic (A6U, LA6U)", "weight": 1 },
+      { "color_name": "Metallic - Memory Red (X7, 998, C3M, L998, LC3M)", "weight": 1 },
+      { "color_name": "Metallic - Satinsilber (C1, X1, Z1, B7Z, V72, 9940, 9973, LB7Z)", "weight": 1 },
+      { "color_name": "Pearl - Dusty Mauve (T1, C5P, LC5P)", "weight": 1 },
+      { "color_name": "Pearl - Indianrot (Y8, 3CT, C3T, LC3T, Y8Y8)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic", "weight": 8 },
+      { "color_name": "Beige plastic", "weight": 2 }
+    ],
+    "interior_color": [
+      { "color_name": "Black leather", "weight": 3 },
+      { "color_name": "Beige leather", "weight": 2 },
+      { "color_name": "Black/White cloth", "weight": 3 }
+    ]
+  },
+  {
+    "id": "003",
+    "name": "Honda Civic Si Coupe",
+    "tier": 4,
+    "price": 15900,
+    "power": 160,
+    "exterior_colors": [
+      { "color_name": "Solid - Taffeta White (NH578)", "weight": 17 },
+      { "color_name": "Metallic - Vogue Silver (NH583M)", "weight": 14 },
+      { "color_name": "Pearl - Granada Black (NH503P)", "weight": 13 },
+      { "color_name": "Pearl - Flamenco Black (NH592P)", "weight": 12 },
+      { "color_name": "Pearl - Island Coral (R95P)", "weight": 11 },
+      { "color_name": "Solid - Milano Red (R81)", "weight": 10 },
+      { "color_name": "Pearl - Cypress Green (G82P)", "weight": 9 },
+      { "color_name": "Pearl - Clover Green (G95P)", "weight": 7 },
+      { "color_name": "Pearl - Electron Blue (B95P)", "weight": 5 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Black/Grey cloth", "weight": 1 }
+    ]
+  },
+  {
+    "id": "004",
+    "name": "Nissan Sentra SE-R SpecV",
+    "tier": 4,
+    "price": 9500,
+    "power": 175,
+    "exterior_colors": [
+      { "color_name": "Solid - Cloud White (QM1)", "weight": 1 },
+      { "color_name": "Solid - Blackout (KH3)", "weight": 1 },
+      { "color_name": "Solid - Sunburst (E10)", "weight": 1 },
+      { "color_name": "Solid - Code Red (A20)", "weight": 1 },
+      { "color_name": "Metallic - Radium (KV9)", "weight": 1 },
+      { "color_name": "Metallic - Volcanic Orange (A12)", "weight": 1 },
+      { "color_name": "Metallic - Molten Silver (KY4)", "weight": 1 },
+      { "color_name": "Metallic - Brilliant Aluminum (K23)", "weight": 1 },
+      { "color_name": "Metallic - Mystic Green (Z13)", "weight": 1 },
+      { "color_name": "Metallic - Envy Green (Z33)", "weight": 1 },
+      { "color_name": "Metallic - Vibrant Blue (BY1)", "weight": 1 },
+      { "color_name": "Metallic - Sapphire Blue (B14)", "weight": 1 },
+      { "color_name": "Metallic - Blue Dusk (B23)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Black cloth", "weight": 1 },
+      { "color_name": "Red cloth", "weight": 1 }
+    ]
+  },
+  {
+    "id": "005",
+    "name": "Mitsubishi Eclipse GSX",
+    "tier": 3,
+    "price": 25500,
+    "power": 210,
+    "exterior_colors": [
+      { "color_name": "Solid - Northstar White (W12)", "weight": 1 },
+      { "color_name": "Pearl  - Minden Silver (A52)", "weight": 1 },
+      { "color_name": "Pearl  - Magenta Gray (A87)", "weight": 1 },
+      { "color_name": "Pearl  - Durango Copper (P01)", "weight": 1 },
+      { "color_name": "Solid - Saronno Red (R87)", "weight": 1 },
+      { "color_name": "Pearl  - Cayenne Red (P88)", "weight": 1 },
+      { "color_name": "Pearl  - Barcelona Red (P75)", "weight": 1 },
+      { "color_name": "Pearl  - Oslo Green (L55)", "weight": 1 },
+      { "color_name": "Metallic  - Everett Green (G36)", "weight": 1 },
+      { "color_name": "Pearl  - Monarch Green (G56)", "weight": 1 },
+      { "color_name": "Pearl  - Kona Blue (B73)", "weight": 1 },
+      { "color_name": "Pearl  - Celtic Blue (B59)", "weight": 1 },
+      { "color_name": "Pearl  - Sundance Plum (P51) [Spyder color]", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Beige leather", "weight": 2 },
+      { "color_name": "Black leather", "weight": 3 },
+      { "color_name": "Grey leather", "weight": 4 }
+    ]
+  },
+  {
+    "id": "006",
+    "name": "VW Golf R (Typ5K)",
+    "tier": 3,
+    "price": 17900,
+    "power": 256,
+    "exterior_colors": [
+      { "color_name": "Metallic - Lapis Blue", "weight": 1 },
+      { "color_name": "Solid - Pure White", "weight": 1 },
+      { "color_name": "Solid - Tornado Red", "weight": 1 },
+      { "color_name": "Metallic - Limestone Grey", "weight": 1 },
+      { "color_name": "Metallic - Reflex Silver", "weight": 1 },
+      { "color_name": "Metallic - Carbon Steel Grey", "weight": 1 },
+      { "color_name": "Metallic - Night Blue", "weight": 1 },
+      { "color_name": "Pearl - Deep Black", "weight": 1 },
+      { "color_name": "Pearl - Oryx White", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "‘Race’ cloth seat centre section with grey Alcantara side bolsters. Titan Black", "weight": 4 },
+      { "color_name": "‘Vienna’ leather Black", "weight": 3 },
+      { "color_name": "‘Carbon/Nappa’ leather Anthracite", "weight": 2 },
+      { "color_name": "‘Carbon/Nappa’ leather Grey", "weight": 1 }
+    ]
+  },
+  {
+    "id": "007",
+    "name": "Honda Integra Type-R",
+    "tier": 3,
+    "price": 19500,
+    "power": 217,
+    "exterior_colors": [
+      { "color_name": "Solid - Taffeta White (NH578)", "weight": 1 },
+      { "color_name": "Solid - Milano Red R81", "weight": 1 },
+      { "color_name": "Metallic - Satin Silver (NH623M)", "weight": 1 },
+      { "color_name": "Metallic - Desert Silver (YR534M)", "weight": 1 },
+      { "color_name": "Metallic - Magnesium (NH675M)", "weight": 1 },
+      { "color_name": "Metallic - Jade Green (G523M)", "weight": 1 },
+      { "color_name": "Pearl - Nighthawk Black (B92P)", "weight": 1 },
+      { "color_name": "Pearl - Firepepper Red (R507P)", "weight": 1 },
+      { "color_name": "Pearl - Redondo Red (R522P)", "weight": 1 },
+      { "color_name": "Pearl - Vivid Blue (B520P)", "weight": 1 },
+      { "color_name": "Pearl - Eternal Blue (B96P)", "weight": 1 },
+      { "color_name": "Metallic - Blaze Orange (YR552M) (Type-S only)", "weight": 1 },
+      { "color_name": "Pearl - Arctic Blue (B507P) [Type-S only]", "weight": 1 },
+      { "color_name": "Pearl - Premium White (NH624P) (Type-S only)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black/Grey plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Recaro - Black seat, carpet and door car", "weight": 4 },
+      { "color_name": "Recaro - Blue seat, carpet and door car", "weight": 1 },
+      { "color_name": "Recaro - Red seat, carpet and door car", "weight": 4 }
+    ]
+  },
+  {
+    "id": "008",
+    "name": "Infiniti G35 Coupe (V35)",
+    "tier": 3,
+    "price": 13500,
+    "power": 293,
+    "exterior_colors": [
+      { "color_name": "Solid - Black Obsidian (KH3)", "weight": 1 },
+      { "color_name": "Metallic - Brilliant Silver (KY0)", "weight": 1 },
+      { "color_name": "Metallic - Liquid Platinum (K23)", "weight": 1 },
+      { "color_name": "Metallic - Diamond Graphite (WV2)", "weight": 1 },
+      { "color_name": "Metallic - Desert Platinum (KX6)", "weight": 1 },
+      { "color_name": "Metallic - Serengeti Sand (K32)", "weight": 1 },
+      { "color_name": "Metallic - Laser Red (AX6)", "weight": 1 },
+      { "color_name": "Metallic - Caribbean Blue (B16)", "weight": 1 },
+      { "color_name": "Metallic - Lakeshore Slate (B30)", "weight": 1 },
+      { "color_name": "Pearl - Athens Blue (B21)", "weight": 1 },
+      { "color_name": "Pearl - Twilight Blue (BW5)", "weight": 1 },
+      { "color_name": "Pearl - Ivory (QX1)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic - Aluminium trim", "weight": 3 },
+      { "color_name": "Black plastic - Rosewood trim", "weight": 2 },
+      { "color_name": "Brown/Tan plastic - Aluminum trim", "weight": 3 },
+      { "color_name": "Brown/Tan - Rosewood trim", "weight": 2 }
+    ],
+    "interior_color": [
+      { "color_name": "Wheat leather", "weight": 1 },
+      { "color_name": "Graphite leather", "weight": 1 },
+      { "color_name": "Stone leather", "weight": 1 }
+    ]
+  },
+  {
+    "id": "009",
+    "name": "BMW 335is (E92)",
+    "tier": 3,
+    "price": 20800,
+    "power": 320,
+    "exterior_colors": [
+      { "color_name": "Solid - Alpine White III (300)", "weight": 1 },
+      { "color_name": "Solid - Crimson Red (A61)", "weight": 1 },
+      { "color_name": "Metallic - Black Sapphire (475)", "weight": 1 },
+      { "color_name": "Metallic - Le Mans Blue (381)", "weight": 1 },
+      { "color_name": "Metallic - Space Gray (A52)", "weight": 1 },
+      { "color_name": "Metallic - Titanium Silver (354)", "weight": 1 },
+      { "color_name": "Mineral White Metallic A96", "weight": 1 },
+      { "color_name": "Platinum Bronze Metallic A53", "weight": 1 },
+      { "color_name": "Blue Water Metallic 896", "weight": 1 },
+      { "color_name": "Deep Sea Blue Metallic A76", "weight": 1 },
+      { "color_name": "Montego Blue Metallic A51", "weight": 1 },
+      { "color_name": "Mojave Metallic A17", "weight": 1 },
+      { "color_name": "Atlantic Blue Metallic A13", "weight": 1 },
+      { "color_name": "Vermillion Red Metallic (A82)", "weight": 1 },
+      { "color_name": "Tasman Green Metallic A81", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Dark Glacier Aluminum Trim", "weight": 1 },
+      { "color_name": "Aluminum Trim (not originally available for iS)", "weight": 1 },
+      { "color_name": "Dark Burl Walnut Wood Trim (not originally available for iS)", "weight": 1 },
+      { "color_name": "Light Burl Walnut Wood Trim (not originally available for iS)", "weight": 1 },
+      { "color_name": "Bamboo Anthracite Wood Trim (not originally available for iS)", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Black Dakota Leather (LCSW)", "weight": 1 },
+      { "color_name": "Gray Dakota Leather (LCAD)", "weight": 1 },
+      { "color_name": "Oysted Dakota Leahter (LCCX)", "weight": 1 },
+      { "color_name": "Cream Beige Dakota Leather (LCGE)", "weight": 1 },
+      { "color_name": "Coral Red Dakota Leather (LCD1)", "weight": 1 },
+      { "color_name": "Saddle Borwn Dakota Leather (LCD3)", "weight": 1 }
+    ]
+  },
+  {
+    "id": "010",
+    "name": "Nissan Skyline GT-R (R34)",
+    "tier": 2,
+    "price": 135000,
+    "power": 280,
+    "exterior_colors": [
+      { "color_name": "Metallic - Athlete Silver (KV2)", "weight": 1 },
+      { "color_name": "Metallic - Black Pearl (GV1)", "weight": 1 },
+      { "color_name": "Solid - Active Red (AR2)", "weight": 1 },
+      { "color_name": "Solid - Lightning Yellow (EV1)", "weight": 1 },
+      { "color_name": "Color shift - Midnight Purple II (LV4)", "weight": 1 },
+      { "color_name": "Color shift - Midnight Purple III (LX0)", "weight": 1 },
+      { "color_name": "Metallic - Sparkling Silver (WV2)", "weight": 1 },
+      { "color_name": "Metallic - Millennium Jade (JW0)", "weight": 1 },
+      { "color_name": "Solid - White (QM1)", "weight": 1 },
+      { "color_name": "Pearl - White Pearl (QT1)", "weight": 1 },
+      { "color_name": "Metallic - Silica Breath (EY0)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Grey cloth", "weight": 1 }
+    ]
+  },
+  {
+    "id": "011",
+    "name": "Honda NSX (NA1)",
+    "tier": 2,
+    "price": 85000,
+    "power": 290,
+    "exterior_colors": [
+      { "color_name": "Solid - Grand Prix White (NH565)", "weight": 1 },
+      { "color_name": "Solid - Formula Red R77", "weight": 1 },
+      { "color_name": "Solid - Berlina Black NH547", "weight": 1 },
+      { "color_name": "Metallic - Kaiser Silver (NH546M)", "weight": 1 },
+      { "color_name": "Pearl - Spa Yellow (Y52P)", "weight": 1 },
+      { "color_name": "Pearl - Imola Orange (YR536P)", "weight": 1 },
+      { "color_name": "Pearl - Brooklands Green (G70P)", "weight": 1 },
+      { "color_name": "Pearl - Monte Carlo Blue (B66P)", "weight": 1 },
+      { "color_name": "Pearl - Midnight (PB73P)", "weight": 1 },
+      { "color_name": "Pearl - Neutron White Pearl (Only 1 ever made)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black leather", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Black leather + Grey carpets", "weight": 1 },
+      { "color_name": "Camel leather + Tan carpets", "weight": 1 },
+      { "color_name": "Red leather + Red carpets", "weight": 1 },
+      { "color_name": "White leather + White carpets", "weight": 1 }
+    ]
+  },
+  {
+    "id": "012",
+    "name": "BMW M3 (E46)",
+    "tier": 2,
+    "price": 35000,
+    "power": 338,
+    "exterior_colors": [
+      { "color_name": "Solid - Alpine White (300)", "weight": 1 },
+      { "color_name": "Solid - Imola Red (405)", "weight": 1 },
+      { "color_name": "Solid - Jet Black (668)", "weight": 1 },
+      { "color_name": "Solid - Laguna Seca Blue (448)", "weight": 1 },
+      { "color_name": "Metallic - Phoenix Yellow (445)", "weight": 1 },
+      { "color_name": "Metallic - Topaz Blue (364)", "weight": 1 },
+      { "color_name": "Metallic - Oxford Green II (430)", "weight": 1 },
+      { "color_name": "Metallic - Carbon Black (416)", "weight": 1 },
+      { "color_name": "Metallic - Steel Grey (400)", "weight": 1 },
+      { "color_name": "Metallic - Titanium Silver (354)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "High gloss black Trim", "weight": 1 },
+      { "color_name": "Titanium shadow Trim", "weight": 1 },
+      { "color_name": "Eucalyptus Matl Wood Trim", "weight": 1 },
+      { "color_name": "Shadow Aluminum Silver Trim", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Black Cloth", "weight": 1 },
+      { "color_name": "Nappa Leather Black", "weight": 1 },
+      { "color_name": "Nappa Leather Blue", "weight": 1 },
+      { "color_name": "Nappa Leather Red", "weight": 1 },
+      { "color_name": "Nappa Leather Kiwi", "weight": 1 },
+      { "color_name": "Nappa Leather Cinnamon", "weight": 1 },
+      { "color_name": "Nappa Leather Grey", "weight": 1 }
+    ]
+  },
+  {
+    "id": "013",
+    "name": "Chevrolet Corvette (C5)",
+    "tier": 2,
+    "price": 24900,
+    "power": 339,
+    "exterior_colors": [
+      { "color_name": "Solid - Black", "weight": 1 },
+      { "color_name": "Solid - Torch red", "weight": 1 },
+      { "color_name": "Solid - Millennium Yellow", "weight": 1 },
+      { "color_name": "Solid - Speedway white", "weight": 1 },
+      { "color_name": "Metallic - Light pewter", "weight": 1 },
+      { "color_name": "Metallic - Quicksilver", "weight": 1 },
+      { "color_name": "Metallic - Electron blue", "weight": 1 },
+      { "color_name": "Metallic - Magnetic Red II", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic + Leather", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Standard seat, Torch red leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Sports seat, Torch red leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Standard seat, Light grey leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Sports seat, Light grey leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Standard seat, Light oak leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Sports seat, Light oak leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Standard seat, Black leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 },
+      { "color_name": "Sports seat, Black leather, seat, carpets, bottom dash, door card bottom.", "weight": 1 }
+    ]
+  },
+  {
+    "id": "014",
+    "name": "Audi RS3 Sportback",
+    "tier": 2,
+    "price": 45000,
+    "power": 362,
+    "exterior_colors": [
+      { "color_name": "Solid - Nardo Grey", "weight": 1 },
+      { "color_name": "Metallic - Glacier White", "weight": 1 },
+      { "color_name": "Metallic - Floret silver", "weight": 1 },
+      { "color_name": "Metallic - Catalunya red", "weight": 1 },
+      { "color_name": "Metallic - Mythos black", "weight": 1 },
+      { "color_name": "Pearl - Daytona grey", "weight": 1 },
+      { "color_name": "Pearl - Sepang blue", "weight": 1 },
+      { "color_name": "Pearl - Panther black", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic - carbon fiber inlay", "weight": 7 },
+      { "color_name": "Black plastic - 3D-design \"Black\" inlay", "weight": 1 },
+      { "color_name": "Black plastic - aluminium race inlay", "weight": 2 }
+    ],
+    "interior_color": [
+      { "color_name": "RS Sport seats, Fine nappa leather, black, with read diamond pattern", "weight": 1 },
+      { "color_name": "RS Sport seats, Fine nappa leather, black with grey diamond pattern", "weight": 1 },
+      { "color_name": "RS Sport seats, Fine nappa leather, lunar silver with diamond pattern", "weight": 1 }
+    ]
+  },
+  {
+    "id": "015",
+    "name": "Cadillac ATS-V Coupe",
+    "tier": 2,
+    "price": 34000,
+    "power": 488,
+    "exterior_colors": [
+      { "color_name": "Solid - Black raven", "weight": 1 },
+      { "color_name": "Metallic - Satin Steel", "weight": 1 },
+      { "color_name": "Metallic - Vector Blue", "weight": 1 },
+      { "color_name": "Metallic - Crystal white", "weight": 1 },
+      { "color_name": "Metallic - Phantom gray", "weight": 1 },
+      { "color_name": "Metallic - Red obsessions", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black Leather & plastic - Carbon fiber trim", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Jet black, black accents", "weight": 1 },
+      { "color_name": "Jet black, saffron accents", "weight": 1 },
+      { "color_name": "Light platinum, black accents", "weight": 1 },
+      { "color_name": "Recaro Jet black, black accents", "weight": 1 },
+      { "color_name": "Recaro Jet black, saffron accents", "weight": 1 },
+      { "color_name": "Recaro Light platinum, black accents", "weight": 1 }
+    ]
+  },
+  {
+    "id": "016",
+    "name": "BMW M4 Competition (G82)",
+    "tier": 2,
+    "price": 68000,
+    "power": 503,
+    "exterior_colors": [
+      { "color_name": "Solid - Alpine white", "weight": 1 },
+      { "color_name": "Solid - Sao Paolo Yellow", "weight": 1 },
+      { "color_name": "Metallic - Brooklyn grey", "weight": 1 },
+      { "color_name": "Metallic - Isle of Man Green", "weight": 1 },
+      { "color_name": "Metallic - Toronto Red", "weight": 1 },
+      { "color_name": "Metallic - Black sapphire", "weight": 1 },
+      { "color_name": "Metallic - Skyscraper grey", "weight": 1 },
+      { "color_name": "Metallic - Aventurine red", "weight": 1 },
+      { "color_name": "Metallic - Portimao blue", "weight": 1 },
+      { "color_name": "Metallic - Dravit grey", "weight": 1 },
+      { "color_name": "Metallic - Tanzanite blue", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black + carbon fiber trim", "weight": 5 },
+      { "color_name": "Black + aluminium anthracite", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Black leather", "weight": 1 },
+      { "color_name": "Silverstone leather", "weight": 1 },
+      { "color_name": "Kyalami orange leather", "weight": 1 },
+      { "color_name": "Yas marina blue leather", "weight": 1 },
+      { "color_name": "Fiona red leather", "weight": 1 },
+      { "color_name": "Tartufo brown leather", "weight": 1 },
+      { "color_name": "Fjord blue leather", "weight": 1 },
+      { "color_name": "Ivory white leather", "weight": 1 }
+    ]
+  },
+  {
+    "id": "017",
+    "name": "Audi R8 5.2 FSI Quattro",
+    "tier": 1,
+    "price": 129000,
+    "power": 533,
+    "exterior_colors": [
+      { "color_name": "Solid - Ibis White (LY9C)", "weight": 1 },
+      { "color_name": "Solid - Dynamite Red (LY3N)", "weight": 1 },
+      { "color_name": "Solid - Vegas Yellow (LZ1A)", "weight": 1 },
+      { "color_name": "Metallic - Suzuka grey (LX7N)", "weight": 1 },
+      { "color_name": "Metallic - Floret silver (LZ7G)", "weight": 1 },
+      { "color_name": "Metallic - Tango red (LY3U)", "weight": 1 },
+      { "color_name": "Metallic - Camouflage green (LX6T)", "weight": 1 },
+      { "color_name": "Metallic - Mythos black (LY9T)", "weight": 1 },
+      { "color_name": "Pearl - Daytona grey (LZ7S)", "weight": 1 },
+      { "color_name": "Matt effect - Camouflage green (LX6U )", "weight": 1 },
+      { "color_name": "Matt effect - Argus brown (LY8Q)", "weight": 1 },
+      { "color_name": "Crystal effect - Macaw blue (LX5J)", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Leather dash - carbon fiber console", "weight": 1 },
+      { "color_name": "Leather dash - piano black console", "weight": 1 },
+      { "color_name": "Leather dash - matt titanium console", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "R8 bucket seats, Alcantara leather, black", "weight": 1 },
+      { "color_name": "R8 sport seats, fine Nappa leather, express red", "weight": 1 },
+      { "color_name": "R8 sport seats, Fine Nappa leather, black", "weight": 1 },
+      { "color_name": "R8 sport seats, Fine Nappa leather, Vermont brown", "weight": 1 },
+      { "color_name": "R8 sport seats, Fine Nappa leather, rotor grey", "weight": 1 },
+      { "color_name": "R8 sport seats, Fine Nappa leather, parchment beige", "weight": 1 },
+      { "color_name": "R8 sport seats with diamond pattern, fine Nappa leather, express red", "weight": 1 },
+      { "color_name": "R8 sport seats with diamond pattern, Fine Nappa leather, black", "weight": 1 },
+      { "color_name": "R8 sport seats with diamond pattern, Fine Nappa leather, Vermont brown", "weight": 1 },
+      { "color_name": "R8 sport seats with diamond pattern, Fine Nappa leather, rotor grey", "weight": 1 },
+      { "color_name": "R8 sport seats with diamond pattern, Fine Nappa leather, parchment beige", "weight": 1 }
+    ]
+  },
+  {
+    "id": "018",
+    "name": "Chevrolet Corvette Z06 (C6)",
+    "tier": 1,
+    "price": 47000,
+    "power": 505,
+    "exterior_colors": [
+      { "color_name": "Solid - Black", "weight": 1 },
+      { "color_name": "Solid - Velocity Yellow", "weight": 1 },
+      { "color_name": "Solid - Victory red", "weight": 1 },
+      { "color_name": "Metallic - Le Mans BLue", "weight": 1 },
+      { "color_name": "Metallic - Machine Silver", "weight": 1 },
+      { "color_name": "Metallic - Daytona Sunset Orange", "weight": 1 },
+      { "color_name": "Metallic - Monterey Red", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black/Silver plastic", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Ebony leather", "weight": 50 },
+      { "color_name": "Ebony leather, Red accent", "weight": 10 },
+      { "color_name": "Ebony leather, Titanium accent", "weight": 20 },
+      { "color_name": "Ebony leather, Cashmere acent", "weight": 20 }
+    ]
+  },
+  {
+    "id": "019",
+    "name": "Cadillac CTS-V Coupe",
+    "tier": 1,
+    "price": 41000,
+    "power": 556,
+    "exterior_colors": [
+      { "color_name": "Solid - Black raven", "weight": 1 },
+      { "color_name": "Meatllic - Black diamond", "weight": 1 },
+      { "color_name": "Meatllic -  Radiant silver", "weight": 1 },
+      { "color_name": "Metallic - Opulent blue", "weight": 1 },
+      { "color_name": "Metallic - Glacier blue", "weight": 1 },
+      { "color_name": "Metallic - White diamond", "weight": 1 },
+      { "color_name": "Metallic - Crystal red", "weight": 1 }
+    ],
+    "trim_color": [
+      { "color_name": "Black plastic + leather - carbon fiber trim", "weight": 1 },
+      { "color_name": "Black plastic + leather - wood trim", "weight": 1 }
+    ],
+    "interior_color": [
+      { "color_name": "Standard seat - Light titanium leather", "weight": 1 },
+      { "color_name": "Standard seat - Ebony leather", "weight": 1 },
+      { "color_name": "Standard seat - Ebony leather, Saffron accent", "weight": 1 },
+      { "color_name": "Recaro seat - Light titanium leather", "weight": 1 },
+      { "color_name": "Recaro seat - Ebony leather, Saffron accent", "weight": 1 },
+      { "color_name": "Recaro seat - Ebony leather, Saffron accent", "weight": 1 }
+    ]
+  }
+]

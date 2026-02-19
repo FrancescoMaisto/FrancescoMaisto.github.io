@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Common",
+        "probability": 0.55,
+        "price": 100
+    },
+    {
+        "name": "Rare",
+        "probability": 0.30,
+        "price": 250
+    },
+    {
+        "name": "Epic",
+        "probability": 0.10,
+        "price": 600
+    },
+    {
+        "name": "Mythic",
+        "probability": 0.05,
+        "price": 1000
+    }
+]
